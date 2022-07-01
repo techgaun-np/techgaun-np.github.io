@@ -1,9 +1,9 @@
 ---
 ####################### Banner #########################
 banner:
-  title : "Let us solve your critical website <br> development challenges"
+  title : "Let us solve your software <br> engineering challenges"
   image : "images/banner-art.svg"
-  content : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nihil enim maxime corporis cumque <br> totam aliquid nam sint inventore optio modi neque laborum officiis necessitatibus"
+  content : "We offer various range of software engineering solutions ranging from custom software (web, mobile, desktop) development, cloud ops, architecture design and review and software security assessment. With combined experience of over 20 years building complex, large-scale, high-volume distributed apps and monolith as well as microservices-powered systems, we are here to solve complex technology needs for your business. We are very passionate about software engineering and technology and we like to work with you to understand the need and build the system that works today as well as in the future."
   button:
     enable : true
     label : "Contact Us"
@@ -12,37 +12,37 @@ banner:
 ##################### Feature ##########################
 feature:
   enable : true
-  title : "Something You Need To Know"
+  title : "Our Services"
   feature_item:
     # feature item loop
-    - name : "Clean Code"
+    - name : "Software Engineering"
       icon : "fas fa-code"
-      content : "Lorem ipsum dolor sit amet consectetur adipisicing elit quam nihil"
+      content : "Design and implement custom software for web, mobile and desktop. We will provide impeccable quality in engineering and support."
       
     # feature item loop
-    - name : "Object Oriented"
-      icon : "fas fa-object-group"
-      content : "Lorem ipsum dolor sit amet consectetur adipisicing elit quam nihil"
-      
-    # feature item loop
-    - name : "24h Service"
-      icon : "fas fa-user-clock"
-      content : "Lorem ipsum dolor sit amet consectetur adipisicing elit quam nihil"
-      
-    # feature item loop
-    - name : "Value For Money"
-      icon : "fas fa-heart"
-      content : "Lorem ipsum dolor sit amet consectetur adipisicing elit quam nihil"
-      
-    # feature item loop
-    - name : "Faster Response"
-      icon : "fas fa-tachometer-alt"
-      content : "Lorem ipsum dolor sit amet consectetur adipisicing elit quam nihil"
-      
-    # feature item loop
-    - name : "Cloud Support"
+    - name : "Cloud Ops, DevOps and Infrastructure"
       icon : "fas fa-cloud"
-      content : "Lorem ipsum dolor sit amet consectetur adipisicing elit quam nihil"
+      content : "We can help build, streamline and review your cloud ops (aws, gcp, azure), devops, infrastructure and SRE functions."
+      
+    # feature item loop
+    - name : "Architecture Design and Review"
+      icon : "fas fa-desktop"
+      content : "We will work with you to build and review high-level and detailed system architecture and also help implement the system following domain-driven design."
+      
+    # feature item loop
+    - name : "Software Security"
+      icon : "fas fa-lock"
+      content : "Our experience in building secure softwares & vulnerability assessment and penetration testing will give us unique opportunity to help secure your software systems."
+      
+    # feature item loop
+    - name : "Web Hosting"
+      icon : "fas fa-network-wired"
+      content : "We will host your websites and web apps in a safe and secure manner and also manage your domains for you. Ask us what you need and we will have it for you."
+
+    # feature item loop
+    - name : "Something Else?"
+      icon : "fas fa-heart"
+      content : "Given our years of experience building large scale software systems, we can work with you for any custom technology need you have."
       
 
 
@@ -105,7 +105,7 @@ call_to_action:
   enable : true
   title : "Ready to get started?"
   image : "images/cta.svg"
-  content : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur."
+  content : "Contact us by clicking below and we will be in touch shortly"
   button:
     enable : true
     label : "Contact Us"
