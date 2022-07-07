@@ -7,8 +7,8 @@ draft: false
 ---
 
 
-### Why you should contact us!
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit recusandae voluptates doloremque veniam temporibus porro culpa ipsa, nisi soluta minima saepe laboriosam debitis nesciunt.
+### Lets start the conversation!
+Please reach out to us and we will be happy to further engage to provide details of our services and offerings.
 
 * **Phone: +1 (913) 850 9524 , +977 9857080453** 
 * **Mail: info@techgaun.com**
