@@ -1,7 +1,7 @@
 ---
-title: "Latest News"
+title: "Latest Blog Posts"
 subtitle: ""
 # meta description
-description: "This is meta description"
+description: "Blog Posts - Techgaun Nepal"
 draft: false
 ---

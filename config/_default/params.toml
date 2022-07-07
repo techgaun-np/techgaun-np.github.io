@@ -26,7 +26,7 @@ link = "contact"
 [cookies]
 enable = false
 expire_days = 2
-content = "This site uses cookies. By continuing to use this website, you agree to their use."
+content = "This site uses cookies. By continuing to use this website, you agree to the terms of use."
 button = "I Accept"
   
 ############################# social site ########################
