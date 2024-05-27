@@ -199,6 +199,45 @@ nav ul li a {
     border-radius: 5px;
 }
 
+.team {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.team h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    width: 200px;
+    margin: 20px;
+    text-align: center;
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.team-member h3 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.team-member p {
+    font-size: 18px;
+    color: #666;
+}
+
 .contact {
     padding: 50px 20px;
     text-align: center;
