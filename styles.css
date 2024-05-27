@@ -2,20 +2,25 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
 }
 
 header {
-    background-color: #fff;
+    background-color: #ffffff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
+    padding: 20px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.logo {
-    font-size: 1.5em;
-    font-weight: bold;
+.logo img {
+    height: 50px;
 }
 
 nav ul {
@@ -79,9 +84,19 @@ nav ul li a {
     margin-bottom: 30px;
 }
 
+.client-logos img {
+    margin: 0 15px;
+    max-height: 50px;
+}
+
 .about {
     padding: 50px 20px;
     text-align: center;
+}
+
+.about p {
+    max-width: 600px;
+    margin: 20px auto;
 }
 
 .about-stats {
@@ -92,16 +107,41 @@ nav ul li a {
 
 .about-stats div {
     margin: 0 20px;
+    text-align: center;
+}
+
+.about-stats h3 {
+    font-size: 2em;
+    margin: 10px 0;
 }
 
 .services {
     background-color: #001f3f;
     color: #fff;
     padding: 50px 20px;
+    text-align: center;
 }
 
-.services h2 {
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.service-item {
+    background-color: #fff;
+    color: #333;
+    width: 30%;
+    margin: 15px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
+}
+
+.service-item img {
+    max-height: 100px;
+    margin-bottom: 20px;
 }
 
 .process {
@@ -109,9 +149,54 @@ nav ul li a {
     text-align: center;
 }
 
+.process-steps {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.process-step {
+    width: 22%;
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
 .case-studies {
     background-color: #f4f4f4;
     padding: 50px 20px;
+    text-align: center;
+}
+
+.case-studies-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.case-study {
+    background-color: #fff;
+    width: 45%;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.case-study img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.case-study button {
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
 .contact {
@@ -123,13 +208,18 @@ nav ul li a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
 .contact form input,
 .contact form textarea {
-    width: 300px;
+    width: 100%;
     padding: 10px;
     margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 .contact form button {
@@ -148,11 +238,17 @@ footer {
     text-align: center;
 }
 
+.footer-logo img {
+    height: 50px;
+    margin-bottom: 20px;
+}
+
 .footer-nav {
     list-style: none;
     display: flex;
     justify-content: center;
     margin: 20px 0;
+    padding: 0;
 }
 
 .footer-nav li {
@@ -162,4 +258,17 @@ footer {
 .footer-nav li a {
     text-decoration: none;
     color: #fff;
+}
+
+.social-media a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-media img {
+    height: 30px;
+}
+
+footer p {
+    margin-top: 20px;
 }
