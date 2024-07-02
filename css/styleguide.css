@@ -1,0 +1,100 @@
+:root { 
+  --black: #000000;
+  --blaze-orange600: #ff5f00;
+  --charade200: #d5dae2;
+  --charade800: #3a4252;
+  --charade900: #333947;
+  --charade950: #282c37;
+  --flush-orange600: #ff8502;
+  --nobel: #b0b0af;
+  --white: #ffffff;
+ 
+  --font-size-l: 18px;
+  --font-size-m: 16px;
+  --font-size-xl: 20px;
+  --font-size-xxl: 24px;
+  --font-size-xxxl: 28px;
+  --font-size-xxxxl: 40px;
+  --font-size-xxxxxl: 48px;
+ 
+  --font-family-plus_jakarta_sans: "Plus Jakarta Sans", Helvetica;
+}
+.plusjakartasans-semi-bold-white-20px {
+  color: var(--white);
+  font-family: var(--font-family-plus_jakarta_sans);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.plusjakartasans-normal-white-16px {
+  color: var(--white);
+  font-family: var(--font-family-plus_jakarta_sans);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.plusjakartasans-medium-black-18px {
+  color: var(--black);
+  font-family: var(--font-family-plus_jakarta_sans);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.plusjakartasans-normal-charade-16px {
+  color: var(--charade950);
+  font-family: var(--font-family-plus_jakarta_sans);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.plusjakartasans-semi-bold-charade-24px {
+  color: var(--charade950);
+  font-family: var(--font-family-plus_jakarta_sans);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.plusjakartasans-normal-bright-gray-16px {
+  color: var(--charade800);
+  font-family: var(--font-family-plus_jakarta_sans);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.plusjakartasans-medium-nobel-18px {
+  color: var(--nobel);
+  font-family: var(--font-family-plus_jakarta_sans);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.plusjakartasans-bold-black-40px {
+  color: var(--black);
+  font-family: var(--font-family-plus_jakarta_sans);
+  font-size: var(--font-size-xxxxl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.plusjakartasans-normal-tuna-18px {
+  color: var(--charade900);
+  font-family: var(--font-family-plus_jakarta_sans);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.plusjakartasans-medium-white-16px {
+  color: var(--white);
+  font-family: var(--font-family-plus_jakarta_sans);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 500;
+}
