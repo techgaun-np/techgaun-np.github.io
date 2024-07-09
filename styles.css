@@ -225,6 +225,10 @@ nav ul li a {
     flex: 0 0 40%;
 }
 
+.service-item h3 {
+    color: #ff8502;
+}
+
 .service-item:nth-child(odd) {
     margin-left: 0;
 }
