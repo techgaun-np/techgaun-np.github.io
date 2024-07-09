@@ -552,6 +552,16 @@ nav ul li a {
     width: 134px;
 }
 
+.contact .success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
 .footer-bg-container {
     display: flex;
     justify-content: center;

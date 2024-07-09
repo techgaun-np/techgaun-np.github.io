@@ -9,8 +9,8 @@
     <script type="text/javascript">
 
         document.addEventListener("click", function (e) {
-            const navIcon = document.getElementById("nav-icon");
-            const mainNav = document.getElementById("main-nav");
+            var navIcon = document.getElementById("nav-icon");
+            var mainNav = document.getElementById("main-nav");
 
             if (navIcon.contains(e.target)) {
                 toggleNav(mainNav);
@@ -36,11 +36,45 @@
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
     <script type="text/javascript">
-    (function(){
-        emailjs.init({
-            publicKey: "-j9iqbK7XwOzki-g6",
+        (function(){
+            emailjs.init({
+                publicKey: "-j9iqbK7XwOzki-g6",
+            });
+        })();
+
+        document.addEventListener("DOMContentLoaded", function() {
+            // Contact form submission section
+            var contactForm = document.getElementById('contact-form');
+            var successMessage = document.getElementById('success-message');
+
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                var submitButton = contactForm.querySelector('button[type="submit"]');
+                submitButton.disabled = true;
+                submitButton.textContent = 'Sending...';
+
+                emailjs.sendForm('service_ak3rxk1', 'template_wiuzc5o', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                        contactForm.reset();
+                        contactForm.style.display = 'none';
+                        successMessage.style.display = 'block';
+
+                        setTimeout(function() {
+                            successMessage.style.display = 'none';
+                            contactForm.style.display = 'block';
+                            submitButton.disabled = false;
+                            submitButton.textContent = 'Submit';
+                        }, 5000);
+                    }, function(error) {
+                        // console.log('FAILED...', error);
+                        // alert('Failed to send the message. Please try again later.');
+                        submitButton.disabled = false;
+                        submitButton.textContent = 'Submit';
+                    });
+            });
         });
-    })();
     </script>
 </head>
 <body>
@@ -278,13 +312,17 @@
             <div class="contact-form-content-container">
                 <h1 class="section-title">Contact Us</h1>
                 <div class="contact-form-input-container">
-                    <form>
-                        <input type="text" placeholder="Full Name">
-                        <input type="email" placeholder="Email">
-                        <input type="tel" placeholder="Phone Number">
-                        <textarea placeholder="Message"></textarea>
+                    <form id="contact-form">
+                        <input type="text" name="from_name" placeholder="Full Name" required>
+                        <input type="email" name="from_email" placeholder="Email" required>
+                        <input type="tel" name="from_phone" placeholder="Phone Number">
+                        <textarea name="message" placeholder="Message" required></textarea>
                         <button type="submit">Submit</button>
                     </form>
+
+                    <div id="success-message" class="success-message" style="display: none;">
+                        <p>Thanks for reaching out. We'll contact you as soon as possible.</p>
+                    </div>
                 </div>
             </div>
             <img class="contact-man" src="assets/images/contact-man.svg" alt="Contact Man"/>
