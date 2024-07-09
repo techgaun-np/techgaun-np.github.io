@@ -225,6 +225,10 @@ nav ul li a {
     flex: 0 0 40%;
 }
 
+.service-item h3 {
+    color: #ff8502;
+}
+
 .service-item:nth-child(odd) {
     margin-left: 0;
 }
@@ -546,6 +550,16 @@ nav ul li a {
     border-radius: 4px;
     font-size: 16px;
     width: 134px;
+}
+
+.contact .success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
 }
 
 .footer-bg-container {
