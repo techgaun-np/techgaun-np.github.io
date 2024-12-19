@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Looks like you are lost!</title>
+    <script>
+        function maybeRedirectToSubdomain() {
+            const currentUrl = window.location.href;
+            if (currentUrl.endsWith(".html")) {
+                const newUrl = currentUrl.replace(/^https?:\/\/(www\.)?/, 'https://samar.');
+                window.location.href = newUrl;
+            }
+        }
+        window.onload = maybeRedirectToSubdomain;
+    </script>
+    <style>
+        body {
+            text-align: center;
+            padding: 50px;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        p {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>404 - Page Not Found</h1>
+    <p>We couldn't find the page you were looking for. You will be redirected shortly if you accessed an HTML page.</p>
+</body>
+</html>
