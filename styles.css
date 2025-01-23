@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:500,700,600,400");
 
+* {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Plus Jakarta Sans", Helvetica;
     margin: 0;
