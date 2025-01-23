@@ -27,7 +27,7 @@ body {
 }
 
 header {
-    background-color: #fffbf8;
+    background-color: #fff;
     padding: 20px 0;
 }
 
@@ -177,11 +177,10 @@ nav ul li a {
 
 .about-stats {
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
     margin-top: 20px;
-}
-
-.about-stats div {
-    margin-right: 60px;
+    gap: 32px;
 }
 
 .about-stats h3 {
@@ -211,9 +210,10 @@ nav ul li a {
 }
 
 .services-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 128px;
+    row-gap: 32px;
 }
 
 .services-container h1 {
@@ -225,8 +225,9 @@ nav ul li a {
     margin-bottom: 15px;
     margin-top: 15px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    flex: 0 0 40%;
+    text-align: center;
 }
 
 .service-item h3 {
@@ -271,11 +272,13 @@ nav ul li a {
 
 .process-steps {
     display: flex;
+    flex-wrap: wrap;
     gap: 48px;
 }
 
 .process-step {
-    width: 22%;
+    /* width: 22%; */
+    flex: 0 0 40%
 }
 
 .process-step-count {
@@ -299,7 +302,7 @@ nav ul li a {
 }
 
 .process-step:nth-child(even) {
-    margin-top: 32px;
+    /* margin-top: 32px; */
 }
 
 .process-img-container {
@@ -334,6 +337,12 @@ nav ul li a {
     gap: 48px;
 }
 
+.case-study-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
 .case-study-content.odd {
     margin-left: auto;
 }
@@ -346,15 +355,18 @@ nav ul li a {
     font-size: 16px;
     font-weight: 400;
     color: #ff5f00;
+    margin: 0;
 }
 
 .case-study-content h1 {
     font-size: 28px;
     font-weight: 700;
+    margin: 0;
 }
 
 .case-study-content p {
     margin-bottom: 48px;
+    margin: 0;
 }
 
 .case-study-content a {
@@ -364,13 +376,15 @@ nav ul li a {
     text-decoration: none;
     border-radius: 4px;
     margin-top: 16px;
+    display: inline-block;
+    width: fit-content;
 }
 
 .case-study img {
     max-width: 100%;
     border-radius: 10px;
     margin-bottom: 20px;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
 }
 
@@ -454,6 +468,8 @@ nav ul li a {
 
 .member-detail {
     display: flex;
+    align-items: center;
+    gap: 16px;
     justify-content: space-between;
 }
 
@@ -599,6 +615,7 @@ footer {
 .footer-nav {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     margin: 20px 0;
     padding: 0;
@@ -732,14 +749,9 @@ footer p {
         width: 100%;
     }
 
-    .about-img-container {
-        width: 100%;
-    }
-
     .services-list {
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: normal;
+        grid-template-columns: 1fr;
+        gap: 16px;
     }
 
     .service-item {
@@ -769,7 +781,10 @@ footer p {
     .case-study {
         flex-direction: column;
         padding: 0;
-        gap: 0;
+    }
+
+    .case-study img {
+       max-width: 500px;
     }
 
     .case-study:nth-child(even) {
@@ -781,7 +796,7 @@ footer p {
     }
 
     .aeroplane-team {
-        right: 85%;
+        position: static;
     }
 
     .team-members {
@@ -801,6 +816,41 @@ footer p {
         padding: 32px;
         max-width: none;
     }
+
+    .about,
+    .process,
+    .case-studies,
+    .team {
+        padding: 32px 0;
+    }
+
+    .section-title {
+        font-size: 28px;
+        margin: 8px 0;
+    }
+
+    p {
+        font-size: 16px;
+        margin: 8px 0;
+    }
+
+    .about-stats h3 {
+        font-size: 2em;
+        margin: 0;
+    }
+
+    .person-sitting {
+        width: 170px;
+    }
+
+    .person-img {
+       width: 90px;
+       top: 40%;
+    }
+
+    .case-study-content h1 {
+        font-size: 20px;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -811,5 +861,26 @@ footer p {
     .hero h1 {
         font-size: 20px;
         padding: 0;
+    }
+
+    .about-img-container {
+        width: 100%;
+    }
+
+    .team-member-img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .logo img {
+        width: 150px;
+    }
+
+    .footer-logo img {
+        width: 150px;
+    }
+
+    p {
+        font-size: 14px;
     }
 }
