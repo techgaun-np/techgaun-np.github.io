@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="assets/images/techgaun-logo-small.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techgaun - We Build Awesome Software Products To Help You Build Awesome Business</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript">
+
+        document.addEventListener("click", function (e) {
+            var navIcon = document.getElementById("nav-icon");
+            var mainNav = document.getElementById("main-nav");
+
+            if (navIcon.contains(e.target)) {
+                toggleNav(mainNav);
+            } else {
+                closeNav(mainNav);
+            }
+        });
+
+        function closeNav(element) {
+            element.className = "main-nav";
+        }
+
+        function toggleNav(element) {
+            if (element.className === "main-nav") {
+                element.className += " responsive";
+            } else {
+                closeNav(element);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="assets/images/logo.svg" alt="Techgaun Logo">
+            </div>
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li><a href="/#home">Home</a></li>
+                    <li><a href="/#about">About</a></li>
+                    <li><a href="/#services">Services</a></li>
+                    <li><a href="https://devtools.techgaun.com" target="_blank">Dev Tools</a></li>
+                    <li><a href="/#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="get-started-container">
+                <a href="#contact" class="get-started">Get Started</a>
+            </div>
+            <a href="javascript:void(0);" id="nav-icon" class="nav-icon">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </header>
+
+    <section class="footer-img">
+        <div class="container footer-bg-container">
+            <img src="assets/images/footer.svg" alt="Footer Background" />
+        </div>
+    </section>
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <img src="assets/images/footer-logo.svg" alt="Techgaun Logo">
+            </div>
+            <ul class="footer-nav">
+                <li><a href="/#home">About</a></li>
+                <li><a href="/#services">Services</a></li>
+                <li><a href="/#case-studies">Case Study</a></li>
+            </ul>
+            <div class="social-media">
+                <a href="https://www.linkedin.com/company/techgaun" target="_blank" noopener noreferrer><img
+                        src="assets/images/linkedin-white.svg" alt="LinkedIn"></a>
+                <a href="https://www.github.com/techgaun-np" target="_blank" noopener noreferrer><img
+                        src="assets/images/github-white.svg" alt="Github"></a>
+                <a href="mailto:info@techgaun.com"><img src="assets/images/email.svg" alt="Email"></a>
+            </div>
+            <p>© 2024 Techgaun. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
