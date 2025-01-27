@@ -6,77 +6,11 @@
     <link rel="icon" type="image/png" href="assets/images/techgaun-logo-small.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Techgaun - We Build Awesome Software Products To Help You Build Awesome Business</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script type="text/javascript">
-
-        document.addEventListener("click", function (e) {
-            var navIcon = document.getElementById("nav-icon");
-            var mainNav = document.getElementById("main-nav");
-
-            if (navIcon.contains(e.target)) {
-                toggleNav(mainNav);
-            } else {
-                closeNav(mainNav);
-            }
-        });
-
-        function closeNav(element) {
-            element.className = "main-nav";
-        }
-
-        function toggleNav(element) {
-            if (element.className === "main-nav") {
-                element.className += " responsive";
-            } else {
-                closeNav(element);
-            }
-        }
-    </script>
-
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
     <script type="text/javascript" src="/script.js"></script>
-    <script type="text/javascript">
-        (function () {
-            emailjs.init({
-                publicKey: "-j9iqbK7XwOzki-g6",
-            });
-        })();
-
-        document.addEventListener("DOMContentLoaded", function () {
-            // Contact form submission section
-            var contactForm = document.getElementById('contact-form');
-            var successMessage = document.getElementById('success-message');
-
-            contactForm.addEventListener('submit', function (event) {
-                event.preventDefault();
-
-                var submitButton = contactForm.querySelector('button[type="submit"]');
-                submitButton.disabled = true;
-                submitButton.textContent = 'Sending...';
-
-                emailjs.sendForm('service_008lxmj', 'template_wiuzc5o', this)
-                    .then(function () {
-                        contactForm.reset();
-                        // contactForm.style.display = 'none';
-                        successMessage.style.display = 'block';
-
-                        setTimeout(function () {
-                            successMessage.style.display = 'none';
-                            // contactForm.style.display = 'block';
-                            submitButton.disabled = false;
-                            submitButton.textContent = 'Submit';
-                        }, 5000);
-                    }, function (error) {
-                        // console.log('FAILED...', error);
-                        // alert('Failed to send the message. Please try again later.');
-                        submitButton.disabled = false;
-                        submitButton.textContent = 'Submit';
-                    });
-            });
-        });
-    </script>
 </head>
 
 <body>
@@ -91,6 +25,7 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
+                    <li><a href="/blogs.html">Blogs</a></li>
                     <li><a href="https://devtools.techgaun.com" target="_blank">Dev Tools</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -271,7 +206,10 @@
                         <p>We have built a suite of online tools for developers to help them with their day-to-day
                             activities. We have made these tools to be used by developers for developers, all in one
                             place and free to use.</p>
-                        <a href="https://devtools.techgaun.com" target="_blank" noopener noreferrer>Use Dev Tools</a>
+                        <div class="case-study-content-link-container">
+                            <a href="https://devtools.techgaun.com" target="_blank" noopener noreferrer>Use Dev
+                                Tools</a>
+                        </div>
                     </div>
                     <img src="assets/images/case-study-devtools.png" alt="Dev Tools">
                 </div>
@@ -281,7 +219,8 @@
                         <h5>Mobile App</h5>
                         <h1>Multi-family Resident Experience</h1>
                         <p>React Native mobile application for multi-family residential communities to improve the
-                            resident experience by providing a seamless way to report maintenance issues, pay rent, and
+                            resident experience by providing a seamless way to report maintenance issues, pay rent,
+                            and
                             communicate with the property management team.</p>
                         <!-- <a href="#">View Case Study</a> -->
                     </div>
@@ -291,7 +230,8 @@
                         <h5>Web App</h5>
                         <h1>Crowdfunding Platform</h1>
                         <p>Complex crowdfunding platform integrated with Stripe and support for complex crowdfunding
-                            requirements with features like subscription, rewards, and tiers and lifecycle management
+                            requirements with features like subscription, rewards, and tiers and lifecycle
+                            management
                             throughout the campaign.</p>
                         <!-- <a href="#">View Case Study</a> -->
                     </div>
@@ -303,19 +243,26 @@
                         <h5>Ancestree</h5>
                         <h1>Genealogy as a Service</h1>
                         <p>Ancestree is a modern multi-lingual genealogy software as a service currently on private
-                            beta, proudly built by our engineering team. Schedule a demo with our team to explore the
+                            beta, proudly built by our engineering team. Schedule a demo with our team to explore
+                            the
                             features for your family tree.</p>
-                        <a href="#contact">Schedule Demo</a>
+                        <div class="case-study-content-link-container">
+                            <a href="#contact">Schedule Demo</a>
+                        </div>
                     </div>
                 </div>
                 <div class="case-study">
                     <div class="case-study-content even">
                         <h5>Open Source</h5>
                         <h1>Build for Nepal</h1>
-                        <p>Build for Nepal is an initiative and effort to creating open datasets and build open source
-                            softwares for Nepal. Techgaun Nepal acts as a facilitator but its really the community that
+                        <p>Build for Nepal is an initiative and effort to creating open datasets and build open
+                            source
+                            softwares for Nepal. Techgaun Nepal acts as a facilitator but its really the community
+                            that
                             gives the life to this open source initiative.</p>
-                        <a href="https://github.com/build-for-nepal" target="_blank">Visit Github</a>
+                        <div class="case-study-content-link-container">
+                            <a href="https://github.com/build-for-nepal" target="_blank">Visit Github</a>
+                        </div>
                     </div>
                     <img src="assets/images/case-study-build-for-nepal.png" alt="Build for Nepal">
                 </div>

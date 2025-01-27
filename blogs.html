@@ -6,33 +6,11 @@
     <link rel="icon" type="image/png" href="assets/images/techgaun-logo-small.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Techgaun - We Build Awesome Software Products To Help You Build Awesome Business</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/blog.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script type="text/javascript">
-
-        document.addEventListener("click", function (e) {
-            var navIcon = document.getElementById("nav-icon");
-            var mainNav = document.getElementById("main-nav");
-
-            if (navIcon.contains(e.target)) {
-                toggleNav(mainNav);
-            } else {
-                closeNav(mainNav);
-            }
-        });
-
-        function closeNav(element) {
-            element.className = "main-nav";
-        }
-
-        function toggleNav(element) {
-            if (element.className === "main-nav") {
-                element.className += " responsive";
-            } else {
-                closeNav(element);
-            }
-        }
-    </script>
+    <script type="text/javascript" src="/script.js"></script>
+    <script type="text/javascript" src="/blog.js"></script>
 </head>
 
 <body>
@@ -47,6 +25,7 @@
                     <li><a href="/#home">Home</a></li>
                     <li><a href="/#about">About</a></li>
                     <li><a href="/#services">Services</a></li>
+                    <li><a href="/blogs.html">Blogs</a></li>
                     <li><a href="https://devtools.techgaun.com" target="_blank">Dev Tools</a></li>
                     <li><a href="/#contact">Contact</a></li>
                 </ul>
@@ -59,6 +38,63 @@
             </a>
         </div>
     </header>
+
+    <section class="blog-title-section">
+        <div class="container">
+            <h1 class="section-title">Techgaun Blog</h1>
+            <p>
+                Articles to inspire and educate you on technology, business and software development.
+            </p>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="primary-blog-container">
+            <div class="primary-blog-content">
+                <h2 class="primary-blog-title">How to build a successful software product?</h2>
+
+                <p class="primary-blog-description">
+                    Building a successful software product is a challenging task. It requires a lot of planning...
+                </p>
+
+                <a href="#">Read More</a>
+            </div>
+
+            <img src="assets/images/blogs/primary-blog.avif" alt="Primary Blog Image" />
+        </div>
+    </section>
+
+    <section class="blog-list container" id="blog-list"></section>
+
+    <section class="container load-more-container">
+        <button id="load-more" class="load-more-btn">Load More</button>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-form-container">
+                <img class="contact-plane" src="assets/images/contact-us-plane.svg" alt="Contact Plane" />
+                <div class="contact-form-content-container">
+                    <h1 class="section-title">Contact Us</h1>
+                    <div class="contact-form-input-container">
+                        <form id="contact-form">
+                            <input type="text" name="from_name" placeholder="Full Name" required>
+                            <input type="email" name="from_email" placeholder="Email" required>
+                            <input type="tel" name="from_phone" placeholder="Phone Number">
+                            <textarea name="message" placeholder="Message" required></textarea>
+                            <button type="submit">Submit</button>
+
+                            <div id="success-message" class="success-message" style="display: none;">
+                                <p>Thanks for reaching out. We'll contact you as soon as possible.</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <img class="contact-man" src="assets/images/contact-man.svg" alt="Contact Man" />
+            </div>
+        </div>
+    </section>
 
     <section class="footer-img">
         <div class="container footer-bg-container">
@@ -86,6 +122,9 @@
             <p>© 2024 Techgaun. All rights reserved.</p>
         </div>
     </footer>
+    <button class="scroll-top" id="scroll-top" onclick="scrollToTop()">
+        <img src="assets/images/arrow-up.png" alt="arrow-up" />
+    </button>
 </body>
 
 </html>
