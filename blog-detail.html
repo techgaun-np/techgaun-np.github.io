@@ -3,16 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/png" href="assets/images/techgaun-logo-small.png" />
+    <link rel="icon" type="image/png" href="../assets/images/techgaun-logo-small.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Techgaun - We Build Awesome Software Products To Help You Build Awesome Business</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/blog.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/blog.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Remove or update script.js if it's needed -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript" src="/assets/js/script.js"></script>
-    <script type="text/javascript" src="assets/js/blog-data.js" defer></script>
-    <script type="text/javascript" src="assets/js/blog.js" defer></script>
+
+    <!-- Load blog-data.js first with defer attribute -->
+    <script type="text/javascript" src="/assets/js/blog-data.js" defer></script>
+    <!-- Load blog-detail.js after with defer attribute -->
+    <script type="text/javascript" src="/assets/js/blog-detail.js" defer></script>
 </head>
 
 <body>
@@ -20,16 +24,16 @@
     <header>
         <div class="container">
             <div class="logo">
-                <img src="assets/images/logo.svg" alt="Techgaun Logo">
+                <img src="../assets/images/logo.svg" alt="Techgaun Logo">
             </div>
             <nav class="main-nav" id="main-nav">
                 <ul>
-                    <li><a href="/#home">Home</a></li>
-                    <li><a href="/#about">About</a></li>
-                    <li><a href="/#services">Services</a></li>
-                    <li><a href="/blogs.html">Blogs</a></li>
+                    <li><a href="../#home">Home</a></li>
+                    <li><a href="../#about">About</a></li>
+                    <li><a href="../#services">Services</a></li>
+                    <li><a href="../blogs.html">Blogs</a></li>
                     <li><a href="https://devtools.techgaun.com" target="_blank">Dev Tools</a></li>
-                    <li><a href="/#contact">Contact</a></li>
+                    <li><a href="../#contact">Contact</a></li>
                 </ul>
             </nav>
             <div class="get-started-container">
@@ -41,42 +45,37 @@
         </div>
     </header>
 
-    <section class="blog-title-section">
-        <div class="container">
-            <h1 class="section-title">Techgaun Blog</h1>
-            <p>
-                Articles to inspire and educate you on technology, business and software development.
+    <section class="blog-content-section container">
+        <div class="blog-detail-heading">
+            <h1 class="section-title" id="blog-title">
+                <!-- Blog title will be inserted here -->
+            </h1>
+
+            <p class="blog-date" id="blog-date">
+                <!-- Blog date will be inserted here -->
             </p>
         </div>
-    </section>
 
-    <section class="container">
-        <div class="primary-blog-container">
-            <div class="primary-blog-content">
-                <h2 class="primary-blog-title">How to build a successful software product?</h2>
+        <img class="blog-image" id="blog-image" src="" alt="Blog Image" />
 
-                <p class="primary-blog-description">
-                    Building a successful software product is a challenging task. It requires a lot of planning...
-                </p>
-
-                <a href="blog-detail.html?blogId=1  ">Read More</a>
-            </div>
-
-            <img src="assets/images/blogs/primary-blog.avif" alt="Primary Blog Image" />
+        <div class="blog-detail-content" id="blog-content">
+            <!-- Blog content will be inserted here -->
         </div>
     </section>
 
-    <section class="blog-list container" id="blog-list"></section>
-
-    <section class="container load-more-container">
-        <button id="load-more" class="load-more-btn">Load More</button>
+    <!-- Other Blogs Section -->
+    <section class="other-blogs container">
+        <h2 class="section-title">Other Blogs</h2>
+        <div class="other-blogs-grid" id="other-blogs-container">
+            <!-- Other blog cards will be inserted here -->
+        </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
             <div class="contact-form-container">
-                <img class="contact-plane" src="assets/images/contact-us-plane.svg" alt="Contact Plane" />
+                <img class="contact-plane" src="../assets/images/contact-us-plane.svg" alt="Contact Plane" />
                 <div class="contact-form-content-container">
                     <h1 class="section-title">Contact Us</h1>
                     <div class="contact-form-input-container">
@@ -93,21 +92,21 @@
                         </form>
                     </div>
                 </div>
-                <img class="contact-man" src="assets/images/contact-man.svg" alt="Contact Man" />
+                <img class="contact-man" src="../assets/images/contact-man.svg" alt="Contact Man" />
             </div>
         </div>
     </section>
 
     <section class="footer-img">
         <div class="container footer-bg-container">
-            <img src="assets/images/footer.svg" alt="Footer Background" />
+            <img src="../assets/images/footer.svg" alt="Footer Background" />
         </div>
     </section>
     <!-- Footer Section -->
     <footer>
         <div class="container">
             <div class="footer-logo">
-                <img src="assets/images/footer-logo.svg" alt="Techgaun Logo">
+                <img src="../assets/images/footer-logo.svg" alt="Techgaun Logo">
             </div>
             <ul class="footer-nav">
                 <li><a href="/#home">About</a></li>
@@ -116,16 +115,16 @@
             </ul>
             <div class="social-media">
                 <a href="https://www.linkedin.com/company/techgaun" target="_blank" noopener noreferrer><img
-                        src="assets/images/linkedin-white.svg" alt="LinkedIn"></a>
+                        src="../assets/images/linkedin-white.svg" alt="LinkedIn"></a>
                 <a href="https://www.github.com/techgaun-np" target="_blank" noopener noreferrer><img
-                        src="assets/images/github-white.svg" alt="Github"></a>
-                <a href="mailto:info@techgaun.com"><img src="assets/images/email.svg" alt="Email"></a>
+                        src="../assets/images/github-white.svg" alt="Github"></a>
+                <a href="mailto:info@techgaun.com"><img src="../assets/images/email.svg" alt="Email"></a>
             </div>
             <p>© 2024 Techgaun. All rights reserved.</p>
         </div>
     </footer>
     <button class="scroll-top" id="scroll-top" onclick="scrollToTop()">
-        <img src="assets/images/arrow-up.png" alt="arrow-up" />
+        <img src="../assets/images/arrow-up.png" alt="arrow-up" />
     </button>
 </body>
 
