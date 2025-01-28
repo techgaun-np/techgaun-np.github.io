@@ -189,8 +189,8 @@ document.addEventListener("DOMContentLoaded", function () {
             submitButton.disabled = true;
             submitButton.textContent = 'Sending...';
 
-            const SERVICE_ID = "service_ou0uexd";
-            const TEMPLATE_ID = "template_q9t2gau";
+            const SERVICE_ID = "service_008lxmj";
+            const TEMPLATE_ID = "template_rodhwgv";
 
             try {
                 // Create template parameters
