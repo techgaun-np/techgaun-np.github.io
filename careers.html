@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="assets/images/techgaun-logo-small.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blogs - Techgaun - We Build Awesome Software Products To Help You Build Awesome Business</title>
+    <title>Careers - Techgaun - We Build Awesome Software Products To Help You Build Awesome Business</title>
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/blog.css">
+    <link rel="stylesheet" href="assets/css/career.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
     <script type="text/javascript" src="/assets/js/script.js"></script>
-    <script type="text/javascript" src="assets/js/blog-data.js" defer></script>
-    <script type="text/javascript" src="assets/js/blog.js" defer></script>
+    <script type="text/javascript" src="/assets/js/career-data.js"></script>
 </head>
 
 <body>
@@ -42,36 +42,16 @@
         </div>
     </header>
 
-    <section class="blog-title-section">
-        <div class="container">
-            <h1 class="section-title">Techgaun Blog</h1>
-            <p>
-                Articles to inspire and educate you on technology, business and software development.
-            </p>
-        </div>
-    </section>
+    <main class="careers-container">
+        <section class="careers-hero">
+            <h1>Join Our Team</h1>
+            <p>We're looking for talented individuals to help us build amazing products</p>
+        </section>
 
-    <section class="container">
-        <div class="primary-blog-container">
-            <div class="primary-blog-content">
-                <h2 class="primary-blog-title">How to build a successful software product?</h2>
-
-                <p class="primary-blog-description">
-                    Building a successful software product is a challenging task. It requires a lot of planning...
-                </p>
-
-                <a href="blog-detail.html?blogId=1  ">Read More</a>
-            </div>
-
-            <img src="assets/images/blogs/primary-blog.avif" alt="Primary Blog Image" />
-        </div>
-    </section>
-
-    <section class="blog-list container" id="blog-list"></section>
-
-    <section class="container load-more-container">
-        <button id="load-more" class="load-more-btn">Load More</button>
-    </section>
+        <section class="careers-list" id="careers-list">
+            <!-- Content will be dynamically populated -->
+        </section>
+    </main>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
@@ -98,7 +78,6 @@
             </div>
         </div>
     </section>
-
     <section class="footer-img">
         <div class="container footer-bg-container">
             <img src="assets/images/footer.svg" alt="Footer Background" />
@@ -111,9 +90,9 @@
                 <img src="assets/images/footer-logo.svg" alt="Techgaun Logo">
             </div>
             <ul class="footer-nav">
-                <li><a href="/#home">About</a></li>
-                <li><a href="/#services">Services</a></li>
-                <li><a href="/#case-studies">Case Study</a></li>
+                <li><a href="#home">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#case-studies">Case Study</a></li>
             </ul>
             <div class="social-media">
                 <a href="https://www.linkedin.com/company/techgaun" target="_blank" noopener noreferrer><img
@@ -125,9 +104,13 @@
             <p>© 2024 Techgaun. All rights reserved.</p>
         </div>
     </footer>
+
     <button class="scroll-top" id="scroll-top" onclick="scrollToTop()">
         <img src="assets/images/arrow-up.png" alt="arrow-up" />
     </button>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/careers.js"></script>
 </body>
 
 </html>

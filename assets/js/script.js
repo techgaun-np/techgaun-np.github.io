@@ -1,4 +1,3 @@
-
 //scroll to top
 window.onscroll = function () {
     var scrollButton = document.getElementById('scroll-top');
