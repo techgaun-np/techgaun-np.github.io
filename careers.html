@@ -20,7 +20,9 @@
     <header>
         <div class="container">
             <div class="logo">
-                <img src="assets/images/logo.svg" alt="Techgaun Logo">
+                <a href="/">
+                    <img src="assets/images/logo.svg" alt="Techgaun Logo">
+                </a>
             </div>
             <nav class="main-nav" id="main-nav">
                 <ul>
@@ -87,7 +89,9 @@
     <footer>
         <div class="container">
             <div class="footer-logo">
-                <img src="assets/images/footer-logo.svg" alt="Techgaun Logo">
+                <a href="/">
+                    <img src="assets/images/footer-logo.svg" alt="Techgaun Logo">
+                </a>
             </div>
             <ul class="footer-nav">
                 <li><a href="#home">About</a></li>
@@ -111,6 +115,45 @@
 
     <script src="assets/js/script.js"></script>
     <script src="assets/js/careers.js"></script>
+
+    <!-- Add this right before the closing </body> tag -->
+    <div id="apply-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Apply for <span id="job-title-display"></span></h2>
+                <span class="close-modal">&times;</span>
+            </div>
+            <form id="job-application-form">
+                <input type="hidden" name="job_title" id="job-title-input">
+                <input type="hidden" name="department" id="department-input">
+
+                <div class="form-group">
+                    <input type="text" name="from_name" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="from_email" placeholder="Email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+                        title="Please enter a valid email address" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="from_phone" placeholder="Phone Number (e.g., +977-9812345678)"
+                        pattern="(\+977-?)?[0-9]{10}" title="Please enter a valid phone number">
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="Cover Letter" required></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="url" name="resume" id="resume"
+                        placeholder="Resume URL (e.g. https://drive.google.com/...)" title="Please enter a valid URL"
+                        required>
+                </div>
+                <button type="submit">Submit Application</button>
+
+                <div id="application-success-message" class="success-message" style="display: none;">
+                    <p>Thanks for applying. We'll review your application and get back to you soon.</p>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>

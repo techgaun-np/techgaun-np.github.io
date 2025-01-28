@@ -198,3 +198,240 @@
         font-size: 0.95rem;
     }
 }
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+    padding: 1rem;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 2rem auto;
+    padding: 0;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid #eee;
+}
+
+.modal-content h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    flex: 1;
+}
+
+.close-modal {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+    padding: 0.5rem;
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    line-height: 1;
+}
+
+#job-application-form {
+    padding: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+#job-application-form input[type="text"],
+#job-application-form input[type="email"],
+#job-application-form input[type="tel"],
+#job-application-form input[type="url"],
+#job-application-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+#job-application-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+#job-application-form button[type="submit"] {
+    margin-top: 1rem;
+    background-color: #ff8502;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+#job-application-form button[type="submit"]:hover {
+    background-color: #ffad55;
+}
+
+#job-application-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #4b5563;
+}
+
+#job-application-form input[type="file"] {
+    width: 100%;
+    padding: 0.5rem 0;
+}
+
+/* Add these styles to your existing CSS */
+.success-message {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+#job-application-form .success-message p {
+    margin: 0;
+    color: white;
+}
+
+/* Update responsive styles */
+@media (max-width: 768px) {
+    .modal {
+        padding: 0.5rem;
+    }
+
+    .modal-content {
+        margin: 1rem auto;
+    }
+
+    .modal-header {
+        padding: 1rem 1.5rem;
+    }
+
+    .modal-content h2 {
+        font-size: 1.25rem;
+    }
+
+    #job-application-form {
+        padding: 1.5rem;
+    }
+
+    .form-group {
+        margin-bottom: 0.875rem;
+    }
+
+    #job-application-form input[type="text"],
+    #job-application-form input[type="email"],
+    #job-application-form input[type="tel"],
+    #job-application-form input[type="url"],
+    #job-application-form textarea {
+        padding: 0.7rem;
+        font-size: 0.95rem;
+    }
+
+    #job-application-form button[type="submit"] {
+        padding: 0.75rem 1rem;
+    }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+    .modal-header {
+        padding: 1rem;
+    }
+
+    #job-application-form {
+        padding: 1rem;
+    }
+
+    .modal-content h2 {
+        font-size: 1.125rem;
+    }
+}
+
+/* Add these styles */
+.form-hint {
+    display: block;
+    color: #666;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+#job-application-form input[type="url"] {
+    word-break: break-all;
+}
+
+/* Add validation styles */
+#job-application-form input.invalid {
+    border-color: #dc3545;
+    background-color: #fff8f8;
+}
+
+#job-application-form input:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+#job-application-form input.invalid:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.25);
+}
+
+/* Add tooltip for validation messages */
+#job-application-form input:invalid {
+    background-position: right 8px center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+}
+
+#job-application-form input.invalid:hover::after {
+    content: attr(title);
+    position: absolute;
+    background: #dc3545;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-top: -40px;
+    margin-left: 10px;
+}
