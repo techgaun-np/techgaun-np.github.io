@@ -22,7 +22,7 @@ window.careerData = [
             },
             {
                 title: 'Backend Engineer',
-                location: 'New York',
+                location: 'Kathmandu, Nepal',
                 experience: '3+ years experience',
                 description: [
                     'Design and implement scalable backend services and APIs',
@@ -45,7 +45,7 @@ window.careerData = [
         jobs: [
             {
                 title: 'UI/UX Designer',
-                location: 'Remote',
+                location: 'Kathmandu, Nepal',
                 experience: '3+ years experience',
                 description: [
                     'Create user-centered designs by understanding business requirements',
@@ -68,7 +68,7 @@ window.careerData = [
         jobs: [
             {
                 title: 'Digital Marketing Manager',
-                location: 'London',
+                location: 'Kathmandu, Nepal',
                 experience: '4+ years experience',
                 description: [
                     'Develop and execute digital marketing strategies',
@@ -85,7 +85,7 @@ window.careerData = [
             },
             {
                 title: 'Content Strategist',
-                location: 'Remote',
+                location: 'Kathmandu, Nepal',
                 experience: '2+ years experience',
                 description: [
                     'Develop content strategy aligned with business goals',
