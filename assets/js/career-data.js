@@ -5,7 +5,7 @@ window.careerData = [
         jobs: [
             {
                 title: 'Senior Frontend Developer',
-                location: 'Remote / San Francisco',
+                location: 'Kathmandu, Nepal',
                 experience: '5+ years experience',
                 description: [
                     'Lead frontend development of complex web applications using React.js and modern JavaScript',
