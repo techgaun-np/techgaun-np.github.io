@@ -56,6 +56,7 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #333;
+    font-size: 14px;
 }
 
 .nav-icon {
@@ -755,7 +756,7 @@ footer p {
     }
 
     .get-started-container {
-        width: auto;
+        width: none;
     }
 
     .hero h1 {
