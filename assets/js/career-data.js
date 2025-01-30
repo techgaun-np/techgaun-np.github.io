@@ -39,6 +39,7 @@ window.careerData = [
                     'Strong knowledge of RESTful APIs and microservices',
                     'Experience with various SQL and NoSQL databases',
                     'Understanding of cloud services (AWS/GCP/Azure)',
+                    'You have a special place in heart for CI/CD and automation',
                     'You know what acronyms such as KISS, YAGNI, SOLID, and DRY mean and how to apply them',
                     'You like to be challenged and take ownership of your work',
                     'Experience with any other OOP or functional programming language is a plus'
