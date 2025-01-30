@@ -11,6 +11,7 @@ window.careerData = [
                     'Develop frontend of complex web applications',
                     'Architect scalable frontend solutions and establish best practices',
                     'Collaborate with UI/UX designers to implement responsive designs',
+                    'Turn beautiful designs into beautiful code',
                     'Mentor junior developers and conduct code reviews'
                 ],
                 requirements: [
