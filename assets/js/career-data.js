@@ -62,7 +62,7 @@ window.careerData = [
                     'Collaborate with developers to ensure proper implementation'
                 ],
                 requirements: [
-                    '3+ years of UI/UX design experience',
+                    '2+ years of UI/UX design experience',
                     'Proficiency in Figma, Adobe XD, Sketch, or similar tools',
                     'Strong portfolio demonstrating user-centric design',
                     'Experience with design systems and component libraries',
