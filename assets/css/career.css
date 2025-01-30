@@ -28,9 +28,19 @@
     color: #333;
 }
 
-.careers-hero p {
-    font-size: 1.2rem;
+.careers-hero p, .careers-hero div {
+    font-size: 1.1rem;
     color: #666;
+}
+
+.careers-core-values {
+    text-align: left;
+    font-size: 1rem;
+}
+
+.careers-hero-text-bottom {
+    margin-top: 2rem;
+    font-size: 1rem;
 }
 
 .department {
