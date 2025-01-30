@@ -4,9 +4,9 @@ window.careerData = [
         title: 'Engineering',
         jobs: [
             {
-                title: 'Senior Frontend Developer',
+                title: 'Mid or Senior Frontend Developer',
                 location: 'Kathmandu, Nepal',
-                experience: '5+ years experience',
+                experience: '3+ years experience',
                 description: [
                     'Lead frontend development of complex web applications using React.js and modern JavaScript',
                     'Architect scalable frontend solutions and establish best practices',
@@ -14,10 +14,11 @@ window.careerData = [
                     'Mentor junior developers and conduct code reviews'
                 ],
                 requirements: [
-                    '5+ years of experience with React.js and modern JavaScript',
+                    '3+ years of experience with React.js and modern JavaScript',
                     'Strong understanding of web performance optimization',
                     'Experience with state management (Redux, Context API)',
-                    'Knowledge of modern build tools and CI/CD practices'
+                    'Knowledge of modern build tools and CI/CD practices',
+                    'Experience with React Native is a big plus'
                 ]
             },
             {
