@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="blog-card-content">
                     <h2 class="blog-card-title">${blog.title}</h2>
                     <p class="blog-card-description">${blog.description}</p>
-                    <a href="blog-detail.html?blogId=${blog.id}" class="read-more">Read More</a>
+                    <a href="blog-detail?blogId=${blog.id}" class="read-more">Read More</a>
                 </div>
             `;
             blogList.appendChild(blogCard);

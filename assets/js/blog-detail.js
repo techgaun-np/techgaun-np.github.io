@@ -18,7 +18,7 @@ function createBlogCard(blog) {
                 <div class="blog-card-content">
                     <h2 class="blog-card-title">${blog.title}</h2>
                     <p class="blog-card-description">${blog.description}</p>
-                    <a href="blog-detail.html?blogId=${blog.id}" class="read-more">Read More</a>
+                    <a href="blog-detail?blogId=${blog.id}" class="read-more">Read More</a>
                 </div>
         </div>
     `;
@@ -45,7 +45,7 @@ function loadBlogContent() {
     try {
         const blogId = getUrlParameter('blogId');
         if (!blogId) {
-            window.location.href = '/blogs.html';
+            window.location.href = '/blogs';
             return;
         }
 
@@ -53,7 +53,7 @@ function loadBlogContent() {
         const blog = window.blogs.find(b => b.id === parseInt(blogId));
 
         if (!blog) {
-            window.location.href = '/blogs.html';
+            window.location.href = '/blogs';
             return;
         }
 
