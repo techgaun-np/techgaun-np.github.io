@@ -21,6 +21,7 @@
 }
 
 .card {
+  position: relative;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -64,6 +65,39 @@
   display: grid;
   gap: 32px;
   grid-template-columns: repeat(3, 1fr);
+}
+
+.social-links {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.social-links a {
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-image 0.3s ease;
+}
+
+.social-links a.github {
+  background-image: url("../../assets/images/github.svg");
+}
+
+.social-links a.linkedin {
+  background-image: url("../../assets/images/linkedin.svg");
+}
+
+.card:hover .social-links a.github {
+  background-image: url("../../assets/images/github-white.svg");
+}
+
+.card:hover .social-links a.linkedin {
+  background-image: url("../../assets/images/linkedin-white.svg");
 }
 
 @media screen and (max-width: 1024px) {
