@@ -7,12 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Careers - Techgaun</title>
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/career.css">
+    <link rel="stylesheet" href="assets/css/team.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
     <script type="text/javascript" src="/assets/js/script.js"></script>
-    <script type="text/javascript" src="/assets/js/career-data.js"></script>
+    <script type="text/javascript" src="/assets/js/teams-data.js"></script>
+
 </head>
 
 <body>
@@ -44,49 +45,10 @@
         </div>
     </header>
 
-    <main class="careers-container">
-        <!-- <section class="careers-hero">
-            <h1>Join Our Team</h1>
-            <div class="careers-hero-text">
-                We're always open for talented individuals to join our team and build amazing products together.
-                At Techgaun Nepal, you will be involved in wide spectrum of projects and technologies.
-                We primarily focus on three main facets: our own product development, open source projects primarily for
-                Nepal,
-                and highest quality consulting and development services for clients.
-            </div>
-            <div class="careers-hero-text">
-                <h2>Our Core Values</h2>
-                <ul class="careers-core-values">
-                    <li>
-                        <strong>Innovation</strong> embracing new ideas and creative solutions while fostering an
-                        environment that encourages experimentation.
-                    </li>
-                    <li>
-                        <strong>Excellence</strong> maintaining high standards of work and continuous improvement,
-                        combined
-                        with an enthusiastic approach to challenges.
-                    </li>
-                    <li>
-                        <strong>Ownership</strong> taking responsibility and initiative in one’s work, encouraging a
-                        sense of
-                        accountability and being proactive and accountable for results.
-                    </li>
-                    <li>
-                        <strong>Playfulness</strong> embracing a playful attitude towards work and finding joy in the
-                        process of
-                        creating and innovating in light-hearted and dynamic atmosphere.
-                    </li>
-                </ul>
-            </div>
-            <div class="careers-hero-text careers-hero-text-bottom">
-                If this is you, we would love to have you on our team. Apply now for any of the positions below or send
-                us an email at <a href="mailto:innovate@techgaun.com">innovate@techgaun.com</a>.
-            </div>
-        </section> -->
-
-        <!-- <section class="careers-list" id="careers-list"> -->
-        <!-- Content will be dynamically populated -->
-        <!-- </section> -->
+    <main>
+        <div class="team-container">
+            <!-- Teams data will be here -->
+        </div>
     </main>
 
     <!-- Contact Section -->
@@ -148,47 +110,9 @@
     </button>
 
     <script src="assets/js/script.js"></script>
-    <script src="assets/js/careers.js"></script>
+    <script src="assets/js/team.js"></script>
 
-    <!-- Add this right before the closing </body> tag -->
-    <div id="apply-modal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Apply for <span id="job-title-display"></span></h2>
-                <span class="close-modal">&times;</span>
-            </div>
-            <form id="job-application-form">
-                <input type="hidden" name="job_title" id="job-title-input">
-                <input type="hidden" name="department" id="department-input">
 
-                <div class="form-group">
-                    <input type="text" name="from_name" placeholder="Full Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" name="from_email" placeholder="Email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
-                        title="Please enter a valid email address" required>
-                </div>
-                <div class="form-group">
-                    <input type="tel" name="from_phone" placeholder="Phone Number (e.g., +977-9812345678)"
-                        pattern="(\+977-?)?[0-9]{10}" title="Please enter a valid phone number">
-                </div>
-                <div class="form-group">
-                    <textarea name="message"
-                        placeholder="Cover Letter or alternatives such as LinkedIn, Github, etc. (optional)"></textarea>
-                </div>
-                <div class="form-group">
-                    <input type="url" name="resume" id="resume"
-                        placeholder="Resume URL (e.g. https://drive.google.com/...)" title="Please enter a valid URL"
-                        required>
-                </div>
-                <button type="submit">Submit Application</button>
-
-                <div id="application-success-message" class="success-message" style="display: none;">
-                    <p>Thanks for applying. We'll review your application and get back to you soon.</p>
-                </div>
-            </form>
-        </div>
-    </div>
 </body>
 
 </html>

@@ -1,23 +1,27 @@
-import { teamData } from "./teams-data.js";
+document.addEventListener("DOMContentLoaded", function () {
+  const teamContainer = document.querySelector(".team-container");
 
-export function renderTeam(containerId) {
-  const teamContainer = document.getElementById(containerId);
-  if (!teamContainer) return;
-
-  teamData.forEach((member) => {
-    const memberCard = `
-      <div class="team-member">
-        <img src="${member.image}" alt="${member.name}" class="team-img">
-        <h3>${member.name}</h3>
-        <p>${member.role}</p>
-        <p>${member.description}</p>
-        <div class="social-links">
-          <a href="${member.socialLinks.reddit}" target="_blank">Reddit</a>
-          <a href="${member.socialLinks.facebook}" target="_blank">Facebook</a>
-          <a href="${member.socialLinks.github}" target="_blank">GitHub</a>
-        </div>
+  if (teamContainer && window.teamData) {
+    const teamHTML = `
+    <div class="team-container-wrapper">
+          <h2 class="team-heading">Meet Our Talented Team</h2>
+          <p class="team-desc">Our team is a diverse group of experts who bring a wide range of skills, from creative design to technical development, strategic planning, and problem-solving. Together, we collaborate to turn ideas into innovative solutions that drive our success.</p>
+          <div class="grid">
+              ${window.teamData
+                .map(
+                  (member) => `
+                          <div class="card">
+                              <img src="${member.image}" alt="${member.name}" class="team-img">
+                              <h3>${member.name}</h3>
+                              <p class="team-role">${member.role}</p>
+                              <p class="team-info">${member.description}</p>
+                          </div>
+                      `
+                )
+                .join("")}
+          </div>
       </div>
-    `;
-    teamContainer.innerHTML += memberCard;
-  });
-}
+      `;
+    teamContainer.innerHTML = teamHTML;
+  }
+});
