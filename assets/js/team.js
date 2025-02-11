@@ -3,40 +3,104 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (teamContainer && window.teamData) {
     const teamHTML = `
-    <div class="team-container-wrapper">
-      <h2 class="team-heading">Meet Our Talented Team</h2>
-      <p class="team-desc">Our team is a diverse group of experts who bring a wide range of skills, from creative design to technical development, strategic planning, and problem-solving. Together, we collaborate to turn ideas into innovative solutions that drive our success.</p>
-      <div class="grid">
-        ${window.teamData
-          .map(
-            (member) => `
-              <div class="card">
-                <img src="${member.image}" alt="${
-              member.name
-            }" class="team-img">
-                <h3>${member.name}</h3>
-                <p class="team-role">${member.role}</p>
-                <p class="team-info">${member.description}</p>
-                <div class="social-links">
-  ${
-    member.github
-      ? `<a href="${member.github}" target="_blank" class="github"></a>`
-      : ""
-  }
-  ${
-    member.linkedin
-      ? `<a href="${member.linkedin}" target="_blank" class="linkedin"></a>`
-      : ""
-  }
+      <div class="team-container-wrapper">
+        <h2 class="group-heading">Meet Our Talented Team</h2>
+        <p class="group-desc">Our team is a diverse group of experts who bring a wide range of skills, from creative design to technical development, strategic planning, and problem-solving. Together, we collaborate to turn ideas into innovative solutions that drive our success.</p>
+        <div class="grid">
+          ${window.teamData
+            .map((member, index) => {
+              let gridClass = "";
+              if (index < 2) {
+                gridClass = "grid-1";
+              } else if (index < 5) {
+                gridClass = "grid-2";
+              } else if (index < 7) {
+                gridClass = "grid-3";
+              } else {
+                gridClass = "grid-4";
+              }
+              return `
+                <div class="card ${gridClass}" data-member-id="${index}">
+                 <div class="default-content">
+                  <img src="${member.image}" alt="${
+                member.name
+              }" class="team-img">
+                  <div class="team-content">
+                    <h3 class="team-name">${member.name}</h3>
+                    <p class="team-role">${member.role}</p>
+                  </div>
+                  </div>
+                  <div class="alternate-content hidden">
+                    <h3 class="team-name">${member.name}</h3>
+                    <p class="team-role">${member.role}</p> 
+                    <p class="team-description">${member.description}</p>
+<div class="social-links">
+${
+  member.github
+    ? `<a href="${member.github}" target="_blank" class="github"></a>`
+    : ""
+}
+${
+  member.linkedin
+    ? `<a href="${member.linkedin}" target="_blank" class="linkedin"></a>`
+    : ""
+}
 </div>
-
-              </div>
-            `
-          )
-          .join("")}
+                  </div>
+                  <div class="team-info-button">
+                    <div class="button-dot button1 active"></div>
+                    <div class="button-dot button2"></div>
+                  </div>
+                </div>
+              `;
+            })
+            .join("")}
+        </div>
       </div>
-    </div>
     `;
+
     teamContainer.innerHTML = teamHTML;
+
+    // Add event listeners for buttons
+    teamContainer.addEventListener("click", (e) => {
+      const card = e.target.closest(".card");
+      if (!card) return;
+
+      const defaultContent = card.querySelector(".default-content");
+      const alternateContent = card.querySelector(".alternate-content");
+      const button1 = card.querySelector(".button1");
+      const button2 = card.querySelector(".button2");
+
+      if (e.target.classList.contains("button1")) {
+        defaultContent.classList.remove("hidden");
+        alternateContent.classList.add("hidden");
+        button1.classList.add("active");
+        button2.classList.remove("active");
+      }
+
+      if (e.target.classList.contains("button2")) {
+        defaultContent.classList.add("hidden");
+        alternateContent.classList.remove("hidden");
+        button2.classList.add("active");
+        button1.classList.remove("active");
+      }
+    });
+
+    const cards = document.querySelectorAll(".card");
+    const observerOptions = {
+      threshold: 0.2,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+        } else {
+          entry.target.classList.remove("in-view");
+        }
+      });
+    }, observerOptions);
+
+    cards.forEach((card) => observer.observe(card));
   }
 });
