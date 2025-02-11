@@ -29,24 +29,6 @@ window.teamData = [
   {
     name: "Simana Poudel",
     role: "Frontend Developer",
-    descriptio:
-      "Specializes in crafting responsive, scalable web applications using React and Next.js.",
-    image: "./assets/images/teams/simanapp.jpg",
-    github: "https://github.com/Simana-poudel",
-    linkedin: "https://www.linkedin.com/in/simana-poudel-16b36a146/",
-  },
-  {
-    name: "Anusha Gurung",
-    role: "UI/UX Designer",
-    description:
-      "Passionate about creating user-centric designs that enhance customer experiences.",
-    image: "./assets/images/teams/guy.jpg",
-    github: "https://github.com/anushagurung",
-    linkedin: "https://www.linkedin.com/in/anushagurung/",
-  },
-  {
-    name: "Simana Poudel",
-    role: "Frontend Developer",
     description:
       "Specializes in crafting responsive, scalable web applications using React and Next.js.",
     image: "./assets/images/teams/simanapp.jpg",
@@ -54,21 +36,29 @@ window.teamData = [
     linkedin: "https://www.linkedin.com/in/simana-poudel-16b36a146/",
   },
   {
-    name: "Anusha Gurung",
-    role: "UI/UX Designer",
+    name: "Anushilan Acharya",
+    role: "VP of Product",
     description:
-      "Passionate about creating user-centric designs that enhance customer experiences.",
+      "Responsible for leading product development and innovation in Nepal.",
     image: "./assets/images/teams/guy.jpg",
-    github: "https://github.com/anushagurung",
-    linkedin: "https://www.linkedin.com/in/anushagurung/",
+    github: "",
+    linkedin: "",
   },
   {
-    name: "Simana Poudel",
-    role: "Frontend Developer",
+    name: "Brihat Pote",
+    role: "VP of Legal & Operations",
+    description: "Oversees legal affairs and operational strategies in Nepal.",
+    image: "./assets/images/teams/guy.jpg",
+    github: "",
+    linkedin: "",
+  },
+  {
+    name: "Sagar Khanal",
+    role: "Junior Engineer",
     description:
-      "Specializes in crafting responsive, scalable web applications using React and Next.js.",
-    image: "./assets/images/teams/samar.webp",
-    github: "https://github.com/Simana-poudel",
-    linkedin: "https://www.linkedin.com/in/simana-poudel-16b36a146/",
+      "A dedicated junior engineer contributing to development projects.",
+    image: "./assets/images/teams/guy.jpg",
+    github: "",
+    linkedin: "",
   },
 ];
