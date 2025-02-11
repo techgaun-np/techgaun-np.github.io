@@ -9,7 +9,7 @@
 
 .team-image-wrapper {
   position: relative;
-  height: 550px; /* Adjusted for content */
+  height: 550px;
 }
 
 .team-rectangle {
@@ -42,10 +42,10 @@
 }
 
 .team-top-container {
-  width: 40%; /* Adjusted for responsiveness */
+  width: 40%;
   margin: 0 auto;
   text-align: center;
-  margin-top: 10%; /* Adjusted for positioning */
+  margin-top: 10%;
   margin-bottom: 60px;
 }
 
@@ -73,7 +73,7 @@
   margin: 0 auto;
   padding: 4rem;
   color: #fff;
-  max-width: 1200px; /* Adjusted for content */
+  max-width: 1200px;
 }
 
 .value-container h1 {
@@ -195,6 +195,7 @@
   font-size: 40px;
   margin-bottom: 20px;
   text-align: center;
+  margin-top: 40px;
 }
 
 .group-desc {
@@ -314,7 +315,6 @@
 /* Grid layouts */
 .grid {
   display: grid;
-  /* margin: 0 auto; */
   gap: 32px;
   grid-template-columns: repeat(12, 1fr);
 }
@@ -350,6 +350,7 @@
   }
 
   .group-heading {
+    margin-top: 0;
     font-size: 30px;
     margin-bottom: 20px;
     text-align: center;
@@ -436,6 +437,14 @@
   .grid-4 {
     grid-column: span 12;
     margin: 0 auto;
+  }
+}
+
+/* For very large screens */
+@media screen and (min-width: 1760px) {
+  .group-heading,
+  .group-desc {
+    color: white;
   }
 }
 
