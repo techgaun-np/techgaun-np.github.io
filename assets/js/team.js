@@ -21,31 +21,33 @@ document.addEventListener("DOMContentLoaded", function () {
               }
               return `
                 <div class="card ${gridClass}" data-member-id="${index}">
-                 <div class="default-content">
-                  <img src="${member.image}" alt="${
+                  <div class="card-inner">
+                    <div class="default-content card-face">
+                      <img src="${member.image}" alt="${
                 member.name
               }" class="team-img">
-                  <div class="team-content">
-                    <h3 class="team-name">${member.name}</h3>
-                    <p class="team-role">${member.role}</p>
-                  </div>
-                  </div>
-                  <div class="alternate-content hidden">
-                    <h3 class="team-name">${member.name}</h3>
-                    <p class="team-role">${member.role}</p> 
-                    <p class="team-description">${member.description}</p>
-<div class="social-links">
-${
-  member.github
-    ? `<a href="${member.github}" target="_blank" class="github"></a>`
-    : ""
-}
-${
-  member.linkedin
-    ? `<a href="${member.linkedin}" target="_blank" class="linkedin"></a>`
-    : ""
-}
-</div>
+                      <div class="team-content">
+                        <h3 class="team-name">${member.name}</h3>
+                        <p class="team-role">${member.role}</p>
+                      </div>
+                    </div>
+                    <div class="alternate-content card-face">
+                      <h3 class="team-name">${member.name}</h3>
+                      <p class="team-role">${member.role}</p> 
+                      <p class="team-description">${member.description}</p>
+                      <div class="social-links">
+                        ${
+                          member.github
+                            ? `<a href="${member.github}" target="_blank" class="github"></a>`
+                            : ""
+                        }
+                        ${
+                          member.linkedin
+                            ? `<a href="${member.linkedin}" target="_blank" class="linkedin"></a>`
+                            : ""
+                        }
+                      </div>
+                    </div>
                   </div>
                   <div class="team-info-button">
                     <div class="button-dot button1 active"></div>
@@ -61,34 +63,11 @@ ${
 
     teamContainer.innerHTML = teamHTML;
 
-    // Add event listeners for buttons
-    teamContainer.addEventListener("click", (e) => {
-      const card = e.target.closest(".card");
-      if (!card) return;
-
-      const defaultContent = card.querySelector(".default-content");
-      const alternateContent = card.querySelector(".alternate-content");
-      const button1 = card.querySelector(".button1");
-      const button2 = card.querySelector(".button2");
-
-      if (e.target.classList.contains("button1")) {
-        defaultContent.classList.remove("hidden");
-        alternateContent.classList.add("hidden");
-        button1.classList.add("active");
-        button2.classList.remove("active");
-      }
-
-      if (e.target.classList.contains("button2")) {
-        defaultContent.classList.add("hidden");
-        alternateContent.classList.remove("hidden");
-        button2.classList.add("active");
-        button1.classList.remove("active");
-      }
-    });
-
     const cards = document.querySelectorAll(".card");
+
+    // Intersection Observer for Animations
     const observerOptions = {
-      threshold: 0.2,
+      threshold: 0.01,
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -102,5 +81,36 @@ ${
     }, observerOptions);
 
     cards.forEach((card) => observer.observe(card));
+
+    // Flip effect on hover
+    cards.forEach((card) => {
+      const button1 = card.querySelector(".button1");
+      const button2 = card.querySelector(".button2");
+
+      card.addEventListener("mouseenter", () => {
+        card.classList.add("flipped");
+        button1.classList.remove("active");
+        button2.classList.add("active");
+      });
+
+      card.addEventListener("mouseleave", () => {
+        card.classList.remove("flipped");
+        button2.classList.remove("active");
+        button1.classList.add("active");
+      });
+
+      // Toggle view on button click
+      button1.addEventListener("click", () => {
+        card.classList.remove("flipped");
+        button1.classList.add("active");
+        button2.classList.remove("active");
+      });
+
+      button2.addEventListener("click", () => {
+        card.classList.add("flipped");
+        button2.classList.add("active");
+        button1.classList.remove("active");
+      });
+    });
   }
 });
