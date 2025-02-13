@@ -90,6 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
           console.log("flipping card by bt1");
           card.classList.add("flipped");
         }
+        card.classList.remove("flipped-back");
         button1.classList.add("active");
         button2.classList.remove("active");
       });
@@ -99,6 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
           console.log("flipping card by bt2");
           card.classList.remove("flipped");
         }
+        card.classList.add("flipped-back");
         button2.classList.add("active");
         button1.classList.remove("active");
       });

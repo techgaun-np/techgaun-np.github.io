@@ -80,13 +80,6 @@
   clip-path: polygon(0 0, 100% 18%, 100% 100%, 0 100%);
 }
 
-.team-rectangle2 {
-  width: 100%;
-  position: absolute;
-  margin: 0 auto;
-  z-index: -1;
-}
-
 .value-container {
   margin: 0 auto;
   padding: 4rem;
@@ -421,16 +414,16 @@
 
   .alternate-content {
     transform: rotateY(180deg);
-    opacity: 0;
+    opacity: 1;
     transition: transform 0s ease;
     margin-left: 50px;
   }
 
-  .card.flipped .card-inner {
+  .card-inner.flipped .card-inner {
     transform: rotateY(180deg);
   }
 
-  .card.flipped .default-content {
+  .card.flipped-back .default-content {
     transform: rotateY(180deg);
     transition: transform 1.1s ease;
     filter: blur(0px);
@@ -438,7 +431,7 @@
     transition: filter 0.5s ease, opacity 0.8s ease;
   }
 
-  .card.flipped .alternate-content {
+  .card.flipped-back .alternate-content {
     transform: rotateY(0);
     position: absolute;
     top: 0;
@@ -447,19 +440,19 @@
   }
 
   /* Override hover effects */
-  .card:hover .default-content,
-  .card:hover .alternate-content {
+  .card-inner:hover .default-content,
+  .card-inner:hover .alternate-content {
     transform: none;
     filter: blur(0px);
     opacity: 1;
     transition: none;
   }
 
-  .card:hover .default-content {
+  .card-inner:hover .default-content {
     transform: rotateY(180deg);
   }
 
-  .card:hover .alternate-content {
+  .card-inner:hover .alternate-content {
     transform: rotateY(0);
     position: absolute;
     top: 0;
