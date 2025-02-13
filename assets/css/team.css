@@ -530,10 +530,9 @@
   }
 
   .team-info-button {
-    display: flex;
+    display: -webkit-inline-box;
     justify-content: center;
-    left: 180px;
-    right: 180px;
+    left: 45%;
   }
 
   .grid-1 {
@@ -566,28 +565,39 @@
 }
 
 @media screen and (max-width: 600px) {
+  .team-info-button {
+    display: -webkit-inline-box;
+    justify-content: center;
+    left: 160px;
+    right: 180px;
+  }
   .grid {
+    z-index: 1;
     grid-template-columns: 1fr;
     margin-top: 8px;
   }
   .grid-1 {
     grid-column: span 12;
     margin: 0 auto;
+    padding: 0px;
   }
 
   .grid-2 {
     grid-column: span 12;
     margin: 0 auto;
+    padding: 0px;
   }
 
   .grid-3 {
     margin: 0 auto;
     grid-column: span 12;
+    padding: 0px;
   }
 
   .grid-4 {
     grid-column: span 12;
     margin: 0 auto;
+    padding: 0px;
   }
 
   .team-image-wrapper {
