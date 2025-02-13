@@ -65,7 +65,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const cards = document.querySelectorAll(".card");
 
-    // Intersection Observer for Animations
     const observerOptions = {
       threshold: 0.01,
     };
@@ -82,32 +81,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
     cards.forEach((card) => observer.observe(card));
 
-    // Flip effect on hover
     cards.forEach((card) => {
       const button1 = card.querySelector(".button1");
       const button2 = card.querySelector(".button2");
 
-      card.addEventListener("mouseenter", () => {
-        card.classList.add("flipped");
-        button1.classList.remove("active");
-        button2.classList.add("active");
-      });
-
-      card.addEventListener("mouseleave", () => {
-        card.classList.remove("flipped");
-        button2.classList.remove("active");
-        button1.classList.add("active");
-      });
-
-      // Toggle view on button click
       button1.addEventListener("click", () => {
-        card.classList.remove("flipped");
+        if (!card.classList.contains("flipped")) {
+          console.log("flipping card by bt1");
+          card.classList.add("flipped");
+        }
         button1.classList.add("active");
         button2.classList.remove("active");
       });
 
       button2.addEventListener("click", () => {
-        card.classList.add("flipped");
+        if (card.classList.contains("flipped")) {
+          console.log("flipping card by bt2");
+          card.classList.remove("flipped");
+        }
         button2.classList.add("active");
         button1.classList.remove("active");
       });
