@@ -282,6 +282,7 @@
 
 .alternate-content {
   margin-top: 90px;
+  position: absolute;
 }
 
 .grid-1 .card {
@@ -443,6 +444,26 @@
     top: 0;
     opacity: 1;
     transition: transform 1.1s ease, opacity 0.5s ease;
+  }
+
+  /* Override hover effects */
+  .card:hover .default-content,
+  .card:hover .alternate-content {
+    transform: none;
+    filter: blur(0px);
+    opacity: 1;
+    transition: none;
+  }
+
+  .card:hover .default-content {
+    transform: rotateY(180deg);
+  }
+
+  .card:hover .alternate-content {
+    transform: rotateY(0);
+    position: absolute;
+    top: 0;
+    opacity: 1;
   }
 
   /* Button styling */
