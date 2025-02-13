@@ -157,6 +157,8 @@
   margin-bottom: 20px;
   text-align: center;
   margin-top: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .group-desc {
@@ -167,6 +169,8 @@
   max-width: 800px;
   margin-bottom: 48px;
   font-weight: 400;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .team-container {
@@ -623,6 +627,10 @@
 
   .value-container ul {
     grid-template-columns: 1fr;
+  }
+
+  .team-container {
+    padding: 0;
   }
 }
 
