@@ -338,18 +338,18 @@
   transition: transform 0s ease;
 }
 
-.card:hover .default-content {
+.card-inner:hover .default-content {
   filter: blur(5px);
   opacity: 0.5;
   transition: filter 0.5s ease, opacity 0.8s ease;
 }
 
-.card:hover .default-content {
+.card-inner:hover .default-content {
   transform: rotateY(180deg);
   transition: transform 1.2s ease;
 }
 
-.card:hover .alternate-content {
+.card-inner:hover .alternate-content {
   transform: rotateY(0);
   position: absolute;
   top: 0;
