@@ -31,7 +31,7 @@ window.teamData = [
     role: "Frontend Developer",
     description:
       "Specializes in crafting responsive, scalable web applications using React and Next.js.",
-    image: "./assets/images/teams/simanapp.jpg",
+    image: "./assets/images/teams/guy.jpg",
     github: "https://github.com/Simana-poudel",
     linkedin: "https://www.linkedin.com/in/simana-poudel-16b36a146/",
   },
