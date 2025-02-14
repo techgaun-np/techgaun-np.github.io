@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
   if (teamContainer && window.teamData) {
     const teamHTML = `
       <div class="team-container-wrapper">
-        <h2 class="group-heading">Meet Our Talented Team</h2>
-        <p class="group-desc">Our team is a diverse group of experts who bring a wide range of skills, from creative design to technical development, strategic planning, and problem-solving. Together, we collaborate to turn ideas into innovative solutions that drive our success.</p>
+        <h2 class="group-heading">Get to know us</h2>
+        <p class="group-desc">we are a passionate team of diverse experts dedicated to crafting exceptional software solutions. We collaboratively transform innovative ideas into impactful solutions. We believe in the power of teamwork and creativity, and we're driven by a shared commitment to excellence, ensuring that every product we build reflects our enthusiasm for what we do.</p>
         <div class="grid">
           ${window.teamData
             .map((member, index) => {
