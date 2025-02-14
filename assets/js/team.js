@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const teamHTML = `
       <div class="team-container-wrapper">
         <h2 class="group-heading">Get to know us</h2>
-        <p class="group-desc">we are a passionate team of diverse experts dedicated to crafting exceptional software solutions. We collaboratively transform innovative ideas into impactful solutions. We believe in the power of teamwork and creativity, and we're driven by a shared commitment to excellence, ensuring that every product we build reflects our enthusiasm for what we do.</p>
+        <p class="group-desc">We are a passionate team of diverse experts dedicated to crafting exceptional software solutions. We collaboratively transform innovative ideas into impactful solutions. We believe in the power of teamwork and creativity, and we're driven by a shared commitment to excellence, ensuring that every product we build reflects our enthusiasm for what we do.</p>
         <div class="grid">
           ${window.teamData
             .map((member, index) => {
