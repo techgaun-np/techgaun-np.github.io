@@ -19,7 +19,7 @@ window.teamData = [
   },
   {
     name: "Rajan Midun Magar",
-    role: "Full-Stack Developer",
+    role: "Senior Full-stack Engineer",
     description:
       "An early riser & fitness enthusiast, I have a passion for tech, teaching, and exploring new techs. I enjoy historical TV shows like Vikings & The Last Kingdom, and love reading finance books like Rich Dad Poor Dad. A big fan of momo!",
     image: "./assets/images/team/rajan.png",
@@ -28,7 +28,7 @@ window.teamData = [
   },
   {
     name: "Simana Poudel",
-    role: "Frontend Developer",
+    role: "Frontend Engineer",
     description:
       "Specializes in crafting responsive, scalable web applications using React and Next.js.",
     image: "./assets/images/team/simana.png",

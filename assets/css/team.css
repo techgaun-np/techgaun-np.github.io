@@ -467,6 +467,7 @@
   .button-dot {
     width: 12px;
     height: 12px;
+    margin-left: 2px;
     background-color: #ccc;
     border-radius: 50%;
     transition: background-color 0.3s;
