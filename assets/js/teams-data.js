@@ -40,7 +40,7 @@ window.teamData = [
     role: "VP of Product",
     description:
       "Responsible for leading product development and innovation in Nepal.",
-    image: "./assets/images/team/guy.jpg",
+    image: "./assets/images/team/placeholder.png",
     github: "",
     linkedin: "",
   },
@@ -48,7 +48,7 @@ window.teamData = [
     name: "Brihat Pote",
     role: "VP of Legal & Operations",
     description: "Oversees legal affairs and operational strategies in Nepal.",
-    image: "./assets/images/team/guy.jpg",
+    image: "./assets/images/team/placeholder.png",
     github: "",
     linkedin: "",
   },
