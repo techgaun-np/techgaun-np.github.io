@@ -5,14 +5,15 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="assets/images/techgaun-logo-small.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blogs - Techgaun</title>
+    <title>Team - Techgaun</title>
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/blog.css">
+    <link rel="stylesheet" href="assets/css/team.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
     <script type="text/javascript" src="/assets/js/script.js"></script>
-    <script type="text/javascript" src="assets/js/blog-data.js" defer></script>
-    <script type="text/javascript" src="assets/js/blog.js" defer></script>
+    <script type="text/javascript" src="/assets/js/teams-data.js"></script>
+
 </head>
 
 <body>
@@ -20,17 +21,18 @@
     <header>
         <div class="container">
             <div class="logo">
-                <img src="assets/images/logo.svg" alt="Techgaun Logo">
+                <a href="/">
+                    <img src="assets/images/logo.svg" alt="Techgaun Logo">
+                </a>
             </div>
             <nav class="main-nav" id="main-nav">
                 <ul>
                     <li><a href="/#home">Home</a></li>
                     <li><a href="/#about">About</a></li>
                     <li><a href="/#services">Services</a></li>
-                    <li><a href="/blogs">Blogs</a></li>
+                    <!-- <li><a href="/blogs">Blogs</a></li> -->
                     <li><a href="/careers">Careers</a></li>
                     <li><a href="/team">Team</a></li>
-
                     <li><a href="https://devtools.techgaun.com" target="_blank">Dev Tools</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -44,36 +46,74 @@
         </div>
     </header>
 
-    <section class="blog-title-section">
-        <div class="container">
-            <h1 class="section-title">Techgaun Blog</h1>
-            <p>
-                Articles to inspire and educate you on technology, business and software development.
-            </p>
-        </div>
-    </section>
+    <main class="team-main">
+        <div class="top-image-wrapper">
 
-    <section class="container">
-        <div class="primary-blog-container">
-            <div class="primary-blog-content">
-                <h2 class="primary-blog-title">How to build a successful software product?</h2>
+            <div class="team-image-wrapper">
 
-                <p class="primary-blog-description">
-                    Building a successful software product is a challenging task. It requires a lot of planning...
-                </p>
+                <div class="rectangle-container">
+                    <dotlottie-player class="rectangle-left"
+                        src="https://lottie.host/cb0392f2-d9bf-4028-9d4c-ad407ad8ea79/bOGFWuCtcK.lottie"
+                        background="transparent" speed="1" style="width: 350px; height: 350px" loop
+                        autoplay></dotlottie-player>
+                    <dotlottie-player class="rectangle-right"
+                        src="https://lottie.host/2e3453c3-48b0-4174-a141-8d62c343f8bd/mEWOuLuVo8.lottie"
+                        background="transparent" speed="1" style="width: 300px; height: 300px" loop
+                        autoplay></dotlottie-player>
 
-                <a href="blog-detail?blogId=1">Read More</a>
+                    <div class="team-top-container">
+                        <h1 class="section-title">Team</h1>
+                        <p>Together, we create the remarkable. Our diverse talents unite to transform ideas into innovative solutions, fueled by passion and purpose.</p>
+                        <div class="get-started-container">
+                            <a href="#contact" class="get-started">Get Started</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <img src="assets/images/blogs/primary-blog.avif" alt="Primary Blog Image" />
         </div>
-    </section>
 
-    <section class="blog-list container" id="blog-list"></section>
+        <div class="team-value-container">
 
-    <section class="container load-more-container">
-        <button id="load-more" class="load-more-btn">Load More</button>
-    </section>
+            <div class="value-container ">
+
+                <h1>Innovation, Excellence, 
+                    <br> Ownership, Playfulness
+                </h1>
+                <ul>
+                    <li class="value-item">
+                        <img class="icon" src="assets/images/light-bulb.png" alt="Experience" />
+                        <p>Proven expertise.</p>
+                    </li>
+                    <li class="value-item">
+                        <img class="icon" src="assets/images/confetti.png" alt="Passion" />
+                        <p>Solution oriented.</p>
+                    </li>
+                    <li class="value-item">
+                        <img class="icon" src="assets/images/confetti.png" alt="Care" />
+                        <p>Driven by your success.</p>
+                    </li>
+                    <li class="value-item">
+                        <img class="icon" src="assets/images/light-bulb.png" alt="Innovation" />
+                        <p>Pioneering new ideas.</p>
+                    </li>
+                    <li class="value-item">
+                        <img class="icon" src="assets/images/confetti.png" alt="Collaboration" />
+                        <p>Understanding your needs.</p>
+                    </li>
+                    <li class="value-item">
+                        <img class="icon" src="assets/images/light-bulb.png" alt="Success" />
+                        <p>Celebrating shared wins.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="team-container">
+            <!-- Teams data will be here -->
+        </div>
+
+
+    </main>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
@@ -100,7 +140,6 @@
             </div>
         </div>
     </section>
-
     <section class="footer-img">
         <div class="container footer-bg-container">
             <img src="assets/images/footer.svg" alt="Footer Background" />
@@ -110,12 +149,14 @@
     <footer>
         <div class="container">
             <div class="footer-logo">
-                <img src="assets/images/footer-logo.svg" alt="Techgaun Logo">
+                <a href="/">
+                    <img src="assets/images/footer-logo.svg" alt="Techgaun Logo">
+                </a>
             </div>
             <ul class="footer-nav">
-                <li><a href="/#home">About</a></li>
-                <li><a href="/#services">Services</a></li>
-                <li><a href="/#case-studies">Case Study</a></li>
+                <li><a href="#home">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#case-studies">Case Study</a></li>
             </ul>
             <div class="social-media">
                 <a href="https://www.linkedin.com/company/techgaun" target="_blank" noopener noreferrer><img
@@ -127,9 +168,16 @@
             <p>© 2024 Techgaun. All rights reserved.</p>
         </div>
     </footer>
+
     <button class="scroll-top" id="scroll-top" onclick="scrollToTop()">
         <img src="assets/images/arrow-up.png" alt="arrow-up" />
     </button>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/team.js"></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+
+
 </body>
 
 </html>
