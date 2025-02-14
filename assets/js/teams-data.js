@@ -12,7 +12,7 @@ window.teamData = [
     name: "Brisha Pote",
     role: "CPO",
     description:
-      "A results-driven professional dedicated to fostering a collaborative work environment and ensuring product excellence.",
+      "A results-driven leader dedicated to fostering a collaborative work environment and ensuring product excellence.",
     image: "./assets/images/team/brisha.jpg",
     github: "https://github.com/bpote",
     linkedin: "https://www.linkedin.com/in/brisha-pote-201bab1b3/",
@@ -21,7 +21,7 @@ window.teamData = [
     name: "Rajan Midun Magar",
     role: "Full-Stack Developer",
     description:
-      "Expert in Node.js, React.js, RESTful APIs, and server-side solutions for scalable applications.",
+      "An early riser & fitness enthusiast, I have a passion for tech, teaching, and exploring new techs. I enjoy historical TV shows like Vikings & The Last Kingdom, and love reading finance books like Rich Dad Poor Dad. A big fan of momo!",
     image: "./assets/images/team/rajan.png",
     github: "https://github.com/rznmgr630",
     linkedin: "https://www.linkedin.com/in/rajan-midun-magar-60aa3b19b/",
@@ -54,9 +54,9 @@ window.teamData = [
   },
   {
     name: "Sagar Khanal",
-    role: "Junior Engineer",
+    role: "Frontend Engineer",
     description:
-      "A dedicated junior engineer contributing to development projects.",
+      "Hobbies include hiking and playing sports. My favorite movies are Interstellar and Rockstar.",
     image: "./assets/images/team/sagar.jpg",
     github: "",
     linkedin: "",
