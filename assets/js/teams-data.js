@@ -3,8 +3,8 @@ window.teamData = [
     name: "Samar Acharya",
     role: "CEO, Founder at large",
     description:
-      "A visionary leader committed to driving business growth through innovation and strategic partnerships.",
-    image: "./assets/images/team/placeholder.png",
+      "Tech enthusiast and open source advocate. Currently, Co-founder and CTO at CarePilot, a clinical ambient AI scribe start-up.",
+    image: "./assets/images/team/samar.jpg",
     github: "https://github.com/techgaun",
     linkedin: "https://www.linkedin.com/in/techgaun/",
   },
