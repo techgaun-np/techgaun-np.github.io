@@ -40,7 +40,7 @@ window.teamData = [
     role: "VP of Product",
     description:
       "Responsible for leading product development and innovation in Nepal.",
-    image: "./assets/images/team/placeholder.png",
+    image: "./assets/images/team/anushilan.png",
     github: "",
     linkedin: "",
   },
