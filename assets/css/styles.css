@@ -696,13 +696,22 @@ footer p {
   .primary-blog-container {
     flex-direction: column;
   }
+  .get-started {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+  .container {
+    width: 90%;
+  }
 }
 
 @media screen and (max-width: 1060px) {
   .hero h1 {
     font-size: 32px;
   }
-
+  .container {
+    width: 95%;
+  }
   .blog-list {
     grid-template-columns: 1fr 1fr;
   }
