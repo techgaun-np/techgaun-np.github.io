@@ -2,6 +2,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const teamContainer = document.querySelector(".team-container");
 
   if (teamContainer && window.teamData) {
+    // Sorting teamData alphabetically by name
+    window.teamData.sort((a, b) => a.name.localeCompare(b.name));
+
     const teamHTML = `
       <div class="team-container-wrapper">
         <h2 class="group-heading">Get to know us</h2>
