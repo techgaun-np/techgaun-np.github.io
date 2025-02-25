@@ -65,7 +65,7 @@ window.teamData = [
     name: "Aarogya Raj Katwal",
     role: "UX Engineer",
     description:
-      "Hobbies include playing Video-games, Swimming, Playing Guitar. My favorite movies are The Fast and the Furious: Tokyo Drift, KGF chapter 2.",
+      "I enjoy playing video games, swimming, and guitar. Passionate about UX design, I love crafting seamless user experiences. ",
     image: "./assets/images/team/aarogya.jpg",
     github: "https://github.com/WILD-BEAST-47",
     linkedin: "https://www.linkedin.com/in/aarogya-raj-katwal-75369b25a",
