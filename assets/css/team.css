@@ -278,8 +278,10 @@
 }
 
 .alternate-content {
-  margin-top: 90px;
+  /* margin-top: 70px;
+  margin-bottom: 70px; */
   position: absolute;
+  place-self: anchor-center;
 }
 
 .grid-1 .card {
@@ -421,6 +423,8 @@
     opacity: 1;
     transition: transform 0s ease;
     margin-left: 50px;
+    place-self: auto;
+    align-self: anchor-center;
   }
 
   .card-inner.flipped .card-inner {
