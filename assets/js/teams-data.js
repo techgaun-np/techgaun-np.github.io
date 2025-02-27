@@ -48,7 +48,7 @@ window.teamData = [
     name: "Brihat Pote",
     role: "VP of Legal & Operations",
     description: "Oversees legal affairs and operational strategies in Nepal.",
-    image: "./assets/images/team/placeholder.png",
+    image: "./assets/images/team/brihat.png",
     github: "",
     linkedin: "",
   },
@@ -69,5 +69,15 @@ window.teamData = [
     image: "./assets/images/team/aarogya.jpg",
     github: "https://github.com/WILD-BEAST-47",
     linkedin: "https://www.linkedin.com/in/aarogya-raj-katwal-75369b25a",
+  },
+  {
+    name: "Kritan Shrestha",
+    role: "Associate Fullstack Engineer",
+    description:
+      "I’m an early riser and biking enthusiast who loves coding, machines, and new technology. Coding keeps me energized, much like a good ride. One unforgettable experience? Trying vada pav—it was amazing!",
+
+    image: "./assets/images/team/kritan.png",
+    github: "https://github.com/kritan560",
+    linkedin: "https://www.linkedin.com/in/kritan-shrestha-52a61a144",
   },
 ];

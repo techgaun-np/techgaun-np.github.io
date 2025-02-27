@@ -13,12 +13,12 @@ document.addEventListener("DOMContentLoaded", function () {
           ${window.teamData
             .map((member, index) => {
               let gridClass = "";
-              if (index < 2) {
-                gridClass = "grid-1";
-              } else if (index < 5) {
+              if (index < 9) {
                 gridClass = "grid-2";
-              } else if (index < 7) {
-                gridClass = "grid-3";
+              } else if (index < 5) {
+                gridClass = "grid-1";
+              } else if (index < 8) {
+                gridClass = "grid-2";
               } else {
                 gridClass = "grid-4";
               }
