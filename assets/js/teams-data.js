@@ -48,7 +48,7 @@ window.teamData = [
     name: "Brihat Pote",
     role: "VP of Legal & Operations",
     description: "Oversees legal affairs and operational strategies in Nepal.",
-    image: "./assets/images/team/birat.png",
+    image: "./assets/images/team/brihat.png",
     github: "",
     linkedin: "",
   },
