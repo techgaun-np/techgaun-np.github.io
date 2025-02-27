@@ -15,10 +15,10 @@ document.addEventListener("DOMContentLoaded", function () {
               let gridClass = "";
               if (index < 2) {
                 gridClass = "grid-1";
-              } else if (index < 5) {
+              } else if (index < 8) {
                 gridClass = "grid-2";
-              } else if (index < 7) {
-                gridClass = "grid-3";
+              } else if (index < 9) {
+                gridClass = "grid-4";
               } else {
                 gridClass = "grid-4";
               }
