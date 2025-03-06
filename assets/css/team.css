@@ -201,7 +201,6 @@
 
 .your-img {
   width: 260px;
-  height: 250px;
   object-fit: cover;
   display: flex;
   justify-content: center;
