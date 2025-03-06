@@ -80,4 +80,13 @@ window.teamData = [
     github: "https://github.com/kritan560",
     linkedin: "https://www.linkedin.com/in/kritan-shrestha-52a61a144",
   },
+  {
+    name: "Ajay Ranabhat",
+    role: "Full Stack Engineer",
+    description:
+      "I'm a tech enthusiast who loves coding, exploring new tech, traveling, and learning new things.",
+    image: "./assets/images/team/ajay.png",
+    github: "https://github.com/ajay-rb",
+    linkedin: "https://www.linkedin.com/in/ajayranabhat/",
+  },
 ];
