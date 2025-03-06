@@ -30,7 +30,7 @@ window.teamData = [
     name: "Simana Poudel",
     role: "Frontend Engineer",
     description:
-      "Specializes in crafting responsive, scalable web applications using React and Next.js.",
+      "Books, code, and art—my perfect trio. Love sketching and building responsive web apps with Next.js.",
     image: "./assets/images/team/simana.png",
     github: "https://github.com/Simana-poudel",
     linkedin: "https://www.linkedin.com/in/simana-poudel-16b36a146/",
@@ -48,7 +48,7 @@ window.teamData = [
     name: "Brihat Pote",
     role: "VP of Legal & Operations",
     description: "Oversees legal affairs and operational strategies in Nepal.",
-    image: "./assets/images/team/placeholder.png",
+    image: "./assets/images/team/brihat.png",
     github: "",
     linkedin: "",
   },
@@ -58,7 +58,35 @@ window.teamData = [
     description:
       "Hobbies include hiking and playing sports. My favorite movies are Interstellar and Rockstar.",
     image: "./assets/images/team/sagar.jpg",
-    github: "",
-    linkedin: "",
+    github: "https://github.com/skh502",
+    linkedin: "https://www.linkedin.com/in/sagar-khanal-0078b62a7/",
+  },
+  {
+    name: "Aarogya Raj Katwal",
+    role: "UX Engineer",
+    description:
+      "I enjoy playing video games, swimming, and guitar. Passionate about UX design, I love crafting seamless user experiences. ",
+    image: "./assets/images/team/aarogya.jpg",
+    github: "https://github.com/WILD-BEAST-47",
+    linkedin: "https://www.linkedin.com/in/aarogya-raj-katwal-75369b25a",
+  },
+  {
+    name: "Kritan Shrestha",
+    role: "Associate Fullstack Engineer",
+    description:
+      "I’m an early riser and biking enthusiast who loves coding, machines, and new technology. Coding keeps me energized, much like a good ride. One unforgettable experience? Trying vada pav—it was amazing!",
+
+    image: "./assets/images/team/kritan.png",
+    github: "https://github.com/kritan560",
+    linkedin: "https://www.linkedin.com/in/kritan-shrestha-52a61a144",
+  },
+  {
+    name: "Ajay Ranabhat",
+    role: "Full Stack Engineer",
+    description:
+      "I'm a tech enthusiast who loves coding, exploring new tech, traveling, and learning new things.",
+    image: "./assets/images/team/ajay.png",
+    github: "https://github.com/ajay-rb",
+    linkedin: "https://www.linkedin.com/in/ajayranabhat/",
   },
 ];

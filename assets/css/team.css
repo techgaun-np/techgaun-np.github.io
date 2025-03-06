@@ -296,8 +296,10 @@
 }
 
 .alternate-content {
-  margin-top: 90px;
+  /* margin-top: 70px;
+  margin-bottom: 70px; */
   position: absolute;
+  place-self: anchor-center;
 }
 
 .grid-1 .card {
@@ -452,6 +454,8 @@
     opacity: 1;
     transition: transform 0s ease;
     margin-left: 50px;
+    place-self: auto;
+    align-self: anchor-center;
   }
 
   .card-inner.flipped .card-inner {
@@ -713,10 +717,6 @@
   background-color: #163152;
 }
 
-.grid-3 .team-img {
+.grid-3 .grid-4 .team-img {
   background-color: #253e5d;
-}
-
-.grid-4 .team-img {
-  background-color: #e8f5e9;
 }
