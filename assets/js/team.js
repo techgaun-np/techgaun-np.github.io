@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
           ${window.teamData
             .map((member, index) => {
               let gridClass = "";
-              if (index < 9) {
+              if (index < 10) {
                 gridClass = "grid-2";
               } else if (index < 5) {
                 gridClass = "grid-1";
@@ -60,6 +60,24 @@ document.addEventListener("DOMContentLoaded", function () {
               `;
             })
             .join("")}
+            <div class="card grid-2">
+            <a href="/careers">
+                  <div class="card-inner">
+                    <div class="default-content card-face">
+                      <img src="./assets/images/team/joinus.png" alt="Your Picture" class="your-img">
+                      <div class="team-content">
+                        <h3 class="your-title">Join Us Now</h3>
+                      </div>
+                    </div>
+                    <div class="alternate-content your-alternate-content card-face">
+                      <h3 class="team-name">Click to join us</h3>
+                      <p class="team-description">Be a part of something big</p>
+                      
+                    </div>
+                    
+                  </div>
+                  </a>
+                </div>
         </div>
       </div>
     `;
