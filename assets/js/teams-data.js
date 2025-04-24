@@ -62,13 +62,12 @@ window.teamData = [
     linkedin: "https://www.linkedin.com/in/sagar-khanal-0078b62a7/",
   },
   {
-    name: "Aarogya Raj Katwal",
+    name: "Uruna Shakya",
     role: "UX Engineer",
     description:
-      "I enjoy playing video games, swimming, and guitar. Passionate about UX design, I love crafting seamless user experiences. ",
-    image: "./assets/images/team/aarogya.jpg",
-    github: "https://github.com/WILD-BEAST-47",
-    linkedin: "https://www.linkedin.com/in/aarogya-raj-katwal-75369b25a",
+      "Obsessed with details, driven by empathy and always chasing that seamless user journey.",
+    image: "./assets/images/team/uruna.png",
+    linkedin: "https://www.linkedin.com/in/uruna-shakya-5504a5212/",
   },
   {
     name: "Kritan Shrestha",
