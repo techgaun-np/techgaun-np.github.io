@@ -64,17 +64,27 @@ document.addEventListener("DOMContentLoaded", function () {
             <a href="/careers">
                   <div class="card-inner">
                     <div class="default-content card-face">
-                      <img src="./assets/images/team/joinus.png" alt="Your Picture" class="your-img">
+                                                              <img src="./assets/images/team/backimg.png" alt="Your Picture" class="your-img">
+
+                      
                       <div class="team-content">
-                        <h3 class="your-title">Join Us Now</h3>
+                      
                       </div>
                     </div>
                     <div class="alternate-content your-alternate-content card-face">
-                      <h3 class="team-name">Click to join us</h3>
-                      <p class="team-description">Be a part of something big</p>
-                      
+                      <img src="./assets/images/team/joinus.png" alt="Your Picture" class="your-img flipped-img">
+                          <dotlottie-player
+                            src="https://lottie.host/bc20c809-5385-43b6-94e4-46b1f098db36/He8mjoYkmm.lottie"
+                            background="transparent"
+                            speed="1"
+                            style="width: 110px; height: 110px; position: absolute; top: -20px; left: 31%;"
+                            loop
+                            autoplay
+                          ></dotlottie-player>
+
                     </div>
-                    
+                          <h3 class="your-title join">Join Us</h3>
+
                   </div>
                   </a>
                 </div>
