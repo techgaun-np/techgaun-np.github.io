@@ -213,6 +213,20 @@
   margin-right: 10px;
 }
 
+.your-img {
+  width: 260px;
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.flipped-img {
+  margin-top: -110px;
+}
+
 .team-content {
   color: #163152;
   flex-direction: column;
@@ -227,7 +241,22 @@
   text-align: center;
   margin-bottom: 0;
   margin-top: 8px;
+  font-weight: 500;
+  color: black;
+}
+
+.your-title {
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: 10px;
   font-weight: 600;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: #163152;
+  font-weight: 500;
 }
 
 .team-role {
@@ -311,6 +340,10 @@
   transform: translateY(100px);
 }
 
+.grid-5 .card {
+  transform: translateY(100px);
+}
+
 .card.in-view {
   opacity: 1;
   transform: translate(0);
@@ -370,6 +403,10 @@
   transition: transform 1.2s ease, opacity 0.5s ease;
 }
 
+.your-alternate-content {
+  justify-self: anchor-center;
+}
+
 /* Grid layouts */
 .grid {
   display: grid;
@@ -393,6 +430,11 @@
 }
 
 .grid-4 {
+  grid-column: span 12;
+  margin: 0 auto;
+}
+
+.grid-5 {
   grid-column: span 12;
   margin: 0 auto;
 }
@@ -495,6 +537,10 @@
     margin-left: 50px;
   }
 
+  .your-img {
+    margin-left: 50px;
+  }
+
   .grid {
     grid-template-columns: repeat(2, 1fr);
     margin-top: 30px;
@@ -571,6 +617,11 @@
     margin: 0 auto;
   }
 
+  .grid-5 {
+    grid-column: span 6;
+    margin: 0 auto;
+  }
+
   .value-container ul {
     display: grid;
     padding: 0;
@@ -611,6 +662,12 @@
   }
 
   .grid-4 {
+    grid-column: span 12;
+    margin: 0 auto;
+    padding: 0px;
+  }
+
+  .grid-5 {
     grid-column: span 12;
     margin: 0 auto;
     padding: 0px;
@@ -675,6 +732,10 @@
     position: absolute;
     z-index: -1;
   }
+}
+
+.flipped-img {
+  margin-left: -2px;
 }
 
 .grid-1 .team-img {
