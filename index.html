@@ -372,7 +372,8 @@
                         src="assets/images/github-white.svg" alt="Github"></a>
                 <a href="mailto:info@techgaun.com"><img src="assets/images/email.svg" alt="Email"></a>
             </div>
-            <p>© 2024 Techgaun. All rights reserved.</p>
+            <p>© <span id="current-year">2024</span> Techgaun. All rights reserved.</p>
+
         </div>
     </footer>
 
@@ -380,5 +381,9 @@
         <img src="assets/images/arrow-up.png" alt="arrow-up" />
     </button>
 </body>
+
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
 
 </html>
