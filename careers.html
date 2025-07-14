@@ -139,7 +139,7 @@
                         src="assets/images/github-white.svg" alt="Github"></a>
                 <a href="mailto:info@techgaun.com"><img src="assets/images/email.svg" alt="Email"></a>
             </div>
-            <p>© 2024 Techgaun. All rights reserved.</p>
+            <p>© <span id="current-year">2025</span> Techgaun. All rights reserved.</p>
         </div>
     </footer>
 
@@ -150,7 +150,7 @@
     <script src="assets/js/script.js"></script>
     <script src="assets/js/careers.js"></script>
 
-    <!-- Add this right before the closing </body> tag -->
+    <!-- Add this right before the closing body tag -->
     <div id="apply-modal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
@@ -190,5 +190,8 @@
         </div>
     </div>
 </body>
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
 
 </html>
