@@ -119,8 +119,38 @@
             <img src="assets/images/footer.svg" alt="Footer Background" />
         </div>
     </section>
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <a href="/">
+                    <img src="assets/images/footer-logo.svg" alt="Techgaun Logo">
+                </a>
+            </div>
+            <ul class="footer-nav">
+                <li><a href="#home">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#case-studies">Case Study</a></li>
+            </ul>
+            <div class="social-media">
+                <a href="https://www.linkedin.com/company/techgaun" target="_blank" noopener noreferrer><img
+                        src="assets/images/linkedin-white.svg" alt="LinkedIn"></a>
+                <a href="https://www.github.com/techgaun-np" target="_blank" noopener noreferrer><img
+                        src="assets/images/github-white.svg" alt="Github"></a>
+                <a href="mailto:info@techgaun.com"><img src="assets/images/email.svg" alt="Email"></a>
+            </div>
+            <p>© <span id="current-year">2025</span> Techgaun. All rights reserved.</p>
+        </div>
+    </footer>
 
-    <!-- Add this right before the closing </body> tag -->
+    <button class="scroll-top" id="scroll-top" onclick="scrollToTop()">
+        <img src="assets/images/arrow-up.png" alt="arrow-up" />
+    </button>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/careers.js"></script>
+
+    <!-- Add this right before the closing body tag -->
     <div id="apply-modal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
@@ -159,38 +189,6 @@
             </form>
         </div>
     </div>
-    <!-- Footer Section -->
-    <footer>
-        <div class="container">
-            <div class="footer-logo">
-                <a href="/">
-                    <img src="assets/images/footer-logo.svg" alt="Techgaun Logo">
-                </a>
-            </div>
-            <ul class="footer-nav">
-                <li><a href="#home">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#case-studies">Case Study</a></li>
-            </ul>
-            <div class="social-media">
-                <a href="https://www.linkedin.com/company/techgaun" target="_blank" noopener noreferrer><img
-                        src="assets/images/linkedin-white.svg" alt="LinkedIn"></a>
-                <a href="https://www.github.com/techgaun-np" target="_blank" noopener noreferrer><img
-                        src="assets/images/github-white.svg" alt="Github"></a>
-                <a href="mailto:info@techgaun.com"><img src="assets/images/email.svg" alt="Email"></a>
-            </div>
-            <p>© <span id="current-year">2025</span> Techgaun. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <button class="scroll-top" id="scroll-top" onclick="scrollToTop()">
-        <img src="assets/images/arrow-up.png" alt="arrow-up" />
-    </button>
-
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/careers.js"></script>
-
-
 </body>
 <script>
     document.getElementById('current-year').textContent = new Date().getFullYear();
