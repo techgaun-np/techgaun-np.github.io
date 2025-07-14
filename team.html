@@ -169,7 +169,7 @@
                         src="assets/images/github-white.svg" alt="Github"></a>
                 <a href="mailto:info@techgaun.com"><img src="assets/images/email.svg" alt="Email"></a>
             </div>
-            <p>© 2024 Techgaun. All rights reserved.</p>
+            <p>© <span id="current-year">2025</span> Techgaun. All rights reserved.</p>
         </div>
     </footer>
 
@@ -183,5 +183,8 @@
     <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 
 </body>
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
 
 </html>
