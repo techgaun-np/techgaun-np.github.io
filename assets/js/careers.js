@@ -202,6 +202,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     job_title: applicationForm.job_title.value,
                     department: applicationForm.department.value,
                     resume_link: resumeUrl
+                    reason: applicationForm.reason.value,
+
                 };
 
                 // Send email with application details
