@@ -543,6 +543,12 @@ nav ul li a {
   align-self: flex-end;
 }
 
+.contact-description {
+  margin-top: -10px;
+  font-size: 16px;
+  color: #666;
+}
+
 .contact form {
   display: flex;
   flex-direction: column;
@@ -550,6 +556,23 @@ nav ul li a {
   padding: 75px 80px 75px 80px;
   position: relative;
   z-index: 100;
+}
+
+.contact form select {
+  width: 108%;
+  padding: 16px;
+  padding-right: 44px; /* Already there to reserve space for icon */
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #b0b0af;
+  appearance: none; /* Remove default arrow */
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23b0b0af" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 16px center; /* control the icon padding */
+  background-size: 18px;
+  background-color: white;
 }
 
 .contact form input,
@@ -962,6 +985,10 @@ footer p {
     width: 85%;
   }
 
+  .contact-description {
+    margin-top: 0px;
+  }
+
   nav {
     display: none;
   }
@@ -1220,6 +1247,26 @@ footer p {
     font-size: 13px;
     margin-bottom: 10px;
   }
+
+  .contact form select {
+    width: 107%;
+    padding: 16px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 20px;
+    color: #b0b0af;
+  }
+
+  .close-banner {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 18px;
+    color: #ffffff;
+    padding-left: 10px;
+    line-height: 1;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -1339,5 +1386,25 @@ footer p {
     top: 10px;
     size: 50px;
     height: 20px;
+  }
+
+  .contact form select {
+    width: 115%;
+    padding: 16px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 20px;
+    color: #b0b0af;
+  }
+
+  .close-banner {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 16px;
+    color: #ffffff;
+    padding-left: 10px;
+    line-height: 1;
   }
 }
