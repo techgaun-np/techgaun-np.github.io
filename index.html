@@ -325,17 +325,35 @@
     <img class="leadership-curve-img" src="assets/images/leadership-bg.svg" />
 
     <!-- Contact Section -->
+    <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
             <div class="contact-form-container">
                 <img class="contact-plane" src="assets/images/contact-us-plane.svg" alt="Contact Plane" />
                 <div class="contact-form-content-container">
                     <h1 class="section-title">Contact Us</h1>
+
+                    <p class="contact-description">
+                        Fill out the form below or reach out to us via
+                        <a href="mailto:info@techgaun.com" class="contact-email">email</a>.
+                    </p>
+
                     <div class="contact-form-input-container">
                         <form id="contact-form">
+                            <select name="reason">
+                                <option value="" disabled selected>Reason for Contact</option>
+                                <option value="hire-us">Hire Us</option>
+                                <option value="product-demo">Product Demo</option>
+                                <option value="job-career">Job/Career</option>
+                                <option value="partnership">Partnership</option>
+                                <option value="others">Others</option>
+                            </select>
                             <input type="text" name="from_name" placeholder="Full Name" required>
                             <input type="email" name="from_email" placeholder="Email" required>
                             <input type="tel" name="from_phone" placeholder="Phone Number">
+
+
+
                             <textarea name="message" placeholder="Message" required></textarea>
                             <button type="submit">Submit</button>
 
@@ -349,6 +367,7 @@
             </div>
         </div>
     </section>
+
     <section class="footer-img">
         <div class="container footer-bg-container">
             <img src="assets/images/footer.svg" alt="Footer Background" />
