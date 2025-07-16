@@ -100,57 +100,97 @@ function closeBanner() {
 }
 
 // Carousel functionality
-
 document.addEventListener("DOMContentLoaded", () => {
-  const track = document.querySelector(".carousel-track");
-  const slides = Array.from(track.children);
+  const imageTrack = document.querySelector(".carousel-image-track");
+  const textTagline = document.getElementById("text-tagline");
+  const textTitle = document.getElementById("text-title");
+  const textDesc = document.getElementById("text-description");
+  const textLink = document.getElementById("text-link");
+  const linkContainer = document.getElementById("text-link-container");
+  const carouselText = document.querySelector(".carousel-text");
+
   const nextButton = document.getElementById("next");
   const prevButton = document.getElementById("prev");
 
-  let index = 1; // Start at the first actual slide (after clone)
+  const slides = imageTrack.children;
   const totalSlides = slides.length;
+  let index = 0;
 
-  // Clone first and last slides
-  const firstClone = slides[0].cloneNode(true);
-  const lastClone = slides[slides.length - 1].cloneNode(true);
-  firstClone.id = "first-clone";
-  lastClone.id = "last-clone";
+  const caseStudies = [
+    {
+      tagline: "Dev Tools",
+      title: "Online Set of Useful Tools for Developers",
+      desc: "We have built a suite of online tools for developers to help them with their day-to-day activities. We have made these tools to be used by developers for developers, all in one place and free to use.",
+      link: "https://devtools.techgaun.com",
+      linkText: "Use Dev Tools",
+    },
+    {
+      tagline: "Mobile App",
+      title: "Multi-family Resident Experience",
+      desc: "React Native mobile application for multi-family residential communities to improve the resident experience...",
+      link: null,
+      linkText: "",
+    },
+    {
+      tagline: "Web App",
+      title: "Crowdfunding Platform",
+      desc: "Complex crowdfunding platform integrated with Stripe and support for complex crowdfunding requirements...",
+      link: null,
+      linkText: "",
+    },
+    {
+      tagline: "Ancestree",
+      title: "Genealogy as a Service",
+      desc: "Ancestree is a modern multi-lingual genealogy software as a service currently on private beta...",
+      link: "#contact",
+      linkText: "Schedule Demo",
+    },
+    {
+      tagline: "Open Source",
+      title: "Build for Nepal",
+      desc: "Build for Nepal is an initiative and effort to creating open datasets and build open source software for Nepal...",
+      link: "https://github.com/build-for-nepal",
+      linkText: "Visit Github",
+    },
+  ];
 
-  track.appendChild(firstClone);
-  track.insertBefore(lastClone, track.firstChild);
+  function updateContent() {
+    const data = caseStudies[index];
 
-  const allSlides = Array.from(track.children);
+    carouselText.classList.add("fade-out");
 
-  // Set initial position
-  track.style.transform = `translateX(-${index * 100}%)`;
+    setTimeout(() => {
+      textTagline.textContent = data.tagline;
+      textTitle.textContent = data.title;
+      textDesc.textContent = data.desc;
 
-  const moveToSlide = () => {
-    track.style.transition = "transform 0.5s ease-in-out";
-    track.style.transform = `translateX(-${index * 100}%)`;
-  };
+      if (data.link) {
+        textLink.href = data.link;
+        textLink.textContent = data.linkText;
+        linkContainer.style.display = "block";
+      } else {
+        linkContainer.style.display = "none";
+      }
+
+      carouselText.classList.remove("fade-out");
+    }, 300);
+  }
+
+  function moveSlide() {
+    imageTrack.style.transform = `translateX(-${index * 100}%)`;
+    updateContent();
+  }
 
   nextButton.addEventListener("click", () => {
-    if (index >= allSlides.length - 1) return;
-    index++;
-    moveToSlide();
+    index = (index + 1) % totalSlides;
+    moveSlide();
   });
 
   prevButton.addEventListener("click", () => {
-    if (index <= 0) return;
-    index--;
-    moveToSlide();
+    index = (index - 1 + totalSlides) % totalSlides;
+    moveSlide();
   });
 
-  track.addEventListener("transitionend", () => {
-    if (allSlides[index].id === "first-clone") {
-      track.style.transition = "none";
-      index = 1;
-      track.style.transform = `translateX(-${index * 100}%)`;
-    }
-    if (allSlides[index].id === "last-clone") {
-      track.style.transition = "none";
-      index = allSlides.length - 2;
-      track.style.transform = `translateX(-${index * 100}%)`;
-    }
-  });
+  // Initial content
+  updateContent();
 });
