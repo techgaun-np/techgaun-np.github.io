@@ -1,0 +1,911 @@
+@import url("https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:500,700,600,400");
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", Helvetica;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  font-size: 18px;
+  font-weight: 400;
+  color: #333;
+  background: #fffbf8;
+}
+
+.section-title {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+header {
+  background-color: #fff;
+  padding: 20px 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 46px;
+  width: 225px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.nav-icon {
+  display: none;
+}
+
+/* case study start */
+
+.case-studies {
+  background-color: #fffbf8;
+  padding: 50px 0 50px 0;
+}
+
+.case-studies-container > h1 {
+  text-align: start;
+}
+
+.case-studies-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.case-study {
+  display: flex;
+  margin: 20px 0;
+  padding: 20px;
+  gap: 48px;
+}
+
+.case-study-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.case-study-content h5 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #ff5f00;
+  margin: 0;
+  text-align: start;
+}
+
+.case-study-content h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.case-study-content p {
+  margin-bottom: 48px;
+  margin: 0;
+  text-align: start;
+}
+
+.case-study-content-link-container {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+}
+
+.case-study img {
+  max-width: 100%;
+  border-radius: 10px;
+  /* margin-bottom: 10px; */
+  object-fit: contain;
+  object-position: center;
+}
+
+.crousel-img {
+  width: 200px;
+}
+
+.case-study button {
+  background-color: #ff8502;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.scroll-top img {
+  width: 20px;
+  height: 20px;
+}
+
+/* crousel */
+
+/* === General === */
+.carousel {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.carousel-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.carousel-text {
+  margin: 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* === Image Wrapper === */
+.carousel-image-wrapper {
+  width: 100%;
+  max-width: 40%;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.carousel-image-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 0px; /* Important: No gaps unless you adjust translateX logic */
+}
+
+.carousel-image-item {
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.carousel-image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* === Overlay === */
+.overlay-container {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-image-item:hover .overlay-container {
+  opacity: 1;
+}
+
+.overlay-bg {
+  background-color: rgb(42, 58, 97);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  border-radius: 20px;
+  opacity: 0.7;
+}
+
+.case-study-link {
+  background: #ff8502;
+  padding: 12px 16px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: small;
+  z-index: 20;
+  position: relative;
+}
+
+.title-container {
+  width: 45%;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-container-mobile {
+  display: none;
+}
+#text-title {
+  margin: 0;
+  font-size: 24px;
+}
+
+#text-title-1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.case-study-title {
+  position: absolute;
+  margin-top: 0;
+}
+
+#text-tagline {
+  color: #ff5f00;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: start;
+}
+
+#text-description {
+  text-align: start;
+  max-width: 700px;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  position: absolute;
+  bottom: -20px;
+  left: 20px;
+  padding: 6px;
+  border-radius: 80px;
+  background-color: #d5dae2;
+}
+
+.carousel-btn {
+  background-color: #b0b9c9;
+  border: none;
+  font-size: 1.5rem;
+  margin: 0 0.2rem;
+  cursor: pointer;
+  padding: 2px 7px;
+  border-radius: 100%;
+  transition: background 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background-color: #ff8502;
+}
+
+.carousel-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .carousel-image-wrapper {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 150px;
+    display: flex;
+    aspect-ratio: inherit;
+  }
+
+  .carousel-image-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 0px; /* Important: No gaps unless you adjust translateX logic */
+  }
+
+  .case-study-title {
+    position: relative;
+  }
+
+  .carousel-image-item {
+    flex: 0 0 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .carousel-image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  #text-tagline {
+    margin: 0 0px;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .carousel-controls {
+    bottom: -60px;
+    left: 50%;
+    translate: -50%;
+  }
+
+  /* === Overlay === */
+  .overlay-container {
+    display: none;
+  }
+
+  .carousel-image-item:hover .overlay-container {
+    opacity: 0;
+    display: none;
+  }
+
+  .overlay-bg {
+    display: none;
+  }
+
+  .case-study-link {
+    background: #ff8502;
+    padding: 3px 6px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: smaller;
+    z-index: 20;
+    position: relative;
+  }
+
+  .carousel-content {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  #text-description {
+    text-align: center;
+    width: 100%;
+  }
+
+  .title-container-mobile {
+    display: flex;
+  }
+  .title-container {
+    display: none;
+  }
+  #text-title {
+    font-size: 16px;
+  }
+
+  #text-title-1 {
+    font-size: 16px;
+  }
+
+  .carousel-text {
+    margin-top: 0px !important; /* Override the 60px from 1260px block */
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .hero h1 {
+    padding: 0;
+  }
+
+  #text-tagline {
+    margin-bottom: 0;
+    margin-top: 60px;
+  }
+
+  .carousel-controls {
+    bottom: -55px;
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  .container {
+    width: 90%;
+  }
+
+  .ramrolink-banner-right-desktop {
+    width: 16rem;
+    right: 16%;
+  }
+
+  .ramrolink-banner-right-socials {
+    z-index: 10;
+    width: 11rem;
+    height: auto;
+    bottom: 16%;
+    right: 5%;
+  }
+
+  #text-title {
+    margin: 0;
+    font-size: 16px;
+  }
+
+  #text-tagline {
+    margin: 0 0px;
+    /* margin-top: 60px; */
+  }
+
+  .carousel-text {
+    margin-top: 60px;
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+  .container {
+    width: 95%;
+  }
+  .blog-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .carousel-controls {
+    bottom: -50px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    width: 85%;
+  }
+
+  .contact-description {
+    margin-top: 0px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .main-nav.responsive {
+    display: flex;
+    position: absolute;
+    z-index: 10000;
+    top: 90px;
+    left: 0;
+    width: 100%;
+  }
+
+  .main-nav.responsive ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: #163152;
+  }
+
+  .main-nav.responsive ul li {
+    margin: 0;
+    display: flex;
+  }
+
+  .main-nav.responsive ul li:not(:last-child) {
+    border-bottom: 1px solid #1b3c65;
+  }
+
+  .main-nav.responsive ul li a {
+    color: #fff;
+    padding: 20px;
+    flex: 1;
+  }
+
+  .nav-icon {
+    display: flex;
+    color: #163152;
+    text-decoration: none;
+  }
+
+  .nav-icon i {
+    font-size: 24px;
+  }
+
+  .get-started-container {
+    width: none;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+    padding: 0;
+  }
+
+  .learn-more {
+    padding: 6px 15px;
+    margin-top: 12px;
+    font-size: 12px;
+  }
+
+  .clients .container {
+    flex-direction: column;
+  }
+
+  .client-logos {
+    flex-direction: column;
+    justify-content: normal;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .about-container {
+    flex-direction: column;
+    justify-content: normal;
+  }
+
+  .about-content {
+    width: 100%;
+  }
+
+  .services-list {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .service-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .process-steps {
+    gap: 0;
+    flex-direction: column;
+  }
+
+  .process-step {
+    width: 100%;
+  }
+
+  .process-step:nth-child(even) {
+    margin-top: 0;
+  }
+
+  .process-img-container img {
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+  }
+
+  .case-study {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .case-study img {
+    max-width: 500px;
+  }
+
+  .case-study:nth-child(even) {
+    flex-direction: column-reverse;
+  }
+
+  .who-we-are-content p {
+    width: 100%;
+  }
+
+  .aeroplane-team {
+    position: static;
+  }
+
+  .team-members {
+    gap: 0;
+    flex-direction: column;
+  }
+
+  .contact-plane {
+    display: none;
+  }
+
+  .contact-man {
+    display: none;
+  }
+
+  .contact form {
+    padding: 32px;
+    max-width: none;
+  }
+
+  .about,
+  .process,
+  .case-studies,
+  .team {
+    padding: 32px 0;
+  }
+
+  .section-title {
+    font-size: 28px;
+    margin: 8px 0;
+  }
+
+  p {
+    font-size: 16px;
+    margin: 8px 0;
+  }
+
+  .about-stats h3 {
+    font-size: 2em;
+    margin: 0;
+  }
+
+  .person-sitting {
+    width: 170px;
+  }
+
+  .person-img {
+    width: 90px;
+    top: 40%;
+  }
+
+  .case-study-content h1 {
+    font-size: 20px;
+  }
+
+  .primary-blog-container {
+    padding: 16px;
+    margin-top: 32px;
+    gap: 24px;
+
+    .primary-blog-content {
+      gap: 8px;
+
+      .primary-blog-title {
+        font-size: 20px;
+        line-height: 28px;
+      }
+
+      .primary-blog-description {
+        font-size: 14px;
+      }
+    }
+  }
+  /* banner modal */
+  .modal-content {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    height: 300px;
+    position: relative;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  .banner-modal-create-now {
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    display: inline-block;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+  }
+
+  .modal-button-wrapper {
+    position: relative;
+    width: fit-content;
+    margin-left: 10px;
+  }
+
+  .ramrolink-banner-right-desktop {
+    z-index: 20;
+    width: 12rem;
+    height: auto;
+    bottom: 5%;
+    right: 16%;
+  }
+
+  .ramrolink-banner-right-socials {
+    z-index: 10;
+    width: 8rem;
+    height: auto;
+    bottom: 6%;
+    right: 20px;
+  }
+  .banner-modal-title {
+    font-size: 24px;
+    margin-top: 25px;
+  }
+
+  .banner-modal-desc {
+    font-size: 16px;
+  }
+
+  .banner-modal-from-text {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
+  .contact form select {
+    width: 107%;
+    padding: 16px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 20px;
+    color: #b0b0af;
+  }
+
+  .close-banner {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 18px;
+    color: #ffffff;
+    padding-left: 10px;
+    line-height: 1;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .get-started-container {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 20px;
+    padding: 0;
+  }
+
+  .about-img-container {
+    width: 100%;
+  }
+
+  .team-member-img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .logo img {
+    width: 150px;
+  }
+
+  .footer-logo img {
+    width: 150px;
+  }
+
+  .case-study-content-link-container {
+    justify-content: center;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .blog-list {
+    grid-template-columns: 1fr;
+  }
+
+  /* modal banner */
+
+  .modal-content {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    height: 200px;
+    position: relative;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  .banner-modal-title {
+    color: #21a69b;
+    font-size: 16px;
+    margin-bottom: 0px;
+    margin-top: 20px;
+  }
+
+  .banner-modal-desc {
+    color: var(--Gray-900, #19191a);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 120%; /* 28.8px */
+    max-width: 150px;
+  }
+  .banner-modal-from-text {
+    font-weight: 500;
+    font-size: 10px;
+    margin-top: -6px;
+    margin-bottom: 6px;
+    color: var(--Gray-900, #19191a);
+  }
+
+  .banner-modal-create-now {
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 400;
+    display: inline-block;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+  }
+
+  .modal-button-wrapper {
+    position: relative;
+    width: fit-content;
+    margin-left: 10px;
+  }
+
+  .ramrolink-banner-right-desktop {
+    z-index: 20;
+    width: 10rem;
+    height: auto;
+    bottom: 5%;
+    right: 16%;
+  }
+
+  .ramrolink-banner-right-socials {
+    z-index: 10;
+    width: 6rem;
+    height: auto;
+    bottom: 10%;
+    right: 10px;
+  }
+
+  .top-arrow {
+    height: 20px;
+  }
+
+  .ramrolink-logo {
+    position: absolute;
+    right: 40px;
+    top: 10px;
+    size: 50px;
+    height: 20px;
+  }
+
+  .contact form select {
+    width: 115%;
+    padding: 16px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 20px;
+    color: #b0b0af;
+  }
+
+  .close-banner {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 16px;
+    color: #ffffff;
+    padding-left: 10px;
+    line-height: 1;
+  }
+}
