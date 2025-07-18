@@ -134,7 +134,8 @@ document.addEventListener("DOMContentLoaded", () => {
       tagline: "Dev Tools",
       title: "Online Set of Useful Tools for Developers",
       title1: "Online Set of Useful Tools for Developers",
-      desc: "We have built a suite of online tools for developers to help them with their day-to-day activities. We have made these tools to be used by developers for developers, all in one place and free to use.",
+      desc: "We’ve created a comprehensive suite of online tools designed to make developers’ day-to-day tasks easier and more efficient. Built by developers for developers, these tools are all available in one place.",
+
       link: "https://devtools.techgaun.com",
       linkText: "Use Dev Tools",
     },
