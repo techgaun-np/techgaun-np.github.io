@@ -180,6 +180,9 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   ];
 
+  let isAnimating = false; // Track animation state
+  let autoScrollInterval;
+
   function updateContent() {
     const data = caseStudies[index % originalLength];
     carouselText.classList.add("fade-out");
@@ -203,11 +206,21 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function moveSlide() {
+    if (isAnimating) return; // Prevent overlapping animations
+    isAnimating = true;
+
     imageTrack.style.transition = "transform 0.5s ease-in-out";
     imageTrack.style.transform = `translateX(-${index * 100}%)`;
     updateContent();
 
-    imageTrack.addEventListener("transitionend", handleLoop, { once: true });
+    imageTrack.addEventListener(
+      "transitionend",
+      () => {
+        isAnimating = false;
+        handleLoop();
+      },
+      { once: true }
+    );
   }
 
   function handleLoop() {
@@ -226,18 +239,47 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // Auto-scroll functionality
+  function startAutoScroll() {
+    autoScrollInterval = setInterval(() => {
+      if (!isAnimating) {
+        index++;
+        moveSlide();
+      }
+    }, 30000); // 30 seconds
+  }
+
+  function stopAutoScroll() {
+    clearInterval(autoScrollInterval);
+  }
+
+  // Modified button handlers
   nextButton.addEventListener("click", () => {
+    if (isAnimating) return;
+    stopAutoScroll();
     index++;
     moveSlide();
+    setTimeout(startAutoScroll, 30000); // Restart after full interval
   });
 
   prevButton.addEventListener("click", () => {
+    if (isAnimating) return;
+    stopAutoScroll();
     index--;
     moveSlide();
+    setTimeout(startAutoScroll, 30000); // Restart after full interval
   });
 
-  // Set initial position to middle copy
+  // Pause on hover
+  const carousel = document.querySelector(".carousel");
+  if (carousel) {
+    carousel.addEventListener("mouseenter", stopAutoScroll);
+    carousel.addEventListener("mouseleave", startAutoScroll);
+  }
+
+  // Initialize
   imageTrack.style.transition = "none";
   imageTrack.style.transform = `translateX(-${index * 100}%)`;
   updateContent();
+  startAutoScroll();
 });
