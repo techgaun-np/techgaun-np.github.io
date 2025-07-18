@@ -343,93 +343,6 @@ nav ul li a {
   width: 100%;
 }
 
-.case-studies {
-  background-color: #fffbf8;
-  padding: 50px 0 50px 0;
-}
-
-.case-studies-container > h1 {
-  text-align: center;
-}
-
-.case-studies-list {
-  display: flex;
-  flex-direction: column;
-}
-
-.case-study {
-  display: flex;
-  margin: 20px 0;
-  padding: 20px;
-  gap: 48px;
-}
-
-.case-study-content {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.case-study-content.odd {
-  margin-left: auto;
-}
-
-.case-study-content.even {
-  margin-left: 0;
-}
-
-.case-study-content h5 {
-  font-size: 16px;
-  font-weight: 400;
-  color: #ff5f00;
-  margin: 0;
-}
-
-.case-study-content h1 {
-  font-size: 28px;
-  font-weight: 700;
-  margin: 0;
-}
-
-.case-study-content p {
-  margin-bottom: 48px;
-  margin: 0;
-}
-
-.case-study-content-link-container {
-  width: 100%;
-  display: flex;
-  justify-content: start;
-}
-
-.case-study-content a {
-  background: #ff8502;
-  padding: 12px 16px;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 4px;
-  margin-top: 16px;
-  display: inline-block;
-  width: fit-content;
-}
-
-.case-study img {
-  max-width: 100%;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  object-fit: contain;
-  object-position: center;
-}
-
-.case-study button {
-  background-color: #ff8502;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
 .team {
   padding: 100px 0 0 0;
   background: #eaf4ff;
@@ -957,6 +870,179 @@ footer p {
   }
 }
 
+/* crousel */
+/* === General === */
+.carousel {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.case-studies-container {
+  padding: 80px;
+}
+
+.carousel-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.carousel-text {
+  margin: 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* === Image Wrapper === */
+.carousel-image-wrapper {
+  width: 100%;
+  max-width: 40%;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.carousel-image-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 0px; /* Important: No gaps unless you adjust translateX logic */
+}
+
+.carousel-image-item {
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.carousel-image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* === Overlay === */
+.overlay-container {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-image-item:hover .overlay-container {
+  opacity: 1;
+}
+
+.overlay-bg {
+  background-color: rgb(42, 58, 97);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  border-radius: 20px;
+  opacity: 0.7;
+}
+
+.case-study-link {
+  background: #ff8502;
+  padding: 12px 16px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: small;
+  z-index: 20;
+  position: relative;
+}
+
+.title-container {
+  width: 45%;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-container-mobile {
+  display: none;
+}
+#text-title {
+  margin: 0;
+  font-size: 24px;
+}
+
+#text-title-1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.case-study-title {
+  position: absolute;
+  margin-top: 0;
+}
+
+#text-tagline {
+  color: #ff5f00;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: start;
+}
+
+#text-description {
+  text-align: start;
+  max-width: 700px;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  position: absolute;
+  bottom: -20px;
+  left: 0px;
+  padding: 6px;
+  border-radius: 80px;
+  background-color: #d5dae2;
+}
+
+.carousel-btn {
+  background-color: #b0b9c9;
+  border: none;
+  font-size: 1.5rem;
+  margin: 0 0.2rem;
+  cursor: pointer;
+  padding: 2px 7px;
+  border-radius: 100%;
+  transition: background 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background-color: #ff8502;
+}
+
+.carousel-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
 .footer-container-1 {
   display: none;
 }
@@ -964,6 +1050,15 @@ footer p {
 @media screen and (max-width: 1600px) {
   .hero h1 {
     padding: 0;
+  }
+
+  #text-tagline {
+    margin-bottom: 0;
+    margin-top: 60px;
+  }
+
+  .carousel-controls {
+    bottom: -55px;
   }
 }
 
@@ -993,6 +1088,20 @@ footer p {
     height: auto;
     bottom: 16%;
     right: 5%;
+  }
+
+  #text-title {
+    margin: 0;
+    font-size: 16px;
+  }
+
+  #text-tagline {
+    margin: 0 0px;
+    /* margin-top: 60px; */
+  }
+
+  .carousel-text {
+    margin-top: 60px;
   }
 }
 
@@ -1129,14 +1238,6 @@ footer p {
   .case-study {
     flex-direction: column;
     padding: 0;
-  }
-
-  .case-study img {
-    max-width: 500px;
-  }
-
-  .case-study:nth-child(even) {
-    flex-direction: column-reverse;
   }
 
   .who-we-are-content p {
@@ -1323,6 +1424,220 @@ footer p {
   .footer-logo img {
     height: 32px;
     margin-bottom: 10px;
+  }
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .carousel-image-wrapper {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 150px;
+    display: flex;
+    aspect-ratio: inherit;
+  }
+
+  .carousel-image-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 0px; /* Important: No gaps unless you adjust translateX logic */
+  }
+
+  .case-study-title {
+    position: relative;
+  }
+
+  .carousel-image-item {
+    flex: 0 0 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .carousel-image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  #text-tagline {
+    margin: 0 0px;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .carousel-controls {
+    bottom: -60px;
+    left: 50%;
+    translate: -50%;
+  }
+
+  /* === Overlay === */
+  .overlay-container {
+    display: none;
+  }
+
+  .carousel-image-item:hover .overlay-container {
+    opacity: 0;
+    display: none;
+  }
+
+  .overlay-bg {
+    display: none;
+  }
+
+  .case-study-link {
+    background: #ff8502;
+    padding: 3px 6px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: smaller;
+    z-index: 20;
+    position: relative;
+  }
+
+  .carousel-content {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  #text-description {
+    text-align: center;
+    width: 100%;
+  }
+
+  .title-container-mobile {
+    display: flex;
+  }
+  .title-container {
+    display: none;
+  }
+  #text-title {
+    font-size: 16px;
+  }
+
+  #text-title-1 {
+    font-size: 16px;
+  }
+
+  .carousel-text {
+    margin-top: 0px !important; /* Override the 60px from 1260px block */
+  }
+
+  .case-studies-container {
+    padding: 0px;
+    padding-bottom: 40px;
+  }
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .carousel-image-wrapper {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 150px;
+    display: flex;
+    aspect-ratio: inherit;
+  }
+
+  .carousel-image-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 0px; /* Important: No gaps unless you adjust translateX logic */
+  }
+
+  .case-study-title {
+    position: relative;
+  }
+
+  .carousel-image-item {
+    flex: 0 0 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .carousel-image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  #text-tagline {
+    margin: 0 0px;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .carousel-controls {
+    bottom: -60px;
+    left: 50%;
+    translate: -50%;
+  }
+
+  /* === Overlay === */
+  .overlay-container {
+    display: none;
+  }
+
+  .carousel-image-item:hover .overlay-container {
+    opacity: 0;
+    display: none;
+  }
+
+  .overlay-bg {
+    display: none;
+  }
+
+  .case-study-link {
+    background: #ff8502;
+    padding: 3px 6px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: smaller;
+    z-index: 20;
+    position: relative;
+  }
+
+  .carousel-content {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  #text-description {
+    text-align: center;
+    width: 100%;
+  }
+
+  .title-container-mobile {
+    display: flex;
+  }
+  .title-container {
+    display: none;
+  }
+  #text-title {
+    font-size: 16px;
+  }
+
+  #text-title-1 {
+    font-size: 16px;
+  }
+
+  .carousel-text {
+    margin-top: 0px !important; /* Override the 60px from 1260px block */
+  }
+
+  .case-studies-container {
+    padding: 0px;
+    padding-bottom: 40px;
   }
 }
 

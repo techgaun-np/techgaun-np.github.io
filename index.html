@@ -208,78 +208,119 @@
     <!-- Case Studies Section -->
     <section id="case-studies" class="case-studies">
         <div class="container case-studies-container">
-            <h1 class="section-title">Case Studies</h1>
-            <div class="case-studies-list">
-                <div class="case-study">
-                    <div class="case-study-content even">
-                        <h5>Dev Tools</h5>
-                        <h1>Online Set of Useful Tools for Developers</h1>
-                        <p>We have built a suite of online tools for developers to help them with their day-to-day
+
+            <div class="carousel">
+                <h1 class=" section-title case-study-title">Case Studies</h1>
+                <div class="carousel-content">
+
+
+                    <!-- Text Content -->
+                    <div class="carousel-text">
+                        <h5 id="text-tagline">Dev Tools</h5>
+                        <p id="text-description">
+                            We have built a suite of online tools for developers to help them with their day-to-day
                             activities. We have made these tools to be used by developers for developers, all in one
-                            place and free to use.</p>
-                        <div class="case-study-content-link-container">
-                            <a href="https://devtools.techgaun.com" target="_blank" noopener noreferrer>Use Dev
-                                Tools</a>
+                            place and free to use.
+                        </p>
+
+                    </div>
+                    <div class="title-container-mobile">
+                        <h1 id="text-title-1">Online Set of Useful Tools for Developers</h3>
+
+                    </div>
+
+                    <div class="title-container-mobile text-link-container">
+                        <a id="text-link" href="https://devtools.techgaun.com" target="_blank"
+                            class="case-study-link mobile-link-crousel">Use
+                            Dev Tools</a>
+                    </div>
+                    <!-- Image Track ;large screen -->
+                    <div class="carousel-image-wrapper">
+                        <div class="carousel-image-track">
+                            <div class="carousel-image-item">
+                                <img src="assets/images/case-study-devtools.png" alt="Dev Tools" />
+                                <div class="overlay-container">
+                                    <div class="overlay-bg"></div>
+
+                                    <a href="https://devtools.techgaun.com" target="_blank" class="case-study-link">Use
+                                        Dev Tools</a>
+
+                                </div>
+                            </div>
+                            <div class="carousel-image-item">
+                                <img src="assets/images/mobile-ux.png" alt="Mobile App" />
+
+                            </div>
+                            <div class="carousel-image-item">
+                                <img src="assets/images/dashboard.svg" alt="Crowdfunding" />
+
+                            </div>
+                            <div class="carousel-image-item">
+                                <img src="assets/images/ancestree.png" alt="Ancestree" />
+
+                                <div class="overlay-container">
+                                    <div class="overlay-bg"></div>
+
+                                    <a href="#contact" class="case-study-link">Schedule Demo</a>
+
+                                </div>
+                            </div>
+                            <div class="carousel-image-item">
+                                <img src="assets/images/case-study-build-for-nepal.png" alt="Build for Nepal" />
+
+                                <div class="overlay-container">
+                                    <div class="overlay-bg"></div>
+
+                                    <a href="https://github.com/build-for-nepal" target="_blank"
+                                        class="case-study-link">
+                                        Visit Github</a>
+
+                                </div>
+                            </div>
+
+                            <div class="carousel-image-item">
+                                <img src="assets/images/banner/laptop.svg" alt="Build for Nepal" />
+
+                                <div class="overlay-container">
+                                    <div class="overlay-bg"></div>
+
+                                    <a href="https://ramro.link" target="_blank" class="case-study-link">
+                                        Visit RamroLink</a>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <img src="assets/images/case-study-devtools.png" alt="Dev Tools">
                 </div>
-                <div class="case-study">
-                    <img src="assets/images/mobile-ux.svg" alt="Mobile App">
-                    <div class="case-study-content odd">
-                        <h5>Mobile App</h5>
-                        <h1>Multi-family Resident Experience</h1>
-                        <p>React Native mobile application for multi-family residential communities to improve the
-                            resident experience by providing a seamless way to report maintenance issues, pay rent,
-                            and
-                            communicate with the property management team.</p>
-                        <!-- <a href="#">View Case Study</a> -->
-                    </div>
+
+
+                <!-- Navigation Arrows -->
+                <div class="carousel-controls">
+                    <button id="prev" class="carousel-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20" fill="none">
+                            <path
+                                d="M9.02464 10.0006L13.1496 14.1256L11.9713 15.3039L6.66797 10.0006L11.9713 4.69727L13.1496 5.8756L9.02464 10.0006Z"
+                                fill="#F6F7F9" />
+                        </svg>
+
+                    </button>
+                    <button id="next" class="carousel-btn"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                            height="16" viewBox="0 0 20 20" fill="none">
+                            <path
+                                d="M10.9766 10.0006L6.85156 5.8756L8.0299 4.69727L13.3332 10.0006L8.0299 15.3039L6.85156 14.1256L10.9766 10.0006Z"
+                                fill="#F6F7F9" />
+                        </svg></button>
                 </div>
-                <div class="case-study">
-                    <div class="case-study-content even">
-                        <h5>Web App</h5>
-                        <h1>Crowdfunding Platform</h1>
-                        <p>Complex crowdfunding platform integrated with Stripe and support for complex crowdfunding
-                            requirements with features like subscription, rewards, and tiers and lifecycle
-                            management
-                            throughout the campaign.</p>
-                        <!-- <a href="#">View Case Study</a> -->
-                    </div>
-                    <img src="assets/images/dashboard.svg" alt="Dashboard Design">
-                </div>
-                <div class="case-study">
-                    <img src="assets/images/case-study-ancestree.png" alt="Ancestree">
-                    <div class="case-study-content odd">
-                        <h5>Ancestree</h5>
-                        <h1>Genealogy as a Service</h1>
-                        <p>Ancestree is a modern multi-lingual genealogy software as a service currently on private
-                            beta, proudly built by our engineering team. Schedule a demo with our team to explore
-                            the
-                            features for your family tree.</p>
-                        <div class="case-study-content-link-container">
-                            <a href="#contact">Schedule Demo</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="case-study">
-                    <div class="case-study-content even">
-                        <h5>Open Source</h5>
-                        <h1>Build for Nepal</h1>
-                        <p>Build for Nepal is an initiative and effort to creating open datasets and build open
-                            source
-                            softwares for Nepal. Techgaun Nepal acts as a facilitator but its really the community
-                            that
-                            gives the life to this open source initiative.</p>
-                        <div class="case-study-content-link-container">
-                            <a href="https://github.com/build-for-nepal" target="_blank">Visit Github</a>
-                        </div>
-                    </div>
-                    <img src="assets/images/case-study-build-for-nepal.png" alt="Build for Nepal">
+
+                <!-- title Trace -->
+                <div class="title-container">
+                    <h1 id="text-title">Online Set of Useful Tools for Developers</h3>
+
                 </div>
             </div>
         </div>
     </section>
+
 
     <!-- Leadership Section -->
     <section class="team">
