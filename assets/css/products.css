@@ -1,5 +1,6 @@
 .hero-img-product {
   width: 100%;
+  max-height: 650px;
 }
 
 .hero-text {
@@ -39,6 +40,22 @@
   border: 1px solid var(--Flush-Orange-600, #ff8502);
   box-shadow: -4px -4px 8px 0px rgba(255, 133, 2, 0.24),
     4px 4px 8px 0px rgba(255, 133, 2, 0.24);
+
+  animation: float-glow 3s ease-in-out infinite;
+}
+
+@keyframes float-glow {
+  0%,
+  100% {
+    transform: translateY(0);
+    box-shadow: -4px -4px 8px rgba(255, 133, 2, 0.24),
+      4px 4px 8px rgba(255, 133, 2, 0.24);
+  }
+  50% {
+    transform: translateY(-8px);
+    box-shadow: -4px -4px 16px rgba(255, 133, 2, 0.4),
+      4px 4px 16px rgba(255, 133, 2, 0.4), 0 0 12px rgba(255, 133, 2, 0.2);
+  }
 }
 
 /* ramro link section */
@@ -76,18 +93,29 @@
   color: #333947;
 }
 
-.title-wrapper {
-  position: relative;
-}
-
 .section-title {
   margin-bottom: 0;
+}
+
+.title-wrapper {
+  position: relative;
 }
 
 .curve-arrow {
   position: absolute;
   top: -5px;
   transform: translateX(-40%);
+  animation: spin 3s infinite linear; /* Added animation */
+  transform-origin: center; /* Rotates around its own center */
+}
+
+@keyframes spin {
+  from {
+    transform: translateX(-40%) rotate(0deg);
+  }
+  to {
+    transform: translateX(-40%) rotate(360deg);
+  }
 }
 
 .primary-desc {
@@ -111,7 +139,7 @@
   margin: 0 auto;
   background-color: black;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   overflow: auto;
   gap: 40px;
   padding: 40px;
@@ -156,6 +184,58 @@
   font-weight: 400;
 }
 
+.dev-tool-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+/* crousel testing */
+
+.image-scroller {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  border-radius: 1.5rem;
+}
+
+.image-track {
+  display: flex;
+  gap: 40px; /* Adjust spacing between images */
+  width: max-content;
+  animation: scroll 30s linear infinite;
+  background-color: black;
+  padding: 40px;
+}
+
+.ramro-link-image {
+  width: 700px; /* Adjust image width */
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+/* Center detection (will be handled by JavaScript) */
+.ramro-link-image.center {
+  transform: scale(1.1);
+  opacity: 1;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
+}
+
+.ramro-link-image:not(.center) {
+  opacity: 0.8;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Move half the width to create loop */
+  }
+}
+
 /* Responsive */
 
 @media (max-width: 768px) {
@@ -188,6 +268,12 @@
     font-size: 0.9rem;
   }
 
+  .ramro-link-content {
+    max-width: 100%;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 6px;
+  }
+
   .ramro-link-description {
     grid-column: span 9;
     text-align: start;
@@ -196,5 +282,32 @@
 
   .step {
     grid-column: span 9;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .ramro-link-image {
+    width: 100px !important; /* Adjust image width */
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+  }
+
+  .image-track {
+    display: flex;
+    gap: 20px; /* Adjust spacing between images */
+    width: max-content;
+    animation: scroll 30s linear infinite;
+    background-color: black;
+    padding: 20px;
+  }
+
+  .dev-tools-carousel {
+    grid-column: span 9;
+  }
+  .dev-tool-item {
+    flex: 0 0 auto;
+    width: 50%;
+    margin-right: 20px;
   }
 }
