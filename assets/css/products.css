@@ -190,11 +190,9 @@
   border-radius: 0.5rem;
 }
 
-/* crousel testing */
-
+/* === Carousel === */
 .image-scroller {
-  width: 100%;
-  overflow: hidden;
+  max-width: 100%;
   position: relative;
   margin: 0 auto;
   border-radius: 1.5rem;
@@ -202,38 +200,58 @@
 
 .image-track {
   display: flex;
-  gap: 40px; /* Adjust spacing between images */
-  width: max-content;
-  animation: scroll 30s linear infinite;
+  aspect-ratio: 16 / 9;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  border-radius: 1.5rem;
+  gap: 30px;
   background-color: black;
   padding: 40px;
+  scrollbar-width: none;
+}
+.image-track::-webkit-scrollbar {
+  display: none;
 }
 
 .ramro-link-image {
-  width: 700px; /* Adjust image width */
-  height: auto;
+  flex: 1 0 80%;
+  scroll-snap-align: center;
   object-fit: cover;
-  transition: transform 0.6s ease, opacity 0.6s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
-
-/* Center detection (will be handled by JavaScript) */
 .ramro-link-image.center {
-  transform: scale(1.1);
+  transform: scale(1.02);
   opacity: 1;
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
 }
-
 .ramro-link-image:not(.center) {
-  opacity: 0.8;
+  opacity: 0.7;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
+  transform: scale(0.95);
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%); /* Move half the width to create loop */
-  }
+/* === Dots === */
+.carousel-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+  gap: 10px;
+}
+.carousel-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.carousel-dot.active {
+  background-color: #ffffff;
 }
 
 /* Responsive */
@@ -268,6 +286,11 @@
     font-size: 0.9rem;
   }
 
+  .ramro-link-section {
+    margin-top: 20px;
+    margin-bottom: 2rem;
+  }
+
   .ramro-link-content {
     max-width: 100%;
     grid-template-columns: repeat(9, 1fr);
@@ -286,28 +309,29 @@
     padding-bottom: 1rem;
   }
 
-  .ramro-link-image {
-    width: 100px !important; /* Adjust image width */
-    height: auto;
-    object-fit: cover;
-    transition: transform 0.6s ease, opacity 0.6s ease;
-  }
-
-  .image-track {
-    display: flex;
-    gap: 20px; /* Adjust spacing between images */
-    width: max-content;
-    animation: scroll 30s linear infinite;
-    background-color: black;
-    padding: 20px;
-  }
-
   .dev-tools-carousel {
     grid-column: span 9;
   }
   .dev-tool-item {
     flex: 0 0 auto;
-    width: 50%;
+    width: 60%;
     margin-right: 20px;
+  }
+
+  .image-track {
+    aspect-ratio: 16 / 9;
+    padding: 20px;
+    gap: 20px;
+  }
+  .ramro-link-image-section {
+    margin-top: 20px;
+  }
+  .carousel-dots {
+    bottom: 5px;
+  }
+
+  .carousel-dot {
+    width: 8px;
+    height: 8px;
   }
 }
