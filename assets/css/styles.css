@@ -880,6 +880,8 @@ footer p {
 
 .case-studies-container {
   padding: 80px;
+  padding-top: 12rem;
+  padding-bottom: 12rem;
 }
 
 .carousel-content {
@@ -890,7 +892,7 @@ footer p {
 }
 
 .carousel-text {
-  margin: 0;
+  margin: 30px 0 0 0;
 }
 
 .section-title {
@@ -972,7 +974,7 @@ footer p {
 }
 
 .title-container {
-  width: 45%;
+  width: 50%;
   float: right;
   display: flex;
   justify-content: center;
@@ -999,7 +1001,7 @@ footer p {
 
 #text-tagline {
   color: #ff5f00;
-  font-size: 16px;
+  font-size: 1.125rem;
   font-weight: 400;
   text-align: start;
 }
@@ -1007,6 +1009,7 @@ footer p {
 #text-description {
   text-align: start;
   max-width: 700px;
+  margin-top: 0;
 }
 
 .carousel-controls {
@@ -1014,7 +1017,7 @@ footer p {
   justify-content: center;
   margin-top: 1rem;
   position: absolute;
-  bottom: -20px;
+  bottom: -40px;
   left: 0px;
   padding: 6px;
   border-radius: 80px;
@@ -1059,6 +1062,16 @@ footer p {
 
   .carousel-controls {
     bottom: -55px;
+  }
+
+  .case-studies-container {
+    padding: 80px;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
+  .title-container {
+    width: 40%;
   }
 }
 
@@ -1114,6 +1127,12 @@ footer p {
   }
   .blog-list {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .case-studies-container {
+    padding: 0px;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
   }
 }
 
@@ -1610,11 +1629,6 @@ footer p {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-  }
-
-  #text-description {
-    text-align: center;
-    width: 100%;
   }
 
   .title-container-mobile {
