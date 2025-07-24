@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
       tagline: "Dev Tools",
       title: "Online Set of Useful Tools for Developers",
       title1: "Online Set of Useful Tools for Developers",
-      desc: "We’ve created a comprehensive suite of online tools designed to make developers’ day-to-day tasks easier and more efficient. Built by developers for developers, these tools are all available in one place.",
+      desc: "We've built a comprehensive suite of online tools tailored specifically to meet the everyday needs of developers. Whether you're debugging, formatting code, converting data, or working with APIs, our platform offers a seamless, all-in-one experience designed to boost productivity and reduce friction. Created by developers for developers, these tools are completely free to use—so you can focus on building, not searching..",
 
       link: "https://devtools.techgaun.com",
       linkText: "Use Dev Tools",
@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
       tagline: "Mobile App",
       title: "Multi-family Resident Experience",
       title1: "Multi-family Resident Experience",
-      desc: "React Native mobile application for multi-family residential communities to improve the resident experience by providing a seamless way to report maintenance issues, pay rent, and communicate with the property management team.",
+      desc: "React Native mobile application designed specifically for multi-family residential communities, enhancing the day-to-day living experience for residents. The app offers an intuitive platform where users can easily report maintenance issues, make rent payments, and stay connected with the property management team—all from the convenience of their phone. By streamlining communication and essential services, it empowers both residents and management to operate more efficiently and harmoniously.",
       link: "#contact",
       linkText: "",
     },
@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", () => {
       tagline: "Web App",
       title: "Crowdfunding Platform",
       title1: "Crowdfunding Platform",
-      desc: "Complex crowdfunding platform integrated with Stripe and support for complex crowdfunding requirements with features like subscription, rewards, and tiers and lifecycle management throughout the campaign.",
+      desc: "A robust and scalable crowdfunding platform engineered to handle complex campaign structures and funding models. Integrated seamlessly with Stripe, it supports advanced features such as recurring subscriptions, reward-based tiers, flexible contribution options, and full lifecycle management—from campaign creation to post-funding fulfillment. Designed for both creators and backers, the platform ensures transparency, control, and a smooth end-to-end crowdfunding experience.",
       link: "#contact",
       linkText: "",
     },
@@ -159,7 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
       tagline: "Ancestree",
       title: "Genealogy as a Service",
       title1: "Genealogy as a Service",
-      desc: "Ancestree is a modern multi-lingual genealogy software as a service currently on private beta, proudly built by our engineering team. Schedule a demo with our team to explore the features for your family tree.",
+      desc: "Ancestree is a modern, multi-lingual genealogy Software-as-a-Service (SaaS) platform, thoughtfully crafted by our engineering team and currently in private beta. It empowers users to build, explore, and preserve their family histories with an intuitive interface and robust data relationships. Schedule a personalized demo with our team to discover how Ancestree can bring your family tree to life across generations and languages.",
       link: "#contact",
       linkText: "Schedule Demo",
     },
@@ -167,15 +167,15 @@ document.addEventListener("DOMContentLoaded", () => {
       tagline: "Open Source",
       title: "Build for Nepal",
       title1: "Build for Nepal",
-      desc: "Build for Nepal is an initiative and effort to creating open datasets and build open source softwares for Nepal. Techgaun Nepal acts as a facilitator but its really the community that gives the life to this open source initiative.",
+      desc: "Build for Nepal is an initiative dedicated to creating open datasets and developing open-source software tailored to Nepal’s unique challenges and opportunities. While Techgaun Nepal serves as a facilitator, it’s the vibrant, driven community that truly breathes life into this grassroots movement. Together, we aim to foster transparency, innovation, and collective ownership in Nepal’s digital transformation.",
       link: "https://github.com/build-for-nepal",
       linkText: "Visit Github",
     },
     {
       tagline: "RamroLink",
-      title: "Techgaun Nepal",
-      title1: "Techgaun Nepal",
-      desc: "RamroLink is a platform built to empower creators, influencers, and individuals with powerful, customizable link- in-bio tools. It's more than just a landing page—it's your digital identity, organized beautifully.",
+      title: "Made for Creators",
+      title1: "Made for Creators",
+      desc: "A dynamic platform designed to empower creators, influencers, and individuals with powerful, fully customizable link-in-bio tools. More than just a landing page, it serves as a centralized hub for your content, brand, and presence—crafted to reflect your identity and drive engagement. With elegant design and seamless user experience, RamroLink transforms your bio link into a powerful expression of who you are.",
       link: "https://ramro.link",
       linkText: "Visit RamroLink",
     },
@@ -247,7 +247,7 @@ document.addEventListener("DOMContentLoaded", () => {
         index++;
         moveSlide();
       }
-    }, 30000); // 30 seconds
+    }, 8000); // 8 seconds
   }
 
   function stopAutoScroll() {
