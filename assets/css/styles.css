@@ -47,6 +47,7 @@ header .container {
 nav ul {
   list-style: none;
   display: flex;
+  align-items: center;
   margin: 0;
   padding: 0;
 }
@@ -73,16 +74,20 @@ nav ul li a {
   border: none;
   font-size: 16px;
   font-weight: 600;
+  font-family: "Plus Jakarta Sans", Helvetica;
+  line-height: 26px;
   cursor: pointer;
   color: #333;
   display: flex;
   align-items: center;
   gap: 6px;
+  padding: 8px 12px;
 }
 
 .dropdown-icon {
   font-size: 14px;
   transition: transform 0.3s ease;
+  display: inline-block;
 }
 
 .dropdown-menu {
@@ -92,23 +97,39 @@ nav ul li a {
   background: #fff;
   display: none;
   flex-direction: column;
-  gap: 12px;
-  padding: 10px;
+  padding: 8px;
   border: 1px solid #ccc;
   border-radius: 8px;
   z-index: 100;
   width: max-content;
+  /* min-width: 240px; */
 }
 
 .dropdown-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  gap: 10px;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.dropdown-item:hover {
+  background-color: #fff5d3;
+}
+
+.dropdown-item a {
+  display: flex;
+  align-items: start;
+  text-decoration: none;
   gap: 10px;
 }
 
 .dropdown-item img {
   width: 24px;
   height: 24px;
+  flex-shrink: 0;
+  margin-top: 6px;
 }
 
 .dropdown-item h1 {
@@ -121,6 +142,18 @@ nav ul li a {
   font-size: 0.85rem;
   color: #777;
   margin: 0;
+}
+
+.dropdown-item:hover h1 {
+  color: #ff8502;
+}
+
+.svg-path {
+  fill: #424c62;
+}
+
+.dropdown-item:hover svg path {
+  fill: #ff8502;
 }
 
 .nav-icon {
@@ -297,6 +330,15 @@ nav ul li a {
   padding: 85px 0 120px 0;
   position: relative;
   display: flex;
+}
+
+.services-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .services-list {

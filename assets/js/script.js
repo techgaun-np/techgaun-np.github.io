@@ -285,30 +285,58 @@ document.addEventListener("DOMContentLoaded", () => {
   startAutoScroll();
 });
 
-const dropdownToggle = document.getElementById("dropdownToggle");
-const dropdownMenu = document.getElementById("dropdownMenu");
-const dropdownIcon = document.getElementById("dropdownIcon");
+// Dropdown functionality for both dropdowns in systematic way
 
-// Toggle dropdown menu
-dropdownToggle.addEventListener("click", () => {
-  dropdownMenu.style.display =
-    dropdownMenu.style.display === "flex" ? "none" : "flex";
+document.addEventListener("DOMContentLoaded", function () {
+  const dropdowns = [
+    {
+      toggleId: "dropdownToggle1",
+      menuId: "dropdownMenu1",
+      iconId: "dropdownIcon1",
+    },
+    {
+      toggleId: "dropdownToggle2",
+      menuId: "dropdownMenu2",
+      iconId: "dropdownIcon2",
+    },
+    // Add more dropdowns here if needed
+  ];
 
-  // Rotate icon
-  dropdownIcon.style.transform =
-    dropdownMenu.style.display === "flex" ? "rotate(180deg)" : "rotate(0deg)";
-});
+  dropdowns.forEach(({ toggleId, menuId, iconId }) => {
+    const toggle = document.getElementById(toggleId);
+    const menu = document.getElementById(menuId);
+    const icon = document.getElementById(iconId);
 
-// Optional: Run a function when icon is clicked specifically
-dropdownIcon.addEventListener("click", (e) => {
-  e.stopPropagation(); // prevent parent toggle
-  console.log("Dropdown icon clicked!"); // call your custom function here
-});
+    toggle.addEventListener("click", function (e) {
+      e.stopPropagation();
 
-// Close dropdown when clicking outside
-document.addEventListener("click", (e) => {
-  if (!dropdownToggle.contains(e.target)) {
-    dropdownMenu.style.display = "none";
-    dropdownIcon.style.transform = "rotate(0deg)";
-  }
+      // Close all dropdowns first
+      dropdowns.forEach(({ menuId: mid, iconId: iid }) => {
+        const otherMenu = document.getElementById(mid);
+        const otherIcon = document.getElementById(iid);
+
+        if (otherMenu && otherMenu !== menu) {
+          otherMenu.style.display = "none";
+        }
+        if (otherIcon && otherIcon !== icon) {
+          otherIcon.style.transform = "rotate(0deg)";
+        }
+      });
+
+      // Toggle current dropdown
+      const isOpen = menu.style.display === "block";
+      menu.style.display = isOpen ? "none" : "block";
+      icon.style.transform = isOpen ? "rotate(0deg)" : "rotate(180deg)";
+    });
+  });
+
+  // Close all when clicking outside
+  document.addEventListener("click", function () {
+    dropdowns.forEach(({ menuId, iconId }) => {
+      const menu = document.getElementById(menuId);
+      const icon = document.getElementById(iconId);
+      if (menu) menu.style.display = "none";
+      if (icon) icon.style.transform = "rotate(0deg)";
+    });
+  });
 });
