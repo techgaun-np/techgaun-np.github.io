@@ -87,7 +87,8 @@ nav ul li a {
 .dropdown-icon {
   font-size: 14px;
   transition: transform 0.3s ease;
-  display: inline-block;
+  float: inline-end;
+  padding-top: 6px;
 }
 
 .dropdown-menu {
@@ -1293,6 +1294,10 @@ footer p {
 
   .nav-icon i {
     font-size: 24px;
+  }
+
+  .dropdown-toggle {
+    display: none;
   }
 
   .get-started-container {
