@@ -42,6 +42,8 @@ header .container {
   width: 225px;
 }
 
+/* nav */
+
 nav ul {
   list-style: none;
   display: flex;
@@ -58,6 +60,67 @@ nav ul li a {
   color: #333;
   font-size: 16px;
   font-weight: 600;
+}
+
+/* select dropdown */
+
+.custom-dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dropdown-icon {
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  z-index: 100;
+  width: max-content;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dropdown-item img {
+  width: 24px;
+  height: 24px;
+}
+
+.dropdown-item h1 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.dropdown-item p {
+  font-size: 0.85rem;
+  color: #777;
+  margin: 0;
 }
 
 .nav-icon {
@@ -1001,8 +1064,8 @@ footer p {
 
 #text-tagline {
   color: #ff5f00;
-  font-size: 1.125rem;
-  font-weight: 400;
+  font-size: 1.265rem;
+  font-weight: 500;
   text-align: start;
 }
 

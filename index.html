@@ -22,13 +22,54 @@
             </div>
             <nav class="main-nav" id="main-nav">
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
+                    <!-- <li><a href="#home">Home</a></li> -->
                     <li><a href="#services">Services</a></li>
+                    <li>
+                        <!-- dropdown with options -->
+                    <li class="custom-dropdown">
+                        <button class="dropdown-toggle" id="dropdownToggle">
+                            Initiatives
+                            <span class="dropdown-icon" id="dropdownIcon">▼</span> <!-- icon -->
+                        </button>
+                        <ul class="dropdown-menu" id="dropdownMenu">
+                            <li class="dropdown-item">
+                                <a href="#devTools">
+                                    <img src="assets/images/banner/iconslist.svg" alt="Dev Tools" />
+                                    <div>
+                                        <h1>Dev Tools</h1>
+                                        <p>Free, open-source developer tools.</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="#team">
+                                    <img src="assets/images/give-back-icon.svg" alt="Give Back" />
+                                    <div>
+                                        <h1>Give Back</h1>
+                                        <p>Fueling future talent with scholarships.</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    </li>
+                    <li>
+                        <!-- dropdown with options -->
+                        <select class="select-dropdown">
+                            <option value="" disabled selected hidden>Company</option>
+                            <option value="#about">About Us</option>
+                            <option value="#team">Our Team</option>
+                            <option value="#careers">Careers</option>
+                        </select>
+                    </li>
+                    <!-- <li><a href="#about">About</a></li> -->
                     <!-- <li><a href="/blogs">Blogs</a></li> -->
-                    <li><a href="/careers">Careers</a></li>
-                    <li><a href="/team">Team</a></li>
-                    <li><a href="https://devtools.techgaun.com" target="_blank">Dev Tools</a></li>
+                    <!-- <li><a href="/careers">Careers</a></li> -->
+                    <!-- <li><a href="/team">Team</a></li> -->
+                    <!-- <li><a href="https://devtools.techgaun.com" target="_blank">Dev Tools</a></li> -->
+
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>

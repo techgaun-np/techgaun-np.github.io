@@ -284,3 +284,31 @@ document.addEventListener("DOMContentLoaded", () => {
   updateContent();
   startAutoScroll();
 });
+
+const dropdownToggle = document.getElementById("dropdownToggle");
+const dropdownMenu = document.getElementById("dropdownMenu");
+const dropdownIcon = document.getElementById("dropdownIcon");
+
+// Toggle dropdown menu
+dropdownToggle.addEventListener("click", () => {
+  dropdownMenu.style.display =
+    dropdownMenu.style.display === "flex" ? "none" : "flex";
+
+  // Rotate icon
+  dropdownIcon.style.transform =
+    dropdownMenu.style.display === "flex" ? "rotate(180deg)" : "rotate(0deg)";
+});
+
+// Optional: Run a function when icon is clicked specifically
+dropdownIcon.addEventListener("click", (e) => {
+  e.stopPropagation(); // prevent parent toggle
+  console.log("Dropdown icon clicked!"); // call your custom function here
+});
+
+// Close dropdown when clicking outside
+document.addEventListener("click", (e) => {
+  if (!dropdownToggle.contains(e.target)) {
+    dropdownMenu.style.display = "none";
+    dropdownIcon.style.transform = "rotate(0deg)";
+  }
+});
