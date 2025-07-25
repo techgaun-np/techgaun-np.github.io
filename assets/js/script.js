@@ -284,3 +284,59 @@ document.addEventListener("DOMContentLoaded", () => {
   updateContent();
   startAutoScroll();
 });
+
+// Dropdown functionality for both dropdowns in systematic way
+
+document.addEventListener("DOMContentLoaded", function () {
+  const dropdowns = [
+    {
+      toggleId: "dropdownToggle1",
+      menuId: "dropdownMenu1",
+      iconId: "dropdownIcon1",
+    },
+    {
+      toggleId: "dropdownToggle2",
+      menuId: "dropdownMenu2",
+      iconId: "dropdownIcon2",
+    },
+    // Add more dropdowns here if needed
+  ];
+
+  dropdowns.forEach(({ toggleId, menuId, iconId }) => {
+    const toggle = document.getElementById(toggleId);
+    const menu = document.getElementById(menuId);
+    const icon = document.getElementById(iconId);
+
+    toggle.addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      // Close all dropdowns first
+      dropdowns.forEach(({ menuId: mid, iconId: iid }) => {
+        const otherMenu = document.getElementById(mid);
+        const otherIcon = document.getElementById(iid);
+
+        if (otherMenu && otherMenu !== menu) {
+          otherMenu.style.display = "none";
+        }
+        if (otherIcon && otherIcon !== icon) {
+          otherIcon.style.transform = "rotate(0deg)";
+        }
+      });
+
+      // Toggle current dropdown
+      const isOpen = menu.style.display === "block";
+      menu.style.display = isOpen ? "none" : "block";
+      icon.style.transform = isOpen ? "rotate(0deg)" : "rotate(180deg)";
+    });
+  });
+
+  // Close all when clicking outside
+  document.addEventListener("click", function () {
+    dropdowns.forEach(({ menuId, iconId }) => {
+      const menu = document.getElementById(menuId);
+      const icon = document.getElementById(iconId);
+      if (menu) menu.style.display = "none";
+      if (icon) icon.style.transform = "rotate(0deg)";
+    });
+  });
+});
