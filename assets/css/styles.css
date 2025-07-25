@@ -1050,6 +1050,15 @@ footer p {
   display: none;
 }
 
+.services-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  width: fit-content;
+  margin: 0 auto;
+}
+
 @media screen and (max-width: 1600px) {
   .hero h1 {
     padding: 0;

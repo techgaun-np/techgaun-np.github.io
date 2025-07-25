@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="assets/images/techgaun-logo-small.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techgaun - We Build Awesome Software Products To Help You Build Awesome Business</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/products.css">
+    <link rel="stylesheet" href="assets/css/services.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript" src="/assets/js/script.js"></script>
+    <script type="text/javascript" src="/assets/js/product.js"></script>
+    <!-- <script type="text/javascript" src="assets/js/service-data.js"></script> -->
+    <script type="text/javascript" src="assets/js/services.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="assets/images/logo.svg" alt="Techgaun Logo">
+            </div>
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <!-- <li><a href="/blogs">Blogs</a></li> -->
+                    <li><a href="/careers">Careers</a></li>
+                    <li><a href="/team">Team</a></li>
+                    <li><a href="https://devtools.techgaun.com" target="_blank">Dev Tools</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="get-started-container">
+                <a href="#contact" class="get-started">Get Started</a>
+            </div>
+            <a href="javascript:void(0);" id="nav-icon" class="nav-icon">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero top-section" data-aos="fade-up">
+        <div class="hero-text">
+            <h1><span class="highlight">Expertise</span></h1>
+            <p class="hero-desc">Solutions that scale, systems that speak, services that deliver.</p>
+            <div class="product-hero-icons">
+                <img src="assets/images/services/graph.svg" alt="Graph Icon" class="product-hero-icon">
+                <p class="rotate-icon">↓</p>
+                <img src="assets/images/services/tag.svg" alt="Tag Icon" class="product-hero-icon">
+                <p class="rotate-icon">↓</p>
+
+                <img src="assets/images/services/light.svg" alt="Light Icon" class="product-hero-icon">
+            </div>
+
+        </div>
+        <img class="hero-img-product" src="assets/images/products/here-bg.svg" alt="Hero Image" />
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="services-tagline" data-aos="fade-up">
+                <span class="horizontal-line"></span>
+                <span>Core Services</span>
+                <span class="horizontal-line"></span>
+            </div>
+            <div class="service-scroll-wrapper">
+                <div class="service-sticky">
+                    <h1 class="services-title">Engineering with Intent. Built to Scale.</h1>
+                    <div class="service-content"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- industries services -->
+
+    <section class="industries-services">
+        <div class="container">
+            <div class="services-tagline" data-aos="fade-up">
+                <span class="horizontal-line"></span>
+                <span>Industry Services</span>
+                <span class="horizontal-line"></span>
+            </div>
+            <h1 class="services-title">Industry Expertise That Delivers Results</h1>
+            <div class="tab">
+                <!-- initially active healthcare -->
+                <ul class="tab-links">
+                    <li class="active"><a href="#healthcare">
+
+                            <img src="assets/images/services/health-care.svg" alt="Healthcare Icon" />
+
+                            HEALTH CARE
+                        </a></li>
+                    <li><a href="#finance">
+                            <img src="assets/images/services/tech.svg" alt="Finance Icon" />
+
+                            FINANCIAL TECH
+                        </a></li>
+                    <li><a href="#energy">
+                            <img src="assets/images/services/power.svg" alt="Energy Icon" />
+
+                            ENERGY INDUSTRY
+                        </a></li>
+                    <li><a href="#more">
+                            <img src="assets/images/services/building.svg" alt="More Industries Icon" />
+
+                            MORE INDUSTRIES
+                        </a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div id="healthcare" class="tab-item active">
+                        <div class="health-care-grid">
+                            <div class="health-care-hero">
+
+                                <h1 class="services-title">Revolutionizing Digital Health.</h1>
+                                <div class="wrap">
+
+                                    <div class="circle">
+
+                                        <img class="img-health-care" src="assets/images/services/doctor.png"
+                                            alt="Mobile Ticket">
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="health-care-content">
+                                <p class="health-care-description">We specialize in healthcare software development,
+                                    delivering
+                                    solutions that enhance patient care, streamline operations, and ensure compliance
+                                    with
+                                    industry standards.</p>
+                                <div class="health-care-list">
+                                    <li>
+                                        <h1>Claims Processing Systems</h1>
+                                        <p>Automated systems for real-time eligibility verification, and auditing.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <h1>HIPAA Compliance Frameworks</h1>
+                                        <p>Security-first implementations of systems and infrastructure, data
+                                            encryption.</p>
+                                    </li>
+                                    <li>
+                                        <h1>Patient Portals & Apps</h1>
+                                        <p>UX-optimized mobile/web portals for appointments, and health records
+                                            access.</p>
+                                    </li>
+                                    <li>
+                                        <h1>Healthcare Data Analytics</h1>
+                                        <p>Visual dashboards and real-time analytics pipelines for population health
+                                            and insights.</p>
+                                    </li>
+                                </div>
+
+                                <div class="health-care-checklist-wrapper">
+                                    <div class="health-care-checklist-container">
+                                        <h1>Who We Work With</h1>
+                                        <div class="health-care-checklist">
+                                            <div> <span class="checkmark">
+
+                                                    ✓
+                                                </span>
+                                                Clinics, hospitals, and private practices</div>
+                                            <div> <span class="checkmark">
+
+                                                    ✓
+                                                </span>Diagnostic labs and research bodies</div>
+                                            <div> <span class="checkmark">
+
+                                                    ✓
+                                                </span>Health tech startups and wellness platforms</div>
+                                            <div> <span class="checkmark">
+
+                                                    ✓
+                                                </span>Insurance providers & TPAs</div>
+
+                                        </div>
+                                    </div>
+
+                                    <img class="checklist-scroll-img" src="assets/images/services/boy-laptop.png"
+                                        alt="Boy in desktop">
+                                </div>
+
+                                <div class="health-care-checklist-wrapper-2">
+                                    <div class="health-care-checklist-container">
+                                        <h1>Why Choose TechGaun for Healthcare?</h1>
+                                        <div class="health-care-checklist">
+                                            <div> <span class="checkmark">
+
+                                                    ✓
+                                                </span>
+                                                HIPAA, HITECH, and GDPR expertise</div>
+                                            <div> <span class="checkmark">
+
+                                                    ✓
+                                                </span>Familiarity with complex payer-provider systems</div>
+                                            <div> <span class="checkmark">
+
+                                                    ✓
+                                                </span>Experience working across timezones with global health teams
+                                            </div>
+                                            <div> <span class="checkmark">
+
+                                                    ✓
+                                                </span>Zero compromise on data sensitivity & patient trust</div>
+
+                                        </div>
+                                    </div>
+
+                                    <img src="assets/images/services/grid.svg" alt="Grid Image" class="grid-image-1">
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div id="finance" class="tab-item">
+                        <div class="health-care-grid">
+
+
+                            <div class="health-care-content">
+                                <p class="health-care-description">We architect scalable, auditable fintech
+                                    ecosystems that handle sensitive transactions while balancing speed,
+                                    security, and seamless user journeys.</p>
+                                <div class="health-care-list">
+                                    <li>
+                                        <h1>Payment Gateways</h1>
+                                        <p>Design & integration of fast, secure checkout systems (cards,
+                                            wallets, UPI).
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <h1>PCI Compliance Architecture</h1>
+                                        <p>System hardening, tokenization, encryption & regular audit
+                                            preparation.</p>
+                                    </li>
+                                    <li>
+                                        <h1>Banking & Wallet APIs</h1>
+                                        <p>RESTful APIs for banks, NBFCs, and payment aggregators.</p>
+                                    </li>
+                                    <li>
+                                        <h1>Transaction Data Analytics</h1>
+                                        <p>Predictive dashboards, fraud anomaly detection, and behavior
+                                            analytics.</p>
+                                    </li>
+                                </div>
+
+                                <div class="health-care-checklist-wrapper">
+
+                                    <img class="checklist-scroll-img" src="assets/images/services/pana.svg"
+                                        alt="Boy in desktop">
+                                    <div class="health-care-checklist-container">
+                                        <h1>Who We Work With</h1>
+                                        <div class="health-care-checklist">
+                                            <div> <span class="checkmark">
+
+                                                    ✓
+                                                </span>
+                                                Digital banks and lending platforms</div>
+                                            <div> <span class="checkmark">
+
+                                                    ✓
+                                                </span>E-commerce platforms & marketplaces</div>
+                                            <div> <span class="checkmark">
+
+                                                    ✓
+                                                </span>Wallets, neobanks, crypto startups</div>
+                                            <div> <span class="checkmark">
+
+                                                    ✓
+                                                </span>Accounting & invoicing SaaS</div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="health-care-checklist-wrapper-2">
+                                    <div class="health-care-checklist-container">
+                                        <h1>Why Choose TechGaun for Financial Tech?</h1>
+                                        <div class="health-care-checklist">
+                                            <div> <span class="checkmark">
+
+                                                    ✓
+                                                </span>
+                                                Deep familiarity with PCI DSS, SOC2, ISO standards</div>
+                                            <div> <span class="checkmark">
+
+                                                    ✓
+                                                </span>Experience integrating with legacy banking systems</div>
+                                            <div> <span class="checkmark">
+
+                                                    ✓
+                                                </span>Strong data lineage and fraud detection models
+                                            </div>
+                                            <div> <span class="checkmark">
+
+                                                    ✓
+                                                </span>Productized approach for compliance: less guesswork,
+                                                faster go-lives</div>
+
+                                        </div>
+                                    </div>
+
+                                    <img src="assets/images/services/grid-2.svg" alt="Grid Image" class="grid-image-2">
+
+                                </div>
+                            </div>
+                            <div class="health-care-hero">
+
+                                <h1 class="services-title">Backbone for Modern Transactions</h1>
+
+
+                                <div class="wrap">
+
+                                    <div class="circle">
+
+                                        <img class="img-health-care" src="assets/images/services/ticket.png"
+                                            alt="Mobile Ticket">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="energy" class="tab-item">
+                        <div class="health-care-grid">
+                            <div class="health-care-hero">
+
+                                <h1 class="services-title">Powering the Planet With Insight.</h1>
+                                <div class="wrap">
+
+                                    <div class="circle">
+                                        <img class="img-health-care" src="assets/images/services/solarhero.png"
+                                            alt="Mobile Ticket">
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="health-care-content">
+                                <p class="health-care-description">From energy performance tracking to predictive
+                                    maintenance, we bring modern software practices to a sector that fuels the
+                                    future.
+                                </p>
+                                <div class="health-care-list">
+                                    <li>
+                                        <h1>IoT & Smart Meter Integrations</h1>
+                                        <p>Real-time energy consumption tracking using connected devices.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <h1>Project Lifecycle Tracking</h1>
+                                        <p>Tools to monitor construction, commissioning, and asset utilization.</p>
+                                    </li>
+                                    <li>
+                                        <h1>Energy Forecasting & ML Models</h1>
+                                        <p>Predictive analytics to optimize production and load balancing.</p>
+                                    </li>
+                                    <li>
+                                        <h1>Investor & Lender Portals</h1>
+                                        <p>Transparency tools for renewable project financing and compliance.</p>
+                                    </li>
+                                </div>
+
+                                <div class="health-care-checklist-wrapper">
+                                    <div class="health-care-checklist-container">
+                                        <h1>Who We Work With</h1>
+                                        <div class="health-care-checklist">
+                                            <div> <span class="checkmark">
+
+                                                    ✓
+                                                </span>
+                                                Solar EPCs and IPPs</div>
+                                            <div> <span class="checkmark">
+
+                                                    ✓
+                                                </span>Renewable project developers</div>
+                                            <div> <span class="checkmark">
+
+                                                    ✓
+                                                </span>Battery/storage startups</div>
+                                            <div> <span class="checkmark">
+
+                                                    ✓
+                                                </span>NGOs and carbon accounting platforms</div>
+
+                                        </div>
+                                    </div>
+
+                                    <img class="checklist-scroll-img" src="assets/images/services/solar.png"
+                                        alt="Boy in desktop">
+                                </div>
+
+                                <div class="health-care-checklist-wrapper-2">
+                                    <div class="health-care-checklist-container">
+                                        <h1>Why TechGaun for Energy?</h1>
+                                        <div class="health-care-checklist">
+                                            <div> <span class="checkmark">
+
+                                                    ✓
+                                                </span>
+                                                Built Corral: a lender-facing solar project monitoring platform
+                                            </div>
+                                            <div> <span class="checkmark">
+
+                                                    ✓
+                                                </span>We understand PPA, LCOE, and real-world solar project
+                                                constraints
+                                            </div>
+                                            <div> <span class="checkmark">
+
+                                                    ✓
+                                                </span>Blend of domain-specific analytics with UX precision
+                                            </div>
+                                            <div> <span class="checkmark">
+
+                                                    ✓
+                                                </span>Our infrastructure scales with your grid</div>
+
+                                        </div>
+                                    </div>
+
+                                    <img src="assets/images/services/grid.svg" alt="Grid Image" class="grid-image-1">
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="more-industries" id="more" class="tab-item">
+                        <div class="content-with-image">
+                            <p class="sub-title">More Industries</p>
+                            <p class="paragraph-wrapper">At Techgaun Nepal, we specialize in building custom
+                                software
+                                solutions
+                                for financial
+                                technology, healthcare, industrial, and energy sectors—with particular experience in
+                                the
+                                solar industry. Our expertise also extends to supporting clients in education,
+                                logistics, community, productivity domains and much more.</p>
+                            <img class="checklist-scroll-img more-industries-img"
+                                src="assets/images/services/group-discussion.png" alt="Group Discussion">
+                        </div>
+                        <div class="content-without-image">
+                            <h1 class="section-title">We Build Across Boundaries.</h1>
+                            <div class="paragraph-wrapper">
+                                <p class="paragraph">We believe that truly effective solutions start with a deep
+                                    understanding of your
+                                    challenges. That’s why we work closely with every client to deliver robust,
+                                    scalable, and maintainable software tailored to your unique requirements—no
+                                    matter
+                                    the industry.</p>
+                                <p class="paragraph">We have first-hand experience designing and scaling SaaS
+                                    platforms that serve
+                                    millions of users seamlessly. Our team understands the unique challenges of
+                                    multi-tenant architecture, security, and real-time performance at scale. From
+                                    robust
+                                    backends to intuitive user interfaces, we build SaaS solutions that grow with
+                                    your
+                                    business—ensuring reliability, flexibility, and easy maintenance whether you’re
+                                    serving hundreds or millions.</p>
+                                <p class="paragraph">Let’s build something impactful together—whatever your
+                                    vision.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+    </section>
+
+    <section class=" footer-img">
+        <div class="container footer-bg-container">
+            <img src="assets/images/footer.svg" alt="Footer Background" />
+        </div>
+
+
+    </section>
+    <!-- Footer Section -->
+    <footer>
+        <div style=" width: 96%;" class="container footer-container">
+            <div class="text-start footer-address">
+                Techgaun LLC <br>
+                Olathe, KS 66062 <br>
+                USA
+                <span style="display: block; margin-top: 10px;">
+                    Techgaun Nepal Pvt. Ltd. <br>
+                    Chandragiri-7, Kathmandu, Nepal
+                </span>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-logo">
+                    <img src="assets/images/footer-logo.svg" alt="Techgaun Logo">
+                </div>
+                <ul class="footer-nav">
+                    <li><a href="#home">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#case-studies">Case Study</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <div class="social-media">
+                    <a href="https://www.linkedin.com/company/techgaun" target="_blank" noopener noreferrer><img
+                            src="assets/images/linkedin-white.svg" alt="LinkedIn"></a>
+                    <a href="https://www.github.com/techgaun-np" target="_blank" noopener noreferrer><img
+                            src="assets/images/github-white.svg" alt="Github"></a>
+                    <a href="mailto:info@techgaun.com"><img src="assets/images/email.svg" alt="Email"></a>
+                </div>
+                <p>© <span id="current-year">2025</span> Techgaun. All rights reserved.</p>
+            </div>
+        </div>
+
+        <div style=" width: 96%;" class="container footer-container-1">
+            <div class="footer-links">
+                <div class="footer-logo">
+                    <img src="assets/images/footer-logo.svg" alt="Techgaun Logo">
+                </div>
+                <ul class="footer-nav">
+                    <li><a href="#home">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#case-studies">Case Study</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <div class="social-media">
+                    <a href="https://www.linkedin.com/company/techgaun" target="_blank" noopener noreferrer><img
+                            src="assets/images/linkedin-white.svg" alt="LinkedIn"></a>
+                    <a href="https://www.github.com/techgaun-np" target="_blank" noopener noreferrer><img
+                            src="assets/images/github-white.svg" alt="Github"></a>
+                    <a href="mailto:info@techgaun.com"><img src="assets/images/email.svg" alt="Email"></a>
+                </div>
+
+                <div class=" footer-address">
+                    Techgaun LLC
+                    Olathe, KS 66062
+                    USA
+                    <span style="display: block; margin-top: 2px;">
+                        Techgaun Nepal Pvt. Ltd.
+                        Chandragiri-7, <br> Kathmandu, Nepal
+                    </span>
+                </div>
+                <p>© <span id="current-year">2025</span> Techgaun. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="scroll-top" id="scroll-top" onclick="scrollToTop()">
+        <img src="assets/images/arrow-up.png" alt="arrow-up" />
+    </button>
+
+    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
+
+</body>
+
+<script>
+
+    // Initialize AOS
+    AOS.init({
+        // Global settings:
+        disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+        startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+        initClassName: 'aos-init', // class applied after initialization
+        animatedClassName: 'aos-animate', // class applied on animation
+        useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+        disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+        debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+        throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+        offset: 120, // offset (in px) from the original trigger point
+        delay: 0, // values from 0 to 3000, with step 50ms
+        duration: 400, // values from 0 to 3000, with step 50ms
+        easing: 'ease', // default easing for AOS animations
+        once: false, // whether animation should happen only once - while scrolling down
+        mirror: false, // whether elements should animate out while scrolling past them
+        anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+    });
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+
+
+</html>
