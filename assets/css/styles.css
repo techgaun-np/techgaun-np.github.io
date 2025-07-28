@@ -328,10 +328,6 @@ nav ul li a {
   color: #90cc8e;
 }
 
-.process-step:nth-child(even) {
-  /* margin-top: 32px; */
-}
-
 .process-img-container {
   display: flex;
   margin-top: 42px;
@@ -1048,6 +1044,15 @@ footer p {
 
 .footer-container-1 {
   display: none;
+}
+
+.services-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 1600px) {
