@@ -328,10 +328,6 @@ nav ul li a {
   color: #90cc8e;
 }
 
-.process-step:nth-child(even) {
-  /* margin-top: 32px; */
-}
-
 .process-img-container {
   display: flex;
   margin-top: 42px;
