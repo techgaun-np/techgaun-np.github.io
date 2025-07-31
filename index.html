@@ -23,9 +23,15 @@
             <nav class="main-nav" id="main-nav">
                 <ul>
                     <!-- <li><a href="#home">Home</a></li> -->
+                    <li><a href="/products">Products</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li>
-                        <!-- dropdown with options -->
+
+                    <!-- mobile view hidden dropdown -->
+                    <li class="hidden"> <a href="https://devtools.techgaun.com/" target="_blank">Services</a></li>
+                    <li class="hidden"><a href="/#about">About Us</a></li>
+                    <li class="hidden"><a href="/team">Our Team</a></li>
+                    <li class="hidden"><a href="/careers">Careers</a></li>
+                    <!-- dropdown with options -->
                     <li class="custom-dropdown">
                         <button class="dropdown-toggle" id="dropdownToggle1">
                             <span>Initiatives</span>
@@ -35,7 +41,7 @@
                         </button>
                         <ul class="dropdown-menu" id="dropdownMenu1">
                             <li class="dropdown-item">
-                                <a href="/products">
+                                <a href="https://devtools.techgaun.com/" target="_blank">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                         fill="none">
                                         <path class="svg-path"
@@ -47,7 +53,7 @@
                                     </div>
                                 </a>
                             </li>
-                            <li class="dropdown-item">
+                            <!-- <li class="dropdown-item">
                                 <a href="#giveBack">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -60,10 +66,9 @@
                                         <p>Fueling future talent with scholarships.</p>
                                     </div>
                                 </a>
-                            </li>
+                            </li> -->
                         </ul>
                     </li>
-
                     <li class="custom-dropdown">
                         <button class="dropdown-toggle" id="dropdownToggle2">
                             <span>Company</span>
@@ -115,13 +120,6 @@
                             </li>
                         </ul>
                     </li>
-
-                    <!-- <li><a href="#about">About</a></li> -->
-                    <!-- <li><a href="/blogs">Blogs</a></li> -->
-                    <!-- <li><a href="/careers">Careers</a></li> -->
-                    <!-- <li><a href="/team">Team</a></li> -->
-                    <!-- <li><a href="https://devtools.techgaun.com" target="_blank">Dev Tools</a></li> -->
-
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -261,9 +259,11 @@
                     </div>
                 </div>
             </div>
-            <button class="learn-more services-btn">
-                <a href="/services"></a>
-                View More</button>
+            <a style="text-decoration: none;" href="/services">
+                <button class="learn-more services-btn">
+                    View More
+                </button>
+            </a>
         </div>
     </section>
 

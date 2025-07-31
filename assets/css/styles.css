@@ -80,15 +80,16 @@ nav ul li a {
   color: #333;
   display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 8px 12px;
+  gap: 2px;
+  padding: 0px 0px;
 }
 
 .dropdown-icon {
-  font-size: 14px;
+  font-size: 10px;
   transition: transform 0.3s ease;
-  float: inline-end;
-  padding-top: 6px;
+  padding-bottom: 0px;
+  padding-top: 10px;
+  margin-bottom: 0px;
 }
 
 .dropdown-menu {
@@ -98,7 +99,7 @@ nav ul li a {
   background: #fff;
   display: none;
   flex-direction: column;
-  padding: 8px;
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 8px;
   z-index: 100;
@@ -110,9 +111,11 @@ nav ul li a {
   display: flex;
   align-items: flex-start;
   gap: 10px;
+  margin-left: 0;
+  margin-right: 0;
   text-decoration: none;
   padding: 10px;
-  border-radius: 4px;
+  border-radius: 8px;
 }
 
 .dropdown-item:hover {
@@ -432,10 +435,6 @@ nav ul li a {
 
 .process-step-4 {
   color: #90cc8e;
-}
-
-.process-step:nth-child(even) {
-  /* margin-top: 32px; */
 }
 
 .process-img-container {
@@ -1156,6 +1155,15 @@ footer p {
   display: none;
 }
 
+.services-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  width: fit-content;
+  margin: 0 auto;
+}
+
 @media screen and (max-width: 1600px) {
   .hero h1 {
     padding: 0;
@@ -1242,6 +1250,10 @@ footer p {
   }
 }
 
+.hidden {
+  display: none;
+}
+
 @media screen and (max-width: 992px) {
   .container {
     width: 85%;
@@ -1298,6 +1310,10 @@ footer p {
 
   .dropdown-toggle {
     display: none;
+  }
+
+  .hidden {
+    display: flex;
   }
 
   .get-started-container {
