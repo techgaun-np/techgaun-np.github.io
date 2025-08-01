@@ -42,9 +42,12 @@ header .container {
   width: 225px;
 }
 
+/* nav */
+
 nav ul {
   list-style: none;
   display: flex;
+  align-items: center;
   margin: 0;
   padding: 0;
 }
@@ -58,6 +61,103 @@ nav ul li a {
   color: #333;
   font-size: 16px;
   font-weight: 600;
+}
+
+/* select dropdown */
+
+.custom-dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Plus Jakarta Sans", Helvetica;
+  line-height: 26px;
+  cursor: pointer;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 0px 0px;
+}
+
+.dropdown-icon {
+  font-size: 10px;
+  transition: transform 0.3s ease;
+  padding-bottom: 0px;
+  padding-top: 10px;
+  margin-bottom: 0px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  display: none;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  z-index: 100;
+  width: max-content;
+  /* min-width: 240px; */
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-left: 0;
+  margin-right: 0;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.dropdown-item:hover {
+  background-color: #fff5d3;
+}
+
+.dropdown-item a {
+  display: flex;
+  align-items: start;
+  text-decoration: none;
+  gap: 10px;
+}
+
+.dropdown-item img {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+.dropdown-item h1 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.dropdown-item p {
+  font-size: 0.85rem;
+  color: #777;
+  margin: 0;
+}
+
+.dropdown-item:hover h1 {
+  color: #ff8502;
+}
+
+.svg-path {
+  fill: #424c62;
+}
+
+.dropdown-item:hover svg path {
+  fill: #ff8502;
 }
 
 .nav-icon {
@@ -234,6 +334,15 @@ nav ul li a {
   padding: 85px 0 120px 0;
   position: relative;
   display: flex;
+}
+
+.services-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .services-list {
@@ -997,8 +1106,8 @@ footer p {
 
 #text-tagline {
   color: #ff5f00;
-  font-size: 1.125rem;
-  font-weight: 400;
+  font-size: 1.265rem;
+  font-weight: 500;
   text-align: start;
 }
 
@@ -1141,6 +1250,10 @@ footer p {
   }
 }
 
+.hidden {
+  display: none;
+}
+
 @media screen and (max-width: 992px) {
   .container {
     width: 85%;
@@ -1181,7 +1294,7 @@ footer p {
 
   .main-nav.responsive ul li a {
     color: #fff;
-    padding: 20px;
+    padding: 12px;
     flex: 1;
   }
 
@@ -1193,6 +1306,14 @@ footer p {
 
   .nav-icon i {
     font-size: 24px;
+  }
+
+  .dropdown-toggle {
+    display: none;
+  }
+
+  .hidden {
+    display: flex;
   }
 
   .get-started-container {
