@@ -149,6 +149,11 @@
   padding-left: 1rem;
 }
 
+.service-hero-icons-container {
+  overflow: hidden;
+  position: relative;
+}
+
 .service-scroll-title {
   color: #ff8502;
   font-weight: bold;
@@ -158,15 +163,17 @@
 
 .service-scroll-description {
   font-size: 1.1rem;
-  margin: 0 0 1rem 0;
+  /* margin: 0 0 1rem 0; */
   line-height: 1.4;
 }
 
 .service-hero-icons {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
+  /* justify-content: space-between; */
+  /* align-items: center; */
+
+  transition: transform 0.5s ease;
+  width: 100%;
 }
 
 .service-hero-icon {
@@ -180,7 +187,10 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin: 0 1rem;
+  margin: 0 0.5rem;
+
+  flex: 0 0 auto;
+  width: 100%;
 }
 
 .service-hero-icon-desc {
@@ -190,6 +200,30 @@
   text-align: center;
   font-weight: 500;
   line-height: 1.75rem;
+}
+
+.icon-carousel-prev,
+.icon-carousel-next {
+  position: absolute;
+  top: 20%;
+  transform: translateY(-50%);
+  color: #ff8502;
+  border: none;
+  padding: 10px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  font-weight: 700;
+  font-size: large;
+  stroke-width: 2px;
+}
+
+.icon-carousel-prev {
+  left: 10px;
+}
+
+.icon-carousel-next {
+  right: 10px;
 }
 
 /* industries services */
@@ -498,6 +532,22 @@
     justify-content: center;
   }
 
+  .icon-carousel-prev,
+  .icon-carousel-next {
+    position: absolute;
+    top: 10%;
+    transform: translateY(-50%);
+    color: #ff8502;
+    border: none;
+    padding: 5px 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    font-weight: 700;
+    font-size: x-small;
+    stroke-width: 2px;
+  }
+
   .carousel-indicators {
     display: flex;
     gap: 0.5rem;
@@ -573,7 +623,7 @@
 
   .services-grid {
     display: flex;
-    flex-direction: column-reverse;
+    /* flex-direction: column-reverse; */
     width: 100%;
   }
 
@@ -584,10 +634,6 @@
 
   .service-scroll-title {
     font-size: 1.5rem;
-  }
-
-  .service-hero-icons {
-    padding: 0.2rem;
   }
 
   .service-hero-icon {
@@ -700,11 +746,10 @@
     text-align: center;
   }
 
-  .service-hero-icons {
+  /* .service-hero-icons {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
-  }
+  } */
 
   .rotate-icon {
     display: none;

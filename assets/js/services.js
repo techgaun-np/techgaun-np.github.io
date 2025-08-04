@@ -8,12 +8,25 @@ document.addEventListener("DOMContentLoaded", function () {
         "At Techgaun, we specialize in architecting and optimizing AI pipelines that are not just functional but transformative. Whether you're looking to launch an LLM-powered application, refine your model’s performance, or overhaul your prompting strategies, we offer full-spectrum expertise grounded in real-world deployments.",
       img: "assets/images/services/ai-pipelines.png",
       icons: [
-        { img: "assets/images/services/llms.svg", desc: "Build with LLMs" },
         {
-          img: "assets/images/services/setting.svg",
-          desc: "Tune Your Prompts",
+          id: "1",
+          title: "Build with LLMs",
+          img: "assets/images/services/llms.svg",
+          description:
+            "We harness cutting-edge Large Language Models (LLMs) to construct robust AI solutions that align with your business needs. Our team specializes in integrating these advanced models to enhance automation, improve decision-making, and drive innovation across various industries.",
         },
-        { img: "assets/images/services/star.svg", desc: "Fine-Tune Models" },
+        {
+          id: "2",
+          img: "assets/images/services/setting.svg",
+          title: "Tune Your Prompts",
+          description: `Unlock the full potential of AI models with Techgaun's prompt-tuning services. We guide you in refining the input prompts to optimize output accuracy and relevance, ensuring your AI solutions deliver precise and actionable results that meet your objectives.`,
+        },
+        {
+          id: "3",
+          title: "Fine-Tune Models",
+          img: "assets/images/services/star.svg",
+          description: `Customize AI models to fit your unique requirements with our fine-tuning services. We adjust pre-existing models, adding layers of specificity and precision, so they perform optimally in your specific use-case scenarios, whether it's enhancing user experience or streamlining operations.`,
+        },
       ],
     },
     {
@@ -23,14 +36,28 @@ document.addEventListener("DOMContentLoaded", function () {
       img: "assets/images/services/web-dev.png",
       icons: [
         {
+          id: "1",
+          title: "Understand & Align",
           img: "assets/images/services/round-star.svg",
-          desc: "Understand & Align",
+
+          description:
+            "At Techgaun, we begin our web application development process by thoroughly understanding your business goals and aligning our strategies to meet them. We engage in comprehensive consultations to ensure that our solutions are tailored to support your vision and drive your success.",
         },
         {
+          id: "2",
+          title: "Choose the Right Stack",
           img: "assets/images/services/llms.svg",
-          desc: "Choose the Right Stack",
+
+          description:
+            "Selecting the appropriate technology stack is crucial for the success of your web application. Our experts assess your project requirements and advise on the best-fit technologies, ensuring scalability, performance, and a seamless user experience.",
         },
-        { img: "assets/images/services/setting.svg", desc: "Build & Deliver" },
+        {
+          id: "3",
+          title: "Build & Deliver",
+          img: "assets/images/services/setting.svg",
+          description:
+            "With a focus on quality and efficiency, Techgaun takes your web application from conception to completion. Our experienced developers build robust, secure, and scalable applications, keeping you informed throughout the development process to deliver a product that exceeds expectations.",
+        },
       ],
     },
     {
@@ -38,12 +65,29 @@ document.addEventListener("DOMContentLoaded", function () {
       description:
         "At Techgaun, we specialize in architecting and optimizing mobile applications that are not just functional but transformative. Whether you're looking to launch a new app, refine your existing mobile experience, or overhaul your app's architecture, we offer full-spectrum expertise grounded in real-world deployments.",
       img: "assets/images/services/mobile-dev.png",
+
       icons: [
-        { img: "assets/images/services/tree.svg", desc: "Cross-Platform" },
-        { img: "assets/images/services/setting.svg", desc: "Go Native" },
         {
+          id: "1",
+          title: "Cross-Platform",
+          img: "assets/images/services/tree.svg",
+          description:
+            " Techgaun helps you embark on a new cloud journey by building scalable, secure, and efficient cloud environments from the ground up. We tailor cloud solutions to your specific needs, ensuring a strong foundation for future growth and innovation.",
+        },
+        {
+          id: "2",
+          title: "Go Native",
+          img: "assets/images/services/setting.svg",
+          description:
+            "Planning for scale is essential for long-term success. Our experts design cloud architectures that seamlessly accommodate your expanding data and user demands, ensuring reliability, performance, and cost-efficiency as your business grows.",
+        },
+        {
+          id: "3",
+          title: "Design for Users",
           img: "assets/images/services/colorful.svg",
-          desc: "Design for Users",
+
+          description:
+            "Streamline your cloud operations through Infrastructure as Code (IaC). Techgaun automates deployment, configuration, and management processes, reducing manual effort, minimizing errors, and enabling rapid, consistent, and repeatable infrastructure updates.",
         },
       ],
     },
@@ -52,12 +96,29 @@ document.addEventListener("DOMContentLoaded", function () {
       description:
         "We help you architect and implement robust cloud environments across AWS, Azure, and GCP. Our team supports everything from network segmentation to application-level abstraction, using tools like Terraform and cloud-native IaC platforms. Whether you're modernizing or starting from scratch, we bring precision, scale, and strategy to your cloud.",
       img: "assets/images/services/cloud.png",
+
       icons: [
-        { img: "assets/images/services/cloud-icon.svg", desc: "Start Fresh" },
-        { img: "assets/images/services/llms.svg", desc: "Architect for Scale" },
         {
+          id: "1",
+          title: "Start Fresh",
+          img: "assets/images/services/cloud-icon.svg",
+          description:
+            " Techgaun helps you embark on a new cloud journey by building scalable, secure, and efficient cloud environments from the ground up. We tailor cloud solutions to your specific needs, ensuring a strong foundation for future growth and innovation.",
+        },
+        {
+          id: "2",
+          title: "Architect for Scale",
+          img: "assets/images/services/llms.svg",
+          description:
+            " Planning for scale is essential for long-term success. Our experts design cloud architectures that seamlessly accommodate your expanding data and user demands, ensuring reliability, performance, and cost-efficiency as your business grows.",
+        },
+        {
+          id: "3",
+          title: "Automate with IaC",
           img: "assets/images/services/setting.svg",
-          desc: "Automate with IaC",
+
+          description:
+            "Streamline your cloud operations through Infrastructure as Code (IaC). Techgaun automates deployment, configuration, and management processes, reducing manual effort, minimizing errors, and enabling rapid, consistent, and repeatable infrastructure updates.",
         },
       ],
     },
@@ -66,16 +127,31 @@ document.addEventListener("DOMContentLoaded", function () {
       description:
         "We help transform legacy systems into modern, scalable applications. Whether it’s breaking down monoliths, updating outdated architectures, or re-platforming entire stacks—our approach is tailored, pragmatic, and proven. No silver bullets—just expert strategy built around your unique tech, team, and timeline.",
       img: "assets/images/services/app-modernization.png",
+
       icons: [
         {
+          id: "1",
+          title: "Assess & Strategize",
           img: "assets/images/services/search.svg",
-          desc: "Assess & Strategize",
+
+          description:
+            "Techgaun begins with a comprehensive assessment of your existing applications to identify gaps and opportunities. We then develop a tailored modernization strategy that aligns with your business goals and sets the stage for future growth.",
         },
         {
+          id: "2",
+          title: "Modularize & Modernize",
           img: "assets/images/services/note.svg",
-          desc: "Modularize & Modernize",
+
+          description:
+            " We break down monolithic applications into modular components, incorporating modern technologies and architectures. This approach enhances flexibility, agility, and maintainability, making your applications more adaptable to evolving needs.",
         },
-        { img: "assets/images/services/chart.svg", desc: "Upgrade & Scale" },
+        {
+          id: "3",
+          title: "Upgrade & Scale",
+          img: "assets/images/services/chart.svg",
+          description:
+            "Techgaun ensures your applications are upgraded with the latest frameworks, tools, and security protocols. We enable scalable solutions that support increased workload and user demands, helping your business stay competitive and innovative.",
+        },
       ],
     },
     {
@@ -83,10 +159,29 @@ document.addEventListener("DOMContentLoaded", function () {
       description:
         "At Techgaun, we specialize in architecting and optimizing AI pipelines that are not just functional but transformative. Whether you're looking to launch an LLM-powered application, refine your model’s performance, or overhaul your prompting strategies, we offer full-spectrum expertise grounded in real-world deployments.",
       img: "assets/images/services/architecture.png",
+
       icons: [
-        { img: "assets/images/services/search.svg", desc: "Assess Blueprint" },
-        { img: "assets/images/services/llms.svg", desc: "Harden the Stack" },
-        { img: "assets/images/services/shield.svg", desc: "Deliver" },
+        {
+          id: "1",
+          img: "assets/images/services/search.svg",
+          title: "Assess Blueprint",
+          description:
+            "Techgaun conducts a thorough evaluation of your existing architecture and security policies to identify vulnerabilities and areas for improvement. This foundational assessment ensures your infrastructure is aligned with best practices.",
+        },
+        {
+          id: "2",
+          img: "assets/images/services/llms.svg",
+          title: "Harden the Stack",
+          description:
+            "We reinforce your technology stack by implementing robust security measures, removing weaknesses, and establishing strong defense mechanisms. Our goal is to safeguard your systems against threats and ensure compliance with industry standards.",
+        },
+        {
+          id: "3",
+          img: "assets/images/services/shield.svg",
+          title: "Deliver",
+          description:
+            " After comprehensive analysis and enhancements, Techgaun provides a detailed report and actionable recommendations, delivering a secure, resilient, and optimized architecture ready to support your business operations effectively.",
+        },
       ],
     },
   ];
@@ -114,6 +209,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function renderNewContent(index) {
     const newService = serviceData[index];
     const wrapper = document.querySelector(".carousel-transition-wrapper");
+    let iconCarouselInterval;
 
     const buildHTML = () => `
       <div class="carousel-transition-wrapper">
@@ -124,22 +220,22 @@ document.addEventListener("DOMContentLoaded", function () {
           <div class="service-scroll-content">
             <h2 class="service-scroll-title">${newService.title}</h2>
             <p class="service-scroll-description">${newService.description}</p>
-            <div class="service-hero-icons">
-              ${newService.icons
-                .map(
-                  (icon, i) => `
-                  <div class="service-hero-icon-wrapper">
-                    <img src="${icon.img}" class="service-hero-icon" alt="icon">
-                    <p class="service-hero-icon-desc">${icon.desc}</p>
-                  </div>
-                  ${
-                    i !== newService.icons.length - 1
-                      ? '<p class="rotate-icon">↓</p>'
-                      : ""
-                  }
-                `
-                )
-                .join("")}
+            <div class="service-hero-icons-container">
+              <div class="service-hero-icons">
+                ${newService.icons
+                  .map(
+                    (icon, i) => `
+                    <div class="service-hero-icon-wrapper">
+                      <img src="${icon.img}" class="service-hero-icon" alt="icon">
+                      <p class="service-hero-icon-desc">${icon.title}</p>
+                      <p class="service-hero-icon-description">${icon.description}</p>
+                    </div>
+                  `
+                  )
+                  .join("")}
+              </div>
+              <button class="icon-carousel-prev">←</button>
+              <button class="icon-carousel-next">→</button>
             </div>
           </div>
           ${
@@ -166,12 +262,69 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>
     `;
 
+    const bindIconCarouselControls = () => {
+      const iconsContainer = document.querySelector(".service-hero-icons");
+      const iconWrappers = document.querySelectorAll(
+        ".service-hero-icon-wrapper"
+      );
+      const prevBtn = document.querySelector(".icon-carousel-prev");
+      const nextBtn = document.querySelector(".icon-carousel-next");
+
+      if (!iconsContainer || !iconWrappers.length) return;
+
+      const iconWidth = iconWrappers[0].offsetWidth + 20; // including margin
+      let currentIconIndex = 0;
+
+      // Clear any existing interval
+      if (iconCarouselInterval) clearInterval(iconCarouselInterval);
+
+      // Set up auto-rotation
+      iconCarouselInterval = setInterval(() => {
+        currentIconIndex = (currentIconIndex + 1) % iconWrappers.length;
+        updateIconPosition();
+      }, 4000);
+
+      const updateIconPosition = () => {
+        gsap.to(iconsContainer, {
+          x: -currentIconIndex * iconWidth,
+          duration: 0.5,
+          ease: "power2.out",
+        });
+      };
+
+      prevBtn?.addEventListener("click", () => {
+        currentIconIndex =
+          (currentIconIndex - 1 + iconWrappers.length) % iconWrappers.length;
+        updateIconPosition();
+        resetAutoRotation();
+      });
+
+      nextBtn?.addEventListener("click", () => {
+        currentIconIndex = (currentIconIndex + 1) % iconWrappers.length;
+        updateIconPosition();
+        resetAutoRotation();
+      });
+
+      const resetAutoRotation = () => {
+        clearInterval(iconCarouselInterval);
+        iconCarouselInterval = setInterval(() => {
+          currentIconIndex = (currentIconIndex + 1) % iconWrappers.length;
+          updateIconPosition();
+        }, 4000);
+      };
+    };
+
     const insertAndAnimate = () => {
       serviceContent.innerHTML = buildHTML();
       gsap.fromTo(
         ".carousel-transition-wrapper",
         { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: 0.4 }
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.4,
+          onComplete: bindIconCarouselControls,
+        }
       );
       if (isMobile) bindCarouselControls();
     };
