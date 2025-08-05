@@ -193,7 +193,7 @@
 }
 
 .service-hero-icon-desc {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #282c37;
   margin-top: 0.5rem;
   text-align: center;
@@ -676,7 +676,7 @@
   }
 
   .service-hero-icon-desc {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     line-height: 1.25rem;
     display: none;
   }

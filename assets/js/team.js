@@ -40,6 +40,11 @@ document.addEventListener("DOMContentLoaded", function () {
                       <p class="team-description">${member.description}</p>
                       <div class="social-links">
                         ${
+                          member.ramrolink
+                            ? `<a href="${member.ramrolink}" target="_blank" class="ramrolink"></a>`
+                            : ""
+                        }
+                        ${
                           member.github
                             ? `<a href="${member.github}" target="_blank" class="github"></a>`
                             : ""

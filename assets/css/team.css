@@ -297,6 +297,10 @@ a {
   background-image: url("../../assets/images/linkedin.svg");
 }
 
+.social-links a.ramrolink {
+  background-image: url("../../assets/images/ramrolink.svg");
+}
+
 .team-info-button {
   display: none;
   justify-content: center;
