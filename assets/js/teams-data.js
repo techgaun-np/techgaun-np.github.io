@@ -45,8 +45,8 @@ window.teamData = [
     description:
       "Responsible for leading product development and innovation in Nepal.",
     image: "./assets/images/team/anushilan.png",
-    ramrolink: "",
-    github: "",
+    ramrolink: "https://ramro.link/wanderlogue",
+    github: "https://github.com/Anushilan",
     linkedin: "",
   },
   {
