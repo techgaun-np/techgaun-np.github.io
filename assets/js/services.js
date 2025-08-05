@@ -210,6 +210,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const newService = serviceData[index];
     const wrapper = document.querySelector(".carousel-transition-wrapper");
     let iconCarouselInterval;
+    let currentActiveDescIndex = 0;
 
     const buildHTML = () => `
       <div class="carousel-transition-wrapper">
@@ -225,17 +226,25 @@ document.addEventListener("DOMContentLoaded", function () {
                 ${newService.icons
                   .map(
                     (icon, i) => `
-                    <div class="service-hero-icon-wrapper">
+                    <div class="service-hero-icon-wrapper" data-index="${i}">
                       <img src="${icon.img}" class="service-hero-icon" alt="icon">
                       <p class="service-hero-icon-desc">${icon.title}</p>
-                      <p class="service-hero-icon-description">${icon.description}</p>
                     </div>
                   `
                   )
                   .join("")}
               </div>
-              <button class="icon-carousel-prev">←</button>
-              <button class="icon-carousel-next">→</button>
+              <div class="service-hero-description-container">
+                ${newService.icons
+                  .map(
+                    (icon, i) => `
+                    <p class="service-hero-icon-description ${
+                      i === 0 ? "active" : ""
+                    }" data-index="${i}">${icon.description}</p>
+                  `
+                  )
+                  .join("")}
+              </div>
             </div>
           </div>
           ${
@@ -262,56 +271,64 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>
     `;
 
-    const bindIconCarouselControls = () => {
-      const iconsContainer = document.querySelector(".service-hero-icons");
+    const bindIconInteractions = () => {
       const iconWrappers = document.querySelectorAll(
         ".service-hero-icon-wrapper"
       );
-      const prevBtn = document.querySelector(".icon-carousel-prev");
-      const nextBtn = document.querySelector(".icon-carousel-next");
+      const descriptions = document.querySelectorAll(
+        ".service-hero-icon-description"
+      );
 
-      if (!iconsContainer || !iconWrappers.length) return;
-
-      const iconWidth = iconWrappers[0].offsetWidth + 20; // including margin
-      let currentIconIndex = 0;
+      if (!iconWrappers.length) return;
 
       // Clear any existing interval
       if (iconCarouselInterval) clearInterval(iconCarouselInterval);
 
-      // Set up auto-rotation
+      // Set up auto-rotation for descriptions
       iconCarouselInterval = setInterval(() => {
-        currentIconIndex = (currentIconIndex + 1) % iconWrappers.length;
-        updateIconPosition();
+        currentActiveDescIndex =
+          (currentActiveDescIndex + 1) % descriptions.length;
+        updateActiveDescription();
       }, 4000);
 
-      const updateIconPosition = () => {
-        gsap.to(iconsContainer, {
-          x: -currentIconIndex * iconWidth,
-          duration: 0.5,
-          ease: "power2.out",
+      const updateActiveDescription = () => {
+        // Update descriptions
+        descriptions.forEach((desc) => {
+          desc.classList.remove("active");
+          if (parseInt(desc.dataset.index) === currentActiveDescIndex) {
+            desc.classList.add("active");
+          }
+        });
+
+        // Update icon wrappers
+        iconWrappers.forEach((wrapper) => {
+          wrapper.classList.remove("active");
+          if (parseInt(wrapper.dataset.index) === currentActiveDescIndex) {
+            wrapper.classList.add("active");
+          }
         });
       };
 
-      prevBtn?.addEventListener("click", () => {
-        currentIconIndex =
-          (currentIconIndex - 1 + iconWrappers.length) % iconWrappers.length;
-        updateIconPosition();
-        resetAutoRotation();
-      });
-
-      nextBtn?.addEventListener("click", () => {
-        currentIconIndex = (currentIconIndex + 1) % iconWrappers.length;
-        updateIconPosition();
-        resetAutoRotation();
+      // Add hover events
+      iconWrappers.forEach((wrapper) => {
+        wrapper.addEventListener("mouseenter", () => {
+          currentActiveDescIndex = parseInt(wrapper.dataset.index);
+          updateActiveDescription();
+          resetAutoRotation();
+        });
       });
 
       const resetAutoRotation = () => {
         clearInterval(iconCarouselInterval);
         iconCarouselInterval = setInterval(() => {
-          currentIconIndex = (currentIconIndex + 1) % iconWrappers.length;
-          updateIconPosition();
+          currentActiveDescIndex =
+            (currentActiveDescIndex + 1) % descriptions.length;
+          updateActiveDescription();
         }, 4000);
       };
+
+      // Initialize the first active state
+      updateActiveDescription();
     };
 
     const insertAndAnimate = () => {
@@ -323,7 +340,7 @@ document.addEventListener("DOMContentLoaded", function () {
           opacity: 1,
           y: 0,
           duration: 0.4,
-          onComplete: bindIconCarouselControls,
+          onComplete: bindIconInteractions,
         }
       );
       if (isMobile) bindCarouselControls();
