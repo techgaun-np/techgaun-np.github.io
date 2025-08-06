@@ -285,8 +285,7 @@ document.addEventListener("DOMContentLoaded", () => {
   startAutoScroll();
 });
 
-// Dropdown functionality for both dropdowns in systematic way
-
+// Dropdown functionality with hover effect
 document.addEventListener("DOMContentLoaded", function () {
   const dropdowns = [
     {
@@ -309,7 +308,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Mouse enter (hover) event
     toggle.addEventListener("mouseenter", function () {
-      // Close all other dropdowns first
       dropdowns.forEach(({ menuId: mid, iconId: iid }) => {
         const otherMenu = document.getElementById(mid);
         const otherIcon = document.getElementById(iid);
@@ -349,6 +347,4 @@ document.addEventListener("DOMContentLoaded", function () {
       icon.style.transform = "rotate(0deg)";
     });
   });
-
-  // Remove the click event listener since we're using hover now
 });
