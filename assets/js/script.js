@@ -285,8 +285,7 @@ document.addEventListener("DOMContentLoaded", () => {
   startAutoScroll();
 });
 
-// Dropdown functionality for both dropdowns in systematic way
-
+// Dropdown functionality with hover effect
 document.addEventListener("DOMContentLoaded", function () {
   const dropdowns = [
     {
@@ -307,10 +306,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const menu = document.getElementById(menuId);
     const icon = document.getElementById(iconId);
 
-    toggle.addEventListener("click", function (e) {
-      e.stopPropagation();
-
-      // Close all dropdowns first
+    // Mouse enter (hover) event
+    toggle.addEventListener("mouseenter", function () {
       dropdowns.forEach(({ menuId: mid, iconId: iid }) => {
         const otherMenu = document.getElementById(mid);
         const otherIcon = document.getElementById(iid);
@@ -323,20 +320,31 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
 
-      // Toggle current dropdown
-      const isOpen = menu.style.display === "block";
-      menu.style.display = isOpen ? "none" : "block";
-      icon.style.transform = isOpen ? "rotate(0deg)" : "rotate(180deg)";
+      // Open current dropdown
+      menu.style.display = "block";
+      icon.style.transform = "rotate(180deg)";
     });
-  });
 
-  // Close all when clicking outside
-  document.addEventListener("click", function () {
-    dropdowns.forEach(({ menuId, iconId }) => {
-      const menu = document.getElementById(menuId);
-      const icon = document.getElementById(iconId);
-      if (menu) menu.style.display = "none";
-      if (icon) icon.style.transform = "rotate(0deg)";
+    // Mouse leave event for the toggle element
+    toggle.addEventListener("mouseleave", function (e) {
+      // Check if mouse is moving to the menu
+      const relatedTarget = e.relatedTarget;
+      if (!menu.contains(relatedTarget)) {
+        menu.style.display = "none";
+        icon.style.transform = "rotate(0deg)";
+      }
+    });
+
+    // Mouse enter for the menu to prevent it from closing when moving to menu
+    menu.addEventListener("mouseenter", function () {
+      menu.style.display = "block";
+      icon.style.transform = "rotate(180deg)";
+    });
+
+    // Mouse leave for the menu to close it
+    menu.addEventListener("mouseleave", function () {
+      menu.style.display = "none";
+      icon.style.transform = "rotate(0deg)";
     });
   });
 });
