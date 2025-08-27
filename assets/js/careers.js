@@ -217,7 +217,7 @@ document.addEventListener("DOMContentLoaded", function () {
       submitButton.disabled = true;
       submitButton.textContent = "Sending...";
 
-      const SERVICE_ID = "service_008lxmj";
+      const SERVICE_ID = "service_z7ecq9h";
       const TEMPLATE_ID = "template_rodhwgv";
 
       try {
