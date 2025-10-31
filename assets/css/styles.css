@@ -1164,6 +1164,98 @@ footer p {
   margin: 0 auto;
 }
 
+/* Bottom banner */
+.bottom-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  color: white;
+  padding: 10px 30px 0 30px;
+  background: rgba(8, 43, 40, 0.8);
+  z-index: 1000;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+  font-family: "Arial", sans-serif;
+}
+
+.banner-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  /* width: 100%; */
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.banner-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 80%;
+}
+
+.banner-logo {
+  height: 30px;
+  width: auto;
+}
+
+/* ✨ Floating up-and-down animation */
+.banner-picture {
+  height: 150px;
+  width: auto;
+  animation: floatUpDown 2s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+  0%,
+  20% {
+    transform: translateY(0); /* Stay at bottom a bit */
+  }
+  40% {
+    transform: translateY(150px); /* Move down quickly */
+  }
+  60% {
+    transform: translateY(150px); /* Pause at bottom */
+  }
+  80%,
+  100% {
+    transform: translateY(0); /* Go back up and pause */
+  }
+}
+
+/* Text */
+.banner-left h4 {
+  font-size: 24px;
+  margin: 0;
+  font-weight: 500;
+  color: #eafbf9;
+}
+
+.banner-left p {
+  font-size: 16px;
+  margin: 2px 0 0 0;
+  color: #eafbf9;
+}
+
+/* Button */
+.banner-right .banner-button {
+  background-color: #00bfa5;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  margin-right: 60px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.banner-right .banner-button:hover {
+  background-color: #009f8c;
+}
+
 @media screen and (max-width: 1600px) {
   .hero h1 {
     padding: 0;
@@ -1230,6 +1322,10 @@ footer p {
   .carousel-text {
     margin-top: 60px;
   }
+
+  .banner-right .banner-button {
+    margin-right: 50px;
+  }
 }
 
 @media screen and (max-width: 1060px) {
@@ -1247,6 +1343,24 @@ footer p {
     padding: 0px;
     padding-top: 8rem;
     padding-bottom: 8rem;
+  }
+
+  .banner-left h4 {
+    font-size: 20px;
+  }
+  .banner-left p {
+    font-size: 14px;
+  }
+
+  .banner-picture {
+    height: 120px;
+  }
+
+  .banner-left {
+    gap: 20px;
+  }
+  .banner-logo {
+    height: 25px;
   }
 }
 
@@ -1570,6 +1684,29 @@ footer p {
     height: 32px;
     margin-bottom: 10px;
   }
+
+  .banner-left h4 {
+    font-size: 16px;
+  }
+  .banner-left p {
+    font-size: 12px;
+  }
+
+  .banner-picture {
+    height: 120px;
+    /* display: none; */
+  }
+
+  .banner-left {
+    gap: 10px;
+  }
+  .banner-logo {
+    height: 20px;
+  }
+  .banner-right .banner-button {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
 }
 
 /* === Responsive === */
@@ -1779,6 +1916,30 @@ footer p {
     padding: 0px;
     padding-bottom: 40px;
   }
+
+  .banner-left h4 {
+    font-size: 14px;
+  }
+  .banner-left p {
+    font-size: 10px;
+  }
+
+  .banner-picture {
+    height: 120px;
+    /* display: none; */
+  }
+
+  .banner-left {
+    gap: 10px;
+    width: 70%;
+  }
+  .banner-logo {
+    height: 16px;
+  }
+  .banner-right .banner-button {
+    font-size: 14px;
+    padding: 6px 14px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -1918,5 +2079,29 @@ footer p {
     color: #ffffff;
     padding-left: 10px;
     line-height: 1;
+  }
+
+  .banner-left h4 {
+    font-size: 14px;
+  }
+  .banner-left p {
+    font-size: 10px;
+  }
+
+  .banner-picture {
+    height: 120px;
+    display: none;
+  }
+
+  .banner-left {
+    gap: 10px;
+    width: 70%;
+  }
+  .banner-logo {
+    height: 16px;
+  }
+  .banner-right .banner-button {
+    font-size: 10px;
+    padding: 5px 10px;
   }
 }
