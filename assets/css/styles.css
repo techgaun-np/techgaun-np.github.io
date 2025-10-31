@@ -1707,6 +1707,10 @@ footer p {
     font-size: 14px;
     padding: 10px 16px;
   }
+
+  .custom-dropdown {
+    display: none !important;
+  }
 }
 
 /* === Responsive === */

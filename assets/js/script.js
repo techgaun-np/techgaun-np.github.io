@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
     submitButton.disabled = true;
     submitButton.textContent = "Sending...";
 
-    emailjs.sendForm("service_008lxmj", "template_wiuzc5o", this).then(
+    emailjs.sendForm("service_z7ecq9h", "template_wiuzc5o", this).then(
       function () {
         contactForm.reset();
         // contactForm.style.display = 'none';
