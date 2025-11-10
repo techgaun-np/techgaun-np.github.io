@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
+    <script type="text/javascript" src="assets/js/banner.js"></script>
+
     <script type="text/javascript" src="/assets/js/script.js"></script>
 </head>
 
@@ -132,13 +134,6 @@
         </div>
     </header>
 
-    <div id="announcementBanner" class="announcement-banner">
-        <p>
-            RamroLink Beta just dropped! Your smart link, your way.
-            <a href="https://ramro.link/" target="_blank" class="banner-link">Create Now!</a>
-        </p>
-        <span class="close-banner" onclick="closeBanner()">&times;</span>
-    </div>
 
 
     <!-- Hero Section -->
@@ -608,9 +603,8 @@
 
     <!-- Bottom Banner -->
     <div class="container">
-
-        <div class="bottom-banner ">
-            <div class="banner-content">
+        <div class="bottom-banner" id="bottomBanner">
+            <div class="banner-content bottom-banner-container">
                 <div class="banner-left">
                     <img src="assets/images/ramrolink/logo.svg" alt="RamroLink Logo" class="banner-logo" />
                     <img src="assets/images/ramrolink/banner-image.png" alt="RamroLink Banner" class="banner-picture" />
@@ -622,9 +616,16 @@
                 <div class="banner-right">
                     <a href="https://ramro.link" target="_blank" class="banner-button">Create Now</a>
                 </div>
+                <button class="banner-minimize" id="minimizeBtn">✕</button>
             </div>
         </div>
+
+        <!-- Mini Icon (hidden by default) -->
+        <div class="mini-banner" id="miniBanner">
+            <img src="assets/images/ramrolink.svg" alt="RamroLink Mini Logo" id="miniLogo" />
+        </div>
     </div>
+
 
 
 
