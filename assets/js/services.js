@@ -1,4 +1,52 @@
 document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".tab-links li a").forEach((tabLink) => {
+    tabLink.addEventListener("click", function (e) {
+      const target = this.getAttribute("href");
+
+      document.querySelectorAll(".tab-links li").forEach((li) => {
+        li.classList.remove("active");
+      });
+
+      this.parentElement.classList.add("active");
+
+      document.querySelectorAll(".tab-item").forEach((item) => {
+        item.classList.remove("active");
+      });
+
+      document.querySelector(target).classList.add("active");
+    });
+  });
+
+  const observerOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.4,
+  };
+
+  const tabObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+
+        document.querySelectorAll(".tab-links li").forEach((li) => {
+          li.classList.remove("active");
+        });
+
+        const matchingTab = document.querySelector(
+          `.tab-links li a[href="#${id}"]`
+        );
+
+        if (matchingTab) {
+          matchingTab.parentElement.classList.add("active");
+        }
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll(".tab-item").forEach((section) => {
+    tabObserver.observe(section);
+  });
+
   gsap.registerPlugin(ScrollTrigger);
 
   const serviceData = [
@@ -39,7 +87,6 @@ document.addEventListener("DOMContentLoaded", function () {
           id: "1",
           title: "Understand & Align",
           img: "assets/images/services/round-star.svg",
-
           description:
             "At Techgaun, we begin our web application development process by thoroughly understanding your business goals and aligning our strategies to meet them. We engage in comprehensive consultations to ensure that our solutions are tailored to support your vision and drive your success.",
         },
@@ -47,7 +94,6 @@ document.addEventListener("DOMContentLoaded", function () {
           id: "2",
           title: "Choose the Right Stack",
           img: "assets/images/services/llms.svg",
-
           description:
             "Selecting the appropriate technology stack is crucial for the success of your web application. Our experts assess your project requirements and advise on the best-fit technologies, ensuring scalability, performance, and a seamless user experience.",
         },
@@ -65,7 +111,6 @@ document.addEventListener("DOMContentLoaded", function () {
       description:
         "At Techgaun, we specialize in architecting and optimizing mobile applications that are not just functional but transformative. Whether you're looking to launch a new app, refine your existing mobile experience, or overhaul your app's architecture, we offer full-spectrum expertise grounded in real-world deployments.",
       img: "assets/images/services/mobile-dev.png",
-
       icons: [
         {
           id: "1",
@@ -85,7 +130,6 @@ document.addEventListener("DOMContentLoaded", function () {
           id: "3",
           title: "Design for Users",
           img: "assets/images/services/colorful.svg",
-
           description:
             "Streamline your cloud operations through Infrastructure as Code (IaC). Techgaun automates deployment, configuration, and management processes, reducing manual effort, minimizing errors, and enabling rapid, consistent, and repeatable infrastructure updates.",
         },
@@ -96,7 +140,6 @@ document.addEventListener("DOMContentLoaded", function () {
       description:
         "We help you architect and implement robust cloud environments across AWS, Azure, and GCP. Our team supports everything from network segmentation to application-level abstraction, using tools like Terraform and cloud-native IaC platforms. Whether you're modernizing or starting from scratch, we bring precision, scale, and strategy to your cloud.",
       img: "assets/images/services/cloud.png",
-
       icons: [
         {
           id: "1",
@@ -116,7 +159,6 @@ document.addEventListener("DOMContentLoaded", function () {
           id: "3",
           title: "Automate with IaC",
           img: "assets/images/services/setting.svg",
-
           description:
             "Streamline your cloud operations through Infrastructure as Code (IaC). Techgaun automates deployment, configuration, and management processes, reducing manual effort, minimizing errors, and enabling rapid, consistent, and repeatable infrastructure updates.",
         },
@@ -127,13 +169,11 @@ document.addEventListener("DOMContentLoaded", function () {
       description:
         "We help transform legacy systems into modern, scalable applications. Whether it’s breaking down monoliths, updating outdated architectures, or re-platforming entire stacks—our approach is tailored, pragmatic, and proven. No silver bullets—just expert strategy built around your unique tech, team, and timeline.",
       img: "assets/images/services/app-modernization.png",
-
       icons: [
         {
           id: "1",
           title: "Assess & Strategize",
           img: "assets/images/services/search.svg",
-
           description:
             "Techgaun begins with a comprehensive assessment of your existing applications to identify gaps and opportunities. We then develop a tailored modernization strategy that aligns with your business goals and sets the stage for future growth.",
         },
@@ -141,7 +181,6 @@ document.addEventListener("DOMContentLoaded", function () {
           id: "2",
           title: "Modularize & Modernize",
           img: "assets/images/services/note.svg",
-
           description:
             " We break down monolithic applications into modular components, incorporating modern technologies and architectures. This approach enhances flexibility, agility, and maintainability, making your applications more adaptable to evolving needs.",
         },
@@ -159,7 +198,6 @@ document.addEventListener("DOMContentLoaded", function () {
       description:
         "At Techgaun, we specialize in architecting and optimizing AI pipelines that are not just functional but transformative. Whether you're looking to launch an LLM-powered application, refine your model’s performance, or overhaul your prompting strategies, we offer full-spectrum expertise grounded in real-world deployments.",
       img: "assets/images/services/architecture.png",
-
       icons: [
         {
           id: "1",
@@ -281,10 +319,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (!iconWrappers.length) return;
 
-      // Clear any existing interval
       if (iconCarouselInterval) clearInterval(iconCarouselInterval);
 
-      // Set up auto-rotation for descriptions
       iconCarouselInterval = setInterval(() => {
         currentActiveDescIndex =
           (currentActiveDescIndex + 1) % descriptions.length;
@@ -292,7 +328,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }, 4000);
 
       const updateActiveDescription = () => {
-        // Update descriptions
         descriptions.forEach((desc) => {
           desc.classList.remove("active");
           if (parseInt(desc.dataset.index) === currentActiveDescIndex) {
@@ -300,7 +335,6 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         });
 
-        // Update icon wrappers
         iconWrappers.forEach((wrapper) => {
           wrapper.classList.remove("active");
           if (parseInt(wrapper.dataset.index) === currentActiveDescIndex) {
@@ -309,7 +343,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       };
 
-      // Add hover events
       iconWrappers.forEach((wrapper) => {
         wrapper.addEventListener("mouseenter", () => {
           currentActiveDescIndex = parseInt(wrapper.dataset.index);
@@ -327,7 +360,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 4000);
       };
 
-      // Initialize the first active state
       updateActiveDescription();
     };
 
@@ -378,7 +410,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Initial render
   renderService(0);
 
   if (!isMobile) {
@@ -401,7 +432,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Morph SVG path animation (optional part)
   const path = document.getElementById("morphPath");
   if (path) {
     const shapes = [
