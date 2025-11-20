@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="assets/images/techgaun-logo-small.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techgaun - We Build Awesome Software Products To Help You Build Awesome Business</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/startup.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript" src="assets/js/banner.js"></script>
+
+    <script type="text/javascript" src="/assets/js/script.js"></script>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="assets/images/logo.svg" alt="Techgaun Logo">
+            </div>
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <!-- <li><a href="#home">Home</a></li> -->
+                    <li><a href="/products">Products</a></li>
+                    <li><a href="#services">Services</a></li>
+
+                    <!-- mobile view hidden dropdown -->
+                    <li class="hidden"> <a href="https://devtools.techgaun.com/" target="_blank">Dev Tools</a></li>
+                    <li class="hidden"><a href="/#about">About Us</a></li>
+                    <li class="hidden"><a href="/team">Our Team</a></li>
+                    <li class="hidden"><a href="/careers">Careers</a></li>
+                    <!-- dropdown with options -->
+                    <li class="custom-dropdown">
+                        <button class="dropdown-toggle" id="dropdownToggle1">
+                            <span>Initiatives</span>
+                            <span class="dropdown-icon" id="dropdownIcon1">
+                                <img src="assets/images/nav/dropdown.svg" alt="dropdown">
+                            </span>
+                        </button>
+                        <ul class="dropdown-menu" id="dropdownMenu1">
+                            <li class="dropdown-item">
+                                <a href="https://devtools.techgaun.com/" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path class="svg-path"
+                                            d="M3 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3ZM4 5V19H20V5H4ZM20 12L16.4645 15.5355L15.0503 14.1213L17.1716 12L15.0503 9.87868L16.4645 8.46447L20 12ZM6.82843 12L8.94975 14.1213L7.53553 15.5355L4 12L7.53553 8.46447L8.94975 9.87868L6.82843 12ZM11.2443 17H9.11597L12.7557 7H14.884L11.2443 17Z" />
+                                    </svg>
+                                    <div>
+                                        <h1>Dev Tools</h1>
+                                        <p>Free, open-source developer tools.</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <!-- <li class="dropdown-item">
+                                <a href="#giveBack">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path class="svg-path"
+                                            d="M5.99805 3C9.48787 3 12.3812 5.55379 12.9112 8.8945C14.0863 7.72389 15.7076 7 17.498 7H21.998V9.5C21.998 13.0899 19.0879 16 15.498 16H12.998V21H10.998V13H8.99805C5.13205 13 1.99805 9.86599 1.99805 6V3H5.99805ZM19.998 9H17.498C15.0128 9 12.998 11.0147 12.998 13.5V14H15.498C17.9833 14 19.998 11.9853 19.998 9.5V9ZM5.99805 5H3.99805V6C3.99805 8.76142 6.23662 11 8.99805 11H10.998V10C10.998 7.23858 8.75947 5 5.99805 5Z" />
+                                    </svg>
+
+                                    <div>
+                                        <h1>Give Back</h1>
+                                        <p>Fueling future talent with scholarships.</p>
+                                    </div>
+                                </a>
+                            </li> -->
+                        </ul>
+                    </li>
+                    <li class="custom-dropdown">
+                        <button class="dropdown-toggle" id="dropdownToggle2">
+                            <span>Company</span>
+                            <span class="dropdown-icon" id="dropdownIcon2"> <img src="assets/images/nav/dropdown.svg"
+                                    alt="dropdown">
+                            </span>
+                        </button>
+                        <ul class="dropdown-menu" id="dropdownMenu2">
+                            <li class="dropdown-item">
+                                <a href="#about">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path class="svg-path"
+                                            d="M12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22ZM12 20C14.1217 20 16.1566 19.1571 17.6569 17.6569C19.1571 16.1566 20 14.1217 20 12C20 9.87827 19.1571 7.84344 17.6569 6.34315C16.1566 4.84285 14.1217 4 12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12C4 14.1217 4.84285 16.1566 6.34315 17.6569C7.84344 19.1571 9.87827 20 12 20ZM12 17C10.6739 17 9.40215 16.4732 8.46447 15.5355C7.52678 14.5979 7 13.3261 7 12C7 10.6739 7.52678 9.40215 8.46447 8.46447C9.40215 7.52678 10.6739 7 12 7C13.3261 7 14.5979 7.52678 15.5355 8.46447C16.4732 9.40215 17 10.6739 17 12C17 13.3261 16.4732 14.5979 15.5355 15.5355C14.5979 16.4732 13.3261 17 12 17Z" />
+                                    </svg>
+                                    <div>
+                                        <h1>About Us</h1>
+                                        <p>Learn who we are and what drives us.</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="/team">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path class="svg-path"
+                                            d="M12 11C13.3261 11 14.5979 11.5268 15.5355 12.4645C16.4732 13.4021 17 14.6739 17 16V22H15V16C15 15.2348 14.7077 14.4985 14.1827 13.9417C13.6578 13.385 12.9399 13.0499 12.176 13.005L12 13C11.2348 13 10.4985 13.2923 9.94174 13.8173C9.38499 14.3422 9.04989 15.0601 9.005 15.824L9 16V22H7V16C7 14.6739 7.52678 13.4021 8.46447 12.4645C9.40215 11.5268 10.6739 11 12 11ZM5.5 14C5.779 14 6.05 14.033 6.31 14.094C6.13902 14.603 6.03777 15.1328 6.009 15.669L6 16V16.086C5.88505 16.0449 5.76549 16.018 5.644 16.006L5.5 16C5.12712 16 4.76761 16.1389 4.49158 16.3896C4.21555 16.6403 4.0428 16.9848 4.007 17.356L4 17.5V22H2V17.5C2 16.5717 2.36875 15.6815 3.02513 15.0251C3.6815 14.3687 4.57174 14 5.5 14ZM18.5 14C19.4283 14 20.3185 14.3687 20.9749 15.0251C21.6313 15.6815 22 16.5717 22 17.5V22H20V17.5C20 17.1271 19.8611 16.7676 19.6104 16.4916C19.3597 16.2156 19.0152 16.0428 18.644 16.007L18.5 16C18.325 16 18.157 16.03 18 16.085V16C18 15.334 17.892 14.694 17.691 14.096C17.95 14.033 18.221 14 18.5 14ZM5.5 8C6.16304 8 6.79893 8.26339 7.26777 8.73223C7.73661 9.20107 8 9.83696 8 10.5C8 11.163 7.73661 11.7989 7.26777 12.2678C6.79893 12.7366 6.16304 13 5.5 13C4.83696 13 4.20107 12.7366 3.73223 12.2678C3.26339 11.7989 3 11.163 3 10.5C3 9.83696 3.26339 9.20107 3.73223 8.73223C4.20107 8.26339 4.83696 8 5.5 8ZM18.5 8C19.163 8 19.7989 8.26339 20.2678 8.73223C20.7366 9.20107 21 9.83696 21 10.5C21 11.163 20.7366 11.7989 20.2678 12.2678C19.7989 12.7366 19.163 13 18.5 13C17.837 13 17.2011 12.7366 16.7322 12.2678C16.2634 11.7989 16 11.163 16 10.5C16 9.83696 16.2634 9.20107 16.7322 8.73223C17.2011 8.26339 17.837 8 18.5 8ZM5.5 10C5.36739 10 5.24021 10.0527 5.14645 10.1464C5.05268 10.2402 5 10.3674 5 10.5C5 10.6326 5.05268 10.7598 5.14645 10.8536C5.24021 10.9473 5.36739 11 5.5 11C5.63261 11 5.75979 10.9473 5.85355 10.8536C5.94732 10.7598 6 10.6326 6 10.5C6 10.3674 5.94732 10.2402 5.85355 10.1464C5.75979 10.0527 5.63261 10 5.5 10ZM18.5 10C18.3674 10 18.2402 10.0527 18.1464 10.1464C18.0527 10.2402 18 10.3674 18 10.5C18 10.6326 18.0527 10.7598 18.1464 10.8536C18.2402 10.9473 18.3674 11 18.5 11C18.6326 11 18.7598 10.9473 18.8536 10.8536C18.9473 10.7598 19 10.6326 19 10.5C19 10.3674 18.9473 10.2402 18.8536 10.1464C18.7598 10.0527 18.6326 10 18.5 10ZM12 2C13.0609 2 14.0783 2.42143 14.8284 3.17157C15.5786 3.92172 16 4.93913 16 6C16 7.06087 15.5786 8.07828 14.8284 8.82843C14.0783 9.57857 13.0609 10 12 10C10.9391 10 9.92172 9.57857 9.17157 8.82843C8.42143 8.07828 8 7.06087 8 6C8 4.93913 8.42143 3.92172 9.17157 3.17157C9.92172 2.42143 10.9391 2 12 2ZM12 4C11.4696 4 10.9609 4.21071 10.5858 4.58579C10.2107 4.96086 10 5.46957 10 6C10 6.53043 10.2107 7.03914 10.5858 7.41421C10.9609 7.78929 11.4696 8 12 8C12.5304 8 13.0391 7.78929 13.4142 7.41421C13.7893 7.03914 14 6.53043 14 6C14 5.46957 13.7893 4.96086 13.4142 4.58579C13.0391 4.21071 12.5304 4 12 4Z" />
+                                    </svg>
+
+                                    <div>
+                                        <h1>Our Team</h1>
+                                        <p>Meet the minds behind Techgaun.</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="/careers">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path class="svg-path"
+                                            d="M12 14V16C10.4087 16 8.88258 16.6321 7.75736 17.7574C6.63214 18.8826 6 20.4087 6 22H4C4 19.8783 4.84285 17.8434 6.34315 16.3431C7.84344 14.8429 9.87827 14 12 14ZM12 13C8.685 13 6 10.315 6 7C6 3.685 8.685 1 12 1C15.315 1 18 3.685 18 7C18 10.315 15.315 13 12 13ZM12 11C14.21 11 16 9.21 16 7C16 4.79 14.21 3 12 3C9.79 3 8 4.79 8 7C8 9.21 9.79 11 12 11ZM18 21.5L15.061 23.045L15.622 19.773L13.245 17.455L16.531 16.977L18 14L19.47 16.977L22.755 17.455L20.378 19.773L20.938 23.045L18 21.5Z" />
+                                    </svg>
+
+                                    <div>
+                                        <h1>Careers</h1>
+                                        <p>Join us in shaping digital Nepal.</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="get-started-container">
+                <a href="#contact" class="get-started">Get Started</a>
+            </div>
+            <a href="javascript:void(0);" id="nav-icon" class="nav-icon">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </header>
+
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-wipe"></div>
+
+        <div class="hero-text">
+            <h1>Driven by <span class="highlight">Innovation</span><br>Defined by <span
+                    class="highlight">Excellence</span></h1>
+            <a href="#services" class="learn-more">Explore Services</a>
+        </div>
+        <img class="hero-img" src="assets/images/hero-bg.svg" alt="Hero Image" />
+        <img class="hero-rocket" src="assets/images/startup/rocket-wipe.png" alt="Rocket Image" />
+    </section>
+
+
+    <!-- About Section -->
+    <section class="startup-about-container">
+
+        <div id="startup-about" class="container ">
+            <div class="startup-about">
+
+                <h1>We invest engineering teams in exchange for equity</h1>
+                <p>Techgaun becomes your technical co-founder. We build your MVP from scratch or scale your existing
+                    product
+                    —
+                    bringing full engineering power and product thinking from day one.</p>
+                <button class="learn-more">
+                    Explore More
+                </button>
+            </div>
+            <img class="rocket" src="assets/images/startup/rocket.png" alt="Rocket Image" />
+        </div>
+        <img src="assets/images/startup/cloud.png" alt="Cloud Image" class="cloud-img" />
+    </section>
+
+
+
+
+
+    <!-- Expertise Section -->
+    <section id="services" class="services">
+        <div class="container services-container">
+            <h1 class="section-title">Services and Expertise</h1>
+            <div class="services-list">
+                <div class="service-item">
+                    <img src="assets/images/ai-pipelines.svg" alt="AI Pipelines">
+                    <div class="services-desc">
+                        <h3 class="highlight">AI Pipelines</h3>
+                        <p>Our team has years of experience in building and maintaining AI pipelines. Either building
+                            your next LLM-powered application or helping you revamp your prompting or helping fine tune
+                            your ML model, we've got you covered.</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <img src="assets/images/web-app-dev.svg" alt="Web Application Development">
+                    <div class="services-desc">
+                        <h3>Web Application Development</h3>
+                        <p>Our team develops robust and scalable web applications tailored to your business needs. We
+                            will work with you to understand your use-cases and choose the best tech stack that aligns
+                            with your needs.</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <img src="assets/images/mobile-app-dev.svg" alt="Mobile Application Development">
+                    <div class="services-desc">
+                        <h3>Mobile Application Development</h3>
+                        <p>We create engaging mobile applications using React Native. We've worked with several
+                            companies to build their next generation of mobile applications. Our experience deeply roots
+                            in building mobile apps and games in native languages such as Kotlin and Swift but we also
+                            have a broad range of experience with React Native.</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <img src="assets/images/cloud-strategy.svg" alt="Cloud Strategy">
+                    <div class="services-desc">
+                        <h3>Cloud Strategy</h3>
+                        <p>Whether its migration to the cloud or building out greenfield cloud infrastructure, we've got
+                            you covered with AWS, Azure, and GCP. From network segmentation to app level infra
+                            abstraction, we can help you at all levels with architectural and implementation needs. We
+                            primarily use terraform but can work with you with cloud specific toolings for your IaC.</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <img src="assets/images/app-modernization.svg" alt="App Modernization">
+                    <div class="services-desc">
+                        <h3>App Modernization</h3>
+                        <p>Is your team working through the process of modernizing the application stack and
+                            architecture? We’ve years of experience modernizing the legacy applications and monolithic
+                            services. Our services ensure that your legacy applications are updated to meet modern
+                            standards. We acknowledge there's no one-size-fits-all strategy and thus will tailor our
+                            approach to your specific needs.</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <img src="assets/images/security.svg" alt="Architecture and Security Review">
+                    <div>
+                        <h3>Architecture and Security Review</h3>
+                        <p>Our deep expertise in security and architecture allows us to conduct thorough reviews to
+                            ensure your applications are secure and efficient. We offer a comprehensive review of your
+                            application's architecture and security posture, including but not limited to network
+                            segmentation, application level security, and infrastructure level security.</p>
+                    </div>
+                </div>
+            </div>
+            <a style="text-decoration: none;" href="/services">
+                <button class="learn-more services-btn">
+                    View More
+                </button>
+            </a>
+        </div>
+    </section>
+
+    <section class="process">
+        <div class="process-curve-container">
+            <img class="process-top-curve" src="assets/images/process-curve.svg" alt="Process curve" />
+        </div>
+        <div class="container process-container">
+            <h1 class="section-title">Process We Follow</h1>
+            <div class="process-steps">
+                <div class="process-step">
+                    <h3><span class="process-step-1 process-step-count">1</span> Research</h3>
+                    <p>We work together with you and that's the key. We understand that you have unique needs and that's
+                        what drives us.</p>
+                </div>
+                <div class="process-step">
+                    <h3><span class="process-step-2 process-step-count">2 </span> Design</h3>
+                    <p>Our design team captures your vision and creates visually appealing and user-friendly designs and
+                        great user experience.</p>
+                </div>
+                <div class="process-step">
+                    <h3><span class="process-step-3 process-step-count">3 </span> Development</h3>
+                    <p>We follow best agile practices and ensure maintainable and scalable codebase. We are all about
+                        continuous refinement, improvement, integration, and delivery.</p>
+                </div>
+                <div class="process-step">
+                    <h3><span class="process-step-4 process-step-count">4 </span> Deploy</h3>
+                    <p>We ensure smooth deployment and provide ongoing support to keep your application running
+                        flawlessly.</p>
+                </div>
+            </div>
+            <div class="process-img-container">
+                <img src="assets/images/process.svg" alt="Process" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section id="case-studies" class="case-studies">
+        <div class="container case-studies-container">
+
+            <div class="carousel">
+                <h1 class=" section-title case-study-title">Case Studies</h1>
+                <div class="carousel-content">
+
+
+                    <!-- Text Content -->
+                    <div class="carousel-text">
+                        <h5 id="text-tagline">Dev Tools</h5>
+                        <p id="text-description">
+                            We have built a suite of online tools for developers to help them with their day-to-day
+                            activities. We have made these tools to be used by developers for developers, all in one
+                            place and free to use.
+                        </p>
+
+                    </div>
+                    <div class="title-container-mobile">
+                        <h1 id="text-title-1">Online Set of Useful Tools for Developers</h3>
+
+                    </div>
+
+                    <div class="title-container-mobile text-link-container">
+                        <a id="text-link" href="https://devtools.techgaun.com" target="_blank"
+                            class="case-study-link mobile-link-crousel">Use
+                            Dev Tools</a>
+                    </div>
+                    <!-- Image Track ;large screen -->
+                    <div class="carousel-image-wrapper">
+                        <div class="carousel-image-track">
+                            <div class="carousel-image-item">
+                                <img src="assets/images/case-study-devtools.png" alt="Dev Tools" />
+                                <div class="overlay-container">
+                                    <div class="overlay-bg"></div>
+
+                                    <a href="https://devtools.techgaun.com" target="_blank" class="case-study-link">Use
+                                        Dev Tools</a>
+
+                                </div>
+                            </div>
+                            <div class="carousel-image-item">
+                                <img src="assets/images/mobile-ux.png" alt="Mobile App" />
+
+                            </div>
+                            <div class="carousel-image-item">
+                                <img src="assets/images/dashboard.svg" alt="Crowdfunding" />
+
+                            </div>
+                            <div class="carousel-image-item">
+                                <img src="assets/images/ancestree.png" alt="Ancestree" />
+
+                                <div class="overlay-container">
+                                    <div class="overlay-bg"></div>
+
+                                    <a href="#contact" class="case-study-link">Schedule Demo</a>
+
+                                </div>
+                            </div>
+                            <div class="carousel-image-item">
+                                <img src="assets/images/case-study-build-for-nepal.png" alt="Build for Nepal" />
+
+                                <div class="overlay-container">
+                                    <div class="overlay-bg"></div>
+
+                                    <a href="https://github.com/build-for-nepal" target="_blank"
+                                        class="case-study-link">
+                                        Visit Github</a>
+
+                                </div>
+                            </div>
+
+                            <div class="carousel-image-item">
+                                <img src="assets/images/banner/laptop.svg" alt="Build for Nepal" />
+
+                                <div class="overlay-container">
+                                    <div class="overlay-bg"></div>
+
+                                    <a href="https://ramro.link" target="_blank" class="case-study-link">
+                                        Visit RamroLink</a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Navigation Arrows -->
+                <div class="carousel-controls">
+                    <button id="prev" class="carousel-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20" fill="none">
+                            <path
+                                d="M9.02464 10.0006L13.1496 14.1256L11.9713 15.3039L6.66797 10.0006L11.9713 4.69727L13.1496 5.8756L9.02464 10.0006Z"
+                                fill="#F6F7F9" />
+                        </svg>
+
+                    </button>
+                    <button id="next" class="carousel-btn"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                            height="16" viewBox="0 0 20 20" fill="none">
+                            <path
+                                d="M10.9766 10.0006L6.85156 5.8756L8.0299 4.69727L13.3332 10.0006L8.0299 15.3039L6.85156 14.1256L10.9766 10.0006Z"
+                                fill="#F6F7F9" />
+                        </svg></button>
+                </div>
+
+                <!-- title Trace -->
+                <div class="title-container">
+                    <h1 id="text-title">Online Set of Useful Tools for Developers</h3>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Leadership Section -->
+    <section class="team">
+        <div class="who-we-are">
+            <div class="who-we-are-content">
+                <img class="aeroplane-team" src="assets/images/aeroplane-team.svg" alt="Aeroplane team" />
+                <div class="who-we-are-desc">
+                    <h1 class="section-title">Leadership</h1>
+                    <p>The leadership team has a combined experience of over 30 years in the field of software
+                        development and consulting having built several software systems all the way from exciting
+                        cutting edge start-up products to large scale complex enterprise systems.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="leadership">
+                <div class="team-members">
+                    <div class="team-member">
+                        <img class="team-member-img" src="assets/images/samar.svg" alt="Samar Acharya">
+                        <div class="member-detail member-detail-1">
+                            <div class="member-name">
+                                <h3>Samar Acharya</h3>
+                                <p>CEO</p>
+                            </div>
+                            <div class="member-social">
+                                <a href="https://www.linkedin.com/in/techgaun/" target="_blank" noopener noreferrer><img
+                                        src="assets/images/linkedin.svg" alt="LinkedIn Profile" /></a>
+                                <a href="https://github.com/techgaun" target="_blank" noopener noreferrer><img
+                                        src="assets/images/github.svg" alt="Github Profile" /></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <img class="team-member-img" src="assets/images/brisha.svg" alt="Brisha Pote">
+                        <div class="member-detail member-detail-2">
+                            <div class="member-name">
+                                <h3>Brisha Pote</h3>
+                                <p>Chief Product Officer</p>
+                            </div>
+                            <div class="member-social">
+                                <a href="https://www.linkedin.com/in/brisha-pote-201bab1b3/" target="_blank" noopener
+                                    noreferrer><img src="assets/images/linkedin.svg" alt="LinkedIn Profile" /></a>
+                                <a href="https://github.com/bpote" target="_blank" noopener noreferrer><img
+                                        src="assets/images/github.svg" alt="Github Profile" /></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <img class="leadership-curve-img" src="assets/images/leadership-bg.svg" />
+
+    <!-- Contact Section -->
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-form-container">
+                <img class="contact-plane" src="assets/images/contact-us-plane.svg" alt="Contact Plane" />
+                <div class="contact-form-content-container">
+                    <h1 class="section-title">Contact Us</h1>
+
+                    <p class="contact-description">
+                        Fill out the form below or reach out to us via
+                        <a href="mailto:info@techgaun.com" class="contact-email">email</a>.
+                    </p>
+
+                    <div class="contact-form-input-container">
+                        <form id="contact-form">
+                            <select name="reason">
+                                <option value="" disabled selected>Reason for Contact</option>
+                                <option value="hire-us">Hire Us</option>
+                                <option value="product-demo">Product Demo</option>
+                                <option value="job-career">Job/Career</option>
+                                <option value="partnership">Partnership</option>
+                                <option value="others">Others</option>
+                            </select>
+                            <input type="text" name="from_name" placeholder="Full Name" required>
+                            <input type="email" name="from_email" placeholder="Email" required>
+                            <input type="tel" name="from_phone" placeholder="Phone Number">
+
+
+
+                            <textarea name="message" placeholder="Message" required></textarea>
+                            <button type="submit">Submit</button>
+
+                            <div id="success-message" class="success-message" style="display: none;">
+                                <p>Thanks for reaching out. We'll contact you as soon as possible.</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <img class="contact-man" src="assets/images/contact-man.svg" alt="Contact Man" />
+            </div>
+        </div>
+    </section>
+
+    <section class="footer-img">
+        <div class="container footer-bg-container">
+            <img src="assets/images/footer.svg" alt="Footer Background" />
+        </div>
+    </section>
+    <!-- Footer Section -->
+    <footer>
+        <div style=" width: 96%;" class="container footer-container">
+            <div class="text-start footer-address">
+                Techgaun LLC <br>
+                Olathe, KS 66062 <br>
+                USA
+                <span style="display: block; margin-top: 10px;">
+                    Techgaun Nepal Pvt. Ltd. <br>
+                    Chandragiri-7, Kathmandu, Nepal
+                </span>
+            </div>
+
+
+            <div class="footer-links">
+
+                <div class="footer-logo">
+                    <img src="assets/images/footer-logo.svg" alt="Techgaun Logo">
+                </div>
+                <ul class="footer-nav">
+                    <li><a href="#home">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#case-studies">Case Study</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+
+                <div class="social-media">
+                    <a href="https://www.linkedin.com/company/techgaun" target="_blank" noopener noreferrer><img
+                            src="assets/images/linkedin-white.svg" alt="LinkedIn"></a>
+                    <a href="https://www.github.com/techgaun-np" target="_blank" noopener noreferrer><img
+                            src="assets/images/github-white.svg" alt="Github"></a>
+                    <a href="mailto:info@techgaun.com"><img src="assets/images/email.svg" alt="Email"></a>
+                </div>
+                <p>© <span id="current-year">2025</span> Techgaun. All rights reserved.</p>
+            </div>
+
+        </div>
+
+        <div style=" width: 96%;" class="container footer-container-1">
+
+
+
+            <div class="footer-links">
+
+                <div class="footer-logo">
+                    <img src="assets/images/footer-logo.svg" alt="Techgaun Logo">
+                </div>
+
+
+                <ul class="footer-nav">
+                    <li><a href="#home">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#case-studies">Case Study</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+
+                <div class="social-media">
+                    <a href="https://www.linkedin.com/company/techgaun" target="_blank" noopener noreferrer><img
+                            src="assets/images/linkedin-white.svg" alt="LinkedIn"></a>
+                    <a href="https://www.github.com/techgaun-np" target="_blank" noopener noreferrer><img
+                            src="assets/images/github-white.svg" alt="Github"></a>
+                    <a href="mailto:info@techgaun.com"><img src="assets/images/email.svg" alt="Email"></a>
+                </div>
+
+                <div class=" footer-address">
+                    Techgaun LLC
+                    Olathe, KS 66062
+                    USA
+                    <span style="display: block; margin-top: 2px;">
+                        Techgaun Nepal Pvt. Ltd.
+                        Chandragiri-7, <br> Kathmandu, Nepal
+                    </span>
+                </div>
+                <p>© <span id="current-year">2025</span> Techgaun. All rights reserved.</p>
+            </div>
+
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scroll-top" onclick="scrollToTop()">
+        <img src="assets/images/arrow-up.png" alt="arrow-up" />
+    </button>
+
+
+
+
+
+
+
+</body>
+
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+
+</html>

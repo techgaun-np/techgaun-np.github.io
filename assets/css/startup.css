@@ -1,0 +1,148 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  animation: hideHero 1s ease 2s forwards; /* hideHero starts after 10s */
+}
+
+.hero-wipe {
+  position: absolute;
+  top: -10%;
+  right: -310%;
+  width: 420%;
+  height: 240%;
+  background: white;
+  transform: rotate(50deg);
+  opacity: 1;
+  z-index: 10;
+  pointer-events: none;
+  animation: diagonalWipe 6s linear forwards; /* same duration & linear easing */
+}
+
+@keyframes diagonalWipe {
+  0% {
+    right: -310%;
+  }
+  100% {
+    right: 0%;
+  }
+}
+
+@keyframes hideHero {
+  to {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+  }
+}
+
+/* Existing rocket animation */
+.hero-rocket {
+  position: absolute;
+  top: 0;
+  right: 10%;
+  width: 450px;
+  z-index: 15;
+  rotate: 22deg;
+  animation: moveRocket 3s linear forwards;
+}
+
+@keyframes moveRocket {
+  0% {
+    top: 0;
+    right: 0%;
+  }
+  100% {
+    top: 100%;
+    right: 125%;
+  }
+}
+
+/* about */
+.startup-about {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  padding: 50px;
+  min-height: 32rem;
+  max-width: 70%;
+  animation: ease-in-out 4s fadeIn;
+}
+
+.startup-about h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 4.5rem;
+}
+
+.startup-about p {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+  line-height: 1.75rem;
+}
+
+/* rocket animation */
+.rocket {
+  position: absolute;
+  bottom: -40%;
+  right: 50%;
+  width: 250px;
+  z-index: 15;
+  rotate: -13deg;
+  animation: moveRocketUp 1s linear forwards 3s;
+}
+@keyframes moveRocketUp {
+  0% {
+    bottom: -40%;
+    right: 50%;
+  }
+  100% {
+    bottom: 30%;
+    right: 10%;
+  }
+}
+
+/* put bg in startup-about after 4 seconds */
+
+.startup-about-container {
+  animation: backgroundFadeIn 1s ease-in-out forwards 3s;
+  position: relative;
+}
+
+.cloud-img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  z-index: 5;
+  opacity: 0;
+  animation: delayFadeIn 1s ease-in-out forwards 4s;
+}
+
+@keyframes delayFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes backgroundFadeIn {
+  0% {
+    background-color: transparent;
+  }
+  100% {
+    background: url("/assets/images/startup/about-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.623) 0%,
+        rgba(255, 255, 255, 0.909) 100%
+      ),
+      url("/assets/images/startup/about-bg.jpg") rgb(245, 244, 244) 50% / cover
+        no-repeat;
+  }
+}
