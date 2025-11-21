@@ -1,3 +1,10 @@
+/* body background  */
+body {
+  background: white;
+  margin: 0;
+  padding: 0;
+}
+
 .hero {
   position: relative;
   overflow: hidden;
@@ -66,6 +73,7 @@
   padding: 50px;
   min-height: 32rem;
   max-width: 70%;
+
   animation: ease-in-out 4s fadeIn;
 }
 
@@ -90,16 +98,22 @@
   width: 250px;
   z-index: 15;
   rotate: -13deg;
+  visibility: hidden;
   animation: moveRocketUp 1s linear forwards 3s;
 }
 @keyframes moveRocketUp {
   0% {
     bottom: -40%;
     right: 50%;
+    visibility: hidden;
+  }
+  50% {
+    visibility: visible;
   }
   100% {
     bottom: 30%;
     right: 10%;
+    visibility: visible;
   }
 }
 
@@ -108,15 +122,16 @@
 .startup-about-container {
   animation: backgroundFadeIn 1s ease-in-out forwards 3s;
   position: relative;
+  overflow: hidden;
 }
 
 .cloud-img {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  bottom: -2rem;
+  left: -5%;
+  width: 110%;
   height: 200px;
-  z-index: 5;
+  z-index: 55;
   opacity: 0;
   animation: delayFadeIn 1s ease-in-out forwards 4s;
 }
@@ -144,5 +159,502 @@
       ),
       url("/assets/images/startup/about-bg.jpg") rgb(245, 244, 244) 50% / cover
         no-repeat;
+  }
+}
+
+.who-we-are-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+.who-we-are-container {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  background: white;
+  padding: 40px 0px 60px 0px;
+  z-index: 200;
+}
+
+/* left column */
+.left {
+  flex: 1 1 55%;
+  text-align: start;
+}
+
+.micro {
+  display: inline-block;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 1.125rem;
+  letter-spacing: 0.6px;
+  margin-bottom: 1rem;
+  color: #ff8502;
+}
+
+h2#why-title {
+  margin: 0px 0 1rem 0;
+  font-size: 2.25rem;
+  line-height: 1.12;
+  color: var(--headline);
+  font-weight: 700;
+}
+
+p.lead {
+  color: #4a4b4f;
+  font-size: 1rem;
+  line-height: 1.65;
+  margin: 0 0 12px 0;
+  width: 100%;
+}
+
+/* right column */
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-left: 10px;
+  text-align: start;
+}
+
+.feature {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  background: transparent;
+  padding: 6px 6px;
+}
+
+.f-icon img {
+  width: 44px;
+  height: 44px;
+  margin-top: 8px;
+}
+
+.f-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.f-title {
+  font-weight: 600;
+  color: #0c0d0d;
+  font-size: 1.25rem;
+  margin-bottom: 6px;
+}
+
+.f-desc {
+  font-size: 1rem;
+  color: #4a4b4f;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* a subtle divider line on the right column start */
+.right::before {
+  content: "";
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    rgba(15, 23, 42, 0.06),
+    rgba(15, 23, 42, 0.02)
+  );
+  margin-left: -14px;
+  margin-right: 18px;
+}
+
+.q-and-a-wrapper {
+  background: #f8fdfe;
+  padding: 80px 0;
+}
+
+.q-and-a-wrapper-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+.q-and-a-wrapper-header {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-btn {
+  height: fit-content;
+}
+
+.left-panel {
+  width: 50%;
+}
+
+.q-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 30px;
+  max-width: 60%;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.accordion-item {
+  border-radius: 1.5rem;
+  background: #f1f5f9;
+  overflow: hidden;
+  transition: 0.3s ease;
+  padding: 1.5rem 2rem;
+}
+
+.accordion-header {
+  width: 100%;
+  background: transparent;
+  border: none;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: start;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  color: #4a4b4f;
+}
+
+.accordion-body {
+  font-size: 1rem;
+  color: #4a4b4f;
+  display: none;
+  margin-left: 6px;
+  margin-top: 2rem;
+}
+
+.accordion-item.active .accordion-body {
+  display: block;
+}
+
+.accordion-item.active .arrow {
+  transform: rotate(180deg);
+}
+
+.arrow {
+  transition: 0.3s;
+}
+
+.right-panel {
+  width: 40%;
+}
+
+.right-panel img {
+  width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+  animation: fadeIn 1s ease-in-out forwards 1s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Startup Team  Section */
+.tg-hero-section {
+  position: relative;
+  min-height: 36rem;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  padding-bottom: 6rem;
+  background: url("/assets/images/startup/hero-bg.png") center/cover no-repeat;
+}
+
+.tg-hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.8
+  ); /* ← change this value to make it darker/lighter */
+  z-index: 1;
+}
+
+/* Make sure your content is above the overlay */
+.tg-hero-content-wrapper,
+.tg-services-grid {
+  position: relative;
+  z-index: 2;
+}
+.tg-hero-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+.tg-main-headline {
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: white;
+  font-size: 3.75rem;
+  font-family: "Orbitron", sans-serif;
+}
+
+.tg-hero-description {
+  margin-bottom: 2.5rem;
+  line-height: 1.65;
+  color: white;
+  font-size: 1.25rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Services Grid */
+.tg-services-grid {
+  display: flex;
+  gap: 1rem;
+  width: fit-content;
+  flex-wrap: wrap;
+  justify-content: start;
+  margin-top: 10rem;
+  align-items: end;
+}
+
+.tg-service-icon {
+  font-size: 1.4rem;
+}
+
+.tg-service-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  padding: 0.45rem 1.25rem 0.45rem 1rem;
+  white-space: nowrap;
+
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 0.875rem;
+  text-decoration: none;
+
+  border-radius: 1rem; /* 16px */
+
+  background: rgba(72, 77, 81, 0.25);
+  backdrop-filter: blur(12px); /* the real "frosted" effect */
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
+
+  box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.15),
+    inset 0 8px 20px rgba(255, 255, 255, 0.08);
+
+  border: 0 0 0 1px rgba(255, 255, 255, 0.15), 0 0 20px rgba(255, 255, 255, 0.1);
+
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tg-service-item:hover {
+  background: rgba(90, 95, 100, 0.35);
+  box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.2),
+    inset 0 8px 25px rgba(255, 255, 255, 0.12),
+    0 0 0 1px rgba(255, 255, 255, 0.25), 0 0 30px rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.startups-section {
+  padding: 60px 0px;
+  text-align: center;
+  background: #ffffff; /* change if your page is dark */
+}
+
+.startups-container {
+  margin: 0 auto;
+}
+
+.startups-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+
+  margin-bottom: 0;
+}
+
+.startups-subtitle {
+  font-size: 1.5rem;
+  color: #666666;
+  margin-bottom: 60px;
+  margin-top: 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.logos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 60px 80px; /* vertical 60px, horizontal 80px */
+  row-gap: 50px;
+}
+
+.logo-item {
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.logo-item:hover {
+  opacity: 1;
+  transform: translateY(-4px);
+}
+
+.logo-item img {
+  height: 46px; /* adjust if your logos are bigger/smaller */
+  width: auto;
+  object-fit: contain;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero {
+    display: none;
+  }
+
+  .startup-about {
+    animation: ease-in-out 1s fadeIn;
+    max-width: 100%;
+    padding: 4rem 0 0 0;
+    min-height: 34rem;
+  }
+
+  .rocket {
+    display: none;
+  }
+
+  .startup-about h1 {
+    font-size: 2.25rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: normal;
+    width: 100%;
+  }
+
+  .startup-about p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    line-height: 1.75rem;
+  }
+  .cloud-img {
+    opacity: 1;
+    animation: none;
+  }
+  .startup-about-container {
+    background: url("/assets/images/startup/about-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.623) 0%,
+        rgba(255, 255, 255, 0.909) 100%
+      ),
+      url("/assets/images/startup/about-bg.jpg") rgb(245, 244, 244) 50% / cover
+        no-repeat;
+  }
+
+  /* who we are */
+  .who-we-are-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+
+  h2#why-title {
+    font-size: 2rem;
+  }
+
+  .f-title {
+    font-size: 1.125rem;
+  }
+
+  /* q and a */
+
+  .desktop-only {
+    display: none;
+  }
+
+  .q-and-a-wrapper {
+    padding: 20px 0;
+  }
+
+  .q-title {
+    font-size: 2rem;
+    max-width: 100%;
+  }
+
+  .q-and-a-wrapper-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .left-panel {
+    width: 100%;
+  }
+  .right-panel {
+    margin-top: 2rem;
+    width: 100%;
+  }
+
+  .tg-hero-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .tg-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+    margin-top: 3rem;
+  }
+
+  .tg-main-headline {
+    margin-top: 5rem;
+  }
+
+  .tg-hero-content-wrapper {
+    text-align: center;
+  }
+
+  .tg-main-headline {
+    text-align: center;
+  }
+
+  .startups-heading {
+    font-size: 2.25rem;
+  }
+
+  .logo-item img {
+    height: 32px;
+  }
+  /* scroll horizontal for overflow */
+  .logos-grid {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 480px) {
+  .startup-about {
+    min-height: 40rem;
   }
 }

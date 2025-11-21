@@ -10,11 +10,16 @@
     <link rel="stylesheet" href="assets/css/startup.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
     <script type="text/javascript" src="assets/js/banner.js"></script>
 
     <script type="text/javascript" src="/assets/js/script.js"></script>
+    <script type="text/javascript" src="/assets/js/startup.js"></script>
+
 </head>
 
 <body>
@@ -27,6 +32,7 @@
             <nav class="main-nav" id="main-nav">
                 <ul>
                     <!-- <li><a href="#home">Home</a></li> -->
+                    <li><a href="/startup">StartUp</a></li>
                     <li><a href="/products">Products</a></li>
                     <li><a href="#services">Services</a></li>
 
@@ -57,20 +63,7 @@
                                     </div>
                                 </a>
                             </li>
-                            <!-- <li class="dropdown-item">
-                                <a href="#giveBack">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path class="svg-path"
-                                            d="M5.99805 3C9.48787 3 12.3812 5.55379 12.9112 8.8945C14.0863 7.72389 15.7076 7 17.498 7H21.998V9.5C21.998 13.0899 19.0879 16 15.498 16H12.998V21H10.998V13H8.99805C5.13205 13 1.99805 9.86599 1.99805 6V3H5.99805ZM19.998 9H17.498C15.0128 9 12.998 11.0147 12.998 13.5V14H15.498C17.9833 14 19.998 11.9853 19.998 9.5V9ZM5.99805 5H3.99805V6C3.99805 8.76142 6.23662 11 8.99805 11H10.998V10C10.998 7.23858 8.75947 5 5.99805 5Z" />
-                                    </svg>
 
-                                    <div>
-                                        <h1>Give Back</h1>
-                                        <p>Fueling future talent with scholarships.</p>
-                                    </div>
-                                </a>
-                            </li> -->
                         </ul>
                     </li>
                     <li class="custom-dropdown">
@@ -172,329 +165,421 @@
         <img src="assets/images/startup/cloud.png" alt="Cloud Image" class="cloud-img" />
     </section>
 
+    <section class="who-we-are-container" aria-labelledby="why-title">
+        <div class="container who-we-are-content">
 
+            <div class="left">
+                <span class="micro">Who We Are</span>
+                <h2 id="why-title">Why Startups Choose Techgaun</h2>
 
+                <p class="lead">
+                    We've lived the founder journey ourselves — the pressure to move fast with limited resources, the
+                    grind
+                    of validating ideas before the runway runs out, the late nights chasing product-market fit while
+                    everything feels both possible and uncertain. We know what it means to build under constraint, to
+                    iterate in real time, and to carry a vision forward when the world hasn't caught up yet.
+                </p>
 
-
-    <!-- Expertise Section -->
-    <section id="services" class="services">
-        <div class="container services-container">
-            <h1 class="section-title">Services and Expertise</h1>
-            <div class="services-list">
-                <div class="service-item">
-                    <img src="assets/images/ai-pipelines.svg" alt="AI Pipelines">
-                    <div class="services-desc">
-                        <h3 class="highlight">AI Pipelines</h3>
-                        <p>Our team has years of experience in building and maintaining AI pipelines. Either building
-                            your next LLM-powered application or helping you revamp your prompting or helping fine tune
-                            your ML model, we've got you covered.</p>
-                    </div>
-                </div>
-                <div class="service-item">
-                    <img src="assets/images/web-app-dev.svg" alt="Web Application Development">
-                    <div class="services-desc">
-                        <h3>Web Application Development</h3>
-                        <p>Our team develops robust and scalable web applications tailored to your business needs. We
-                            will work with you to understand your use-cases and choose the best tech stack that aligns
-                            with your needs.</p>
-                    </div>
-                </div>
-                <div class="service-item">
-                    <img src="assets/images/mobile-app-dev.svg" alt="Mobile Application Development">
-                    <div class="services-desc">
-                        <h3>Mobile Application Development</h3>
-                        <p>We create engaging mobile applications using React Native. We've worked with several
-                            companies to build their next generation of mobile applications. Our experience deeply roots
-                            in building mobile apps and games in native languages such as Kotlin and Swift but we also
-                            have a broad range of experience with React Native.</p>
-                    </div>
-                </div>
-                <div class="service-item">
-                    <img src="assets/images/cloud-strategy.svg" alt="Cloud Strategy">
-                    <div class="services-desc">
-                        <h3>Cloud Strategy</h3>
-                        <p>Whether its migration to the cloud or building out greenfield cloud infrastructure, we've got
-                            you covered with AWS, Azure, and GCP. From network segmentation to app level infra
-                            abstraction, we can help you at all levels with architectural and implementation needs. We
-                            primarily use terraform but can work with you with cloud specific toolings for your IaC.</p>
-                    </div>
-                </div>
-                <div class="service-item">
-                    <img src="assets/images/app-modernization.svg" alt="App Modernization">
-                    <div class="services-desc">
-                        <h3>App Modernization</h3>
-                        <p>Is your team working through the process of modernizing the application stack and
-                            architecture? We’ve years of experience modernizing the legacy applications and monolithic
-                            services. Our services ensure that your legacy applications are updated to meet modern
-                            standards. We acknowledge there's no one-size-fits-all strategy and thus will tailor our
-                            approach to your specific needs.</p>
-                    </div>
-                </div>
-                <div class="service-item">
-                    <img src="assets/images/security.svg" alt="Architecture and Security Review">
-                    <div>
-                        <h3>Architecture and Security Review</h3>
-                        <p>Our deep expertise in security and architecture allows us to conduct thorough reviews to
-                            ensure your applications are secure and efficient. We offer a comprehensive review of your
-                            application's architecture and security posture, including but not limited to network
-                            segmentation, application level security, and infrastructure level security.</p>
-                    </div>
-                </div>
+                <p class="lead">
+                    That's why we build with you, not for you — as partners who share the momentum, the responsibility,
+                    and
+                    the ambition to turn a concept into a company.
+                </p>
             </div>
-            <a style="text-decoration: none;" href="/services">
-                <button class="learn-more services-btn">
-                    View More
+
+            <div class="right" aria-hidden="false">
+                <div class="feature">
+                    <div class="f-icon" aria-hidden="true">
+                        <!-- partner icon -->
+                        <img src="assets/images/startup/handshake-icon.png" alt="Partner Icon">
+                    </div>
+                    <div class="f-body">
+                        <div class="f-title">Partner, Not Vendor</div>
+                        <div class="f-desc">We build with ownership and alignment equity, accountability, and a shared
+                            mission.</div>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <div class="f-icon" aria-hidden="true">
+                        <img src="assets/images/startup/tag-icon.png" alt="Full-Stack Icon">
+                    </div>
+                    <div class="f-body">
+                        <div class="f-title">Full-Stack Product Engineering</div>
+                        <div class="f-desc">From design, frontend to backend, a unified team built to remove
+                            bottlenecks.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <div class="f-icon" aria-hidden="true">
+                        <!-- timezone icon -->
+                        <img src="assets/images/startup/globe-icon.png" alt="Timezone Icon">
+                    </div>
+                    <div class="f-body">
+                        <div class="f-title">Timezone Harmony</div>
+                        <div class="f-desc">US collaboration with Nepal engineering velocity — fast cycles without
+                            premium
+                            costs.</div>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <div class="f-icon" aria-hidden="true">
+                        <!-- strategy icon -->
+                        <img src="assets/images/startup/person-icon.png" alt="Strategy Icon">
+                    </div>
+                    <div class="f-body">
+                        <div class="f-title">Strategy + Hands-On Craft</div>
+                        <div class="f-desc">You get architects who code, designers who think in systems, and engineers
+                            who
+                            understand product trade-offs.</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="q-and-a-wrapper">
+        <div class="container ">
+            <div class="q-and-a-wrapper-header">
+                <h1 class="q-title">Everything you need to move faster with a partner who builds beside you</h1>
+                <button class="learn-more contact-btn desktop-only">
+                    Contact Us
                 </button>
-            </a>
-        </div>
-    </section>
-
-    <section class="process">
-        <div class="process-curve-container">
-            <img class="process-top-curve" src="assets/images/process-curve.svg" alt="Process curve" />
-        </div>
-        <div class="container process-container">
-            <h1 class="section-title">Process We Follow</h1>
-            <div class="process-steps">
-                <div class="process-step">
-                    <h3><span class="process-step-1 process-step-count">1</span> Research</h3>
-                    <p>We work together with you and that's the key. We understand that you have unique needs and that's
-                        what drives us.</p>
-                </div>
-                <div class="process-step">
-                    <h3><span class="process-step-2 process-step-count">2 </span> Design</h3>
-                    <p>Our design team captures your vision and creates visually appealing and user-friendly designs and
-                        great user experience.</p>
-                </div>
-                <div class="process-step">
-                    <h3><span class="process-step-3 process-step-count">3 </span> Development</h3>
-                    <p>We follow best agile practices and ensure maintainable and scalable codebase. We are all about
-                        continuous refinement, improvement, integration, and delivery.</p>
-                </div>
-                <div class="process-step">
-                    <h3><span class="process-step-4 process-step-count">4 </span> Deploy</h3>
-                    <p>We ensure smooth deployment and provide ongoing support to keep your application running
-                        flawlessly.</p>
-                </div>
             </div>
-            <div class="process-img-container">
-                <img src="assets/images/process.svg" alt="Process" />
-            </div>
-        </div>
-    </section>
-
-    <!-- Case Studies Section -->
-    <section id="case-studies" class="case-studies">
-        <div class="container case-studies-container">
-
-            <div class="carousel">
-                <h1 class=" section-title case-study-title">Case Studies</h1>
-                <div class="carousel-content">
+            <div class="q-and-a-wrapper-content">
 
 
-                    <!-- Text Content -->
-                    <div class="carousel-text">
-                        <h5 id="text-tagline">Dev Tools</h5>
-                        <p id="text-description">
-                            We have built a suite of online tools for developers to help them with their day-to-day
-                            activities. We have made these tools to be used by developers for developers, all in one
-                            place and free to use.
-                        </p>
+                <div class=" left-panel">
 
-                    </div>
-                    <div class="title-container-mobile">
-                        <h1 id="text-title-1">Online Set of Useful Tools for Developers</h3>
+                    <div class="accordion">
 
-                    </div>
-
-                    <div class="title-container-mobile text-link-container">
-                        <a id="text-link" href="https://devtools.techgaun.com" target="_blank"
-                            class="case-study-link mobile-link-crousel">Use
-                            Dev Tools</a>
-                    </div>
-                    <!-- Image Track ;large screen -->
-                    <div class="carousel-image-wrapper">
-                        <div class="carousel-image-track">
-                            <div class="carousel-image-item">
-                                <img src="assets/images/case-study-devtools.png" alt="Dev Tools" />
-                                <div class="overlay-container">
-                                    <div class="overlay-bg"></div>
-
-                                    <a href="https://devtools.techgaun.com" target="_blank" class="case-study-link">Use
-                                        Dev Tools</a>
-
-                                </div>
-                            </div>
-                            <div class="carousel-image-item">
-                                <img src="assets/images/mobile-ux.png" alt="Mobile App" />
-
-                            </div>
-                            <div class="carousel-image-item">
-                                <img src="assets/images/dashboard.svg" alt="Crowdfunding" />
-
-                            </div>
-                            <div class="carousel-image-item">
-                                <img src="assets/images/ancestree.png" alt="Ancestree" />
-
-                                <div class="overlay-container">
-                                    <div class="overlay-bg"></div>
-
-                                    <a href="#contact" class="case-study-link">Schedule Demo</a>
-
-                                </div>
-                            </div>
-                            <div class="carousel-image-item">
-                                <img src="assets/images/case-study-build-for-nepal.png" alt="Build for Nepal" />
-
-                                <div class="overlay-container">
-                                    <div class="overlay-bg"></div>
-
-                                    <a href="https://github.com/build-for-nepal" target="_blank"
-                                        class="case-study-link">
-                                        Visit Github</a>
-
-                                </div>
-                            </div>
-
-                            <div class="carousel-image-item">
-                                <img src="assets/images/banner/laptop.svg" alt="Build for Nepal" />
-
-                                <div class="overlay-container">
-                                    <div class="overlay-bg"></div>
-
-                                    <a href="https://ramro.link" target="_blank" class="case-study-link">
-                                        Visit RamroLink</a>
-
-                                </div>
+                        <div class="accordion-item active" data-image="img1">
+                            <button class="accordion-header">
+                                Co-build Your MVP
+                                <span class="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="9"
+                                        viewBox="0 0 16 9" fill="none">
+                                        <path d="M14.3333 7.6665L7.66659 0.999838L0.999919 7.6665" stroke="#97979B"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg></span>
+                            </button>
+                            <div class="accordion-body">
+                                We embed ourselves into your vision from day one, shaping the product as true partners.
                             </div>
                         </div>
+
+                        <div class="accordion-item" data-image="img2">
+                            <button class="accordion-header">
+                                Unified Architecture
+                                <span class="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="9"
+                                        viewBox="0 0 16 9" fill="none">
+                                        <path d="M14.3333 7.6665L7.66659 0.999838L0.999919 7.6665" stroke="#97979B"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg></span> </button>
+                            <div class="accordion-body">
+                                A unified architecture that supports scalability and long-term growth.
+                            </div>
+                        </div>
+
+                        <div class="accordion-item" data-image="img3">
+                            <button class="accordion-header">
+                                AI That Ships
+                                <span class="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="9"
+                                        viewBox="0 0 16 9" fill="none">
+                                        <path d="M14.3333 7.6665L7.66659 0.999838L0.999919 7.6665" stroke="#97979B"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg></span> </button>
+                            <div class="accordion-body">
+                                Build AI-powered features that solve real business problems.
+                            </div>
+                        </div>
+
+                        <div class="accordion-item" data-image="img4">
+                            <button class="accordion-header">
+                                Seamless Product Expansion
+                                <span class="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="9"
+                                        viewBox="0 0 16 9" fill="none">
+                                        <path d="M14.3333 7.6665L7.66659 0.999838L0.999919 7.6665" stroke="#97979B"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg></span> </button>
+                            <div class="accordion-body">
+                                Expand your product with confidence and clarity.
+                            </div>
+                        </div>
+
+                        <div class="accordion-item" data-image="img5">
+                            <button class="accordion-header">
+                                Aligned, Transparent Sprints
+                                <span class="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="9"
+                                        viewBox="0 0 16 9" fill="none">
+                                        <path d="M14.3333 7.6665L7.66659 0.999838L0.999919 7.6665" stroke="#97979B"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg></span> </button>
+                            <div class="accordion-body">
+                                Every sprint is aligned and transparent for your team.
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
-
-                <!-- Navigation Arrows -->
-                <div class="carousel-controls">
-                    <button id="prev" class="carousel-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20" fill="none">
-                            <path
-                                d="M9.02464 10.0006L13.1496 14.1256L11.9713 15.3039L6.66797 10.0006L11.9713 4.69727L13.1496 5.8756L9.02464 10.0006Z"
-                                fill="#F6F7F9" />
-                        </svg>
-
-                    </button>
-                    <button id="next" class="carousel-btn"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                            height="16" viewBox="0 0 20 20" fill="none">
-                            <path
-                                d="M10.9766 10.0006L6.85156 5.8756L8.0299 4.69727L13.3332 10.0006L8.0299 15.3039L6.85156 14.1256L10.9766 10.0006Z"
-                                fill="#F6F7F9" />
-                        </svg></button>
+                <div class="right-panel">
+                    <img id="displayImage" src="./assets/images/startup/post.png" alt="Display" />
                 </div>
 
-                <!-- title Trace -->
-                <div class="title-container">
-                    <h1 id="text-title">Online Set of Useful Tools for Developers</h3>
-
-                </div>
             </div>
         </div>
     </section>
 
-
-    <!-- Leadership Section -->
-    <section class="team">
-        <div class="who-we-are">
-            <div class="who-we-are-content">
-                <img class="aeroplane-team" src="assets/images/aeroplane-team.svg" alt="Aeroplane team" />
-                <div class="who-we-are-desc">
-                    <h1 class="section-title">Leadership</h1>
-                    <p>The leadership team has a combined experience of over 30 years in the field of software
-                        development and consulting having built several software systems all the way from exciting
-                        cutting edge start-up products to large scale complex enterprise systems.</p>
-                </div>
-            </div>
-        </div>
+    <section class="tg-hero-section">
+        <!-- <div class="tg-hero-bg"></div> -->
         <div class="container">
-            <div class="leadership">
-                <div class="team-members">
-                    <div class="team-member">
-                        <img class="team-member-img" src="assets/images/samar.svg" alt="Samar Acharya">
-                        <div class="member-detail member-detail-1">
-                            <div class="member-name">
-                                <h3>Samar Acharya</h3>
-                                <p>CEO</p>
-                            </div>
-                            <div class="member-social">
-                                <a href="https://www.linkedin.com/in/techgaun/" target="_blank" noopener noreferrer><img
-                                        src="assets/images/linkedin.svg" alt="LinkedIn Profile" /></a>
-                                <a href="https://github.com/techgaun" target="_blank" noopener noreferrer><img
-                                        src="assets/images/github.svg" alt="Github Profile" /></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="team-member">
-                        <img class="team-member-img" src="assets/images/brisha.svg" alt="Brisha Pote">
-                        <div class="member-detail member-detail-2">
-                            <div class="member-name">
-                                <h3>Brisha Pote</h3>
-                                <p>Chief Product Officer</p>
-                            </div>
-                            <div class="member-social">
-                                <a href="https://www.linkedin.com/in/brisha-pote-201bab1b3/" target="_blank" noopener
-                                    noreferrer><img src="assets/images/linkedin.svg" alt="LinkedIn Profile" /></a>
-                                <a href="https://github.com/bpote" target="_blank" noopener noreferrer><img
-                                        src="assets/images/github.svg" alt="Github Profile" /></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <img class="leadership-curve-img" src="assets/images/leadership-bg.svg" />
+            <div class=" tg-hero-content">
 
-    <!-- Contact Section -->
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="contact-form-container">
-                <img class="contact-plane" src="assets/images/contact-us-plane.svg" alt="Contact Plane" />
-                <div class="contact-form-content-container">
-                    <h1 class="section-title">Contact Us</h1>
+                <div class="tg-hero-content-wrapper">
+                    <h1 class="tg-main-headline">
+                        You Won’t Build Alone
+                    </h1>
 
-                    <p class="contact-description">
-                        Fill out the form below or reach out to us via
-                        <a href="mailto:info@techgaun.com" class="contact-email">email</a>.
+                    <p class="tg-hero-description">
+                        At Techgaun, founders gain a head-start with a dedicated team of product builders, engineers,
+                        and
+                        startup operators building alongside you from day one.
                     </p>
 
-                    <div class="contact-form-input-container">
-                        <form id="contact-form">
-                            <select name="reason">
-                                <option value="" disabled selected>Reason for Contact</option>
-                                <option value="hire-us">Hire Us</option>
-                                <option value="product-demo">Product Demo</option>
-                                <option value="job-career">Job/Career</option>
-                                <option value="partnership">Partnership</option>
-                                <option value="others">Others</option>
-                            </select>
-                            <input type="text" name="from_name" placeholder="Full Name" required>
-                            <input type="email" name="from_email" placeholder="Email" required>
-                            <input type="tel" name="from_phone" placeholder="Phone Number">
-
-
-
-                            <textarea name="message" placeholder="Message" required></textarea>
-                            <button type="submit">Submit</button>
-
-                            <div id="success-message" class="success-message" style="display: none;">
-                                <p>Thanks for reaching out. We'll contact you as soon as possible.</p>
-                            </div>
-                        </form>
-                    </div>
+                    <a href="#team" class="learn-more">Meet the Team</a>
                 </div>
-                <img class="contact-man" src="assets/images/contact-man.svg" alt="Contact Man" />
+
+                <div class="tg-services-grid">
+                    <a href="#" class="tg-service-item">
+                        <span class="tg-service-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M2 2V12.6667C2 13.0203 2.14048 13.3594 2.39052 13.6095C2.64057 13.8595 2.97971 14 3.33333 14H14"
+                                    stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M4.66675 10.6668C5.00008 9.3335 5.66675 6.00016 7.33341 6.00016C8.66675 6.00016 8.66675 8.00016 10.0001 8.00016C11.6667 8.00016 13.0001 4.66683 13.3334 3.3335"
+                                    stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span> Smooth Flow
+                    </a>
+                    <a href="#" class="tg-service-item">
+                        <span class="tg-service-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6.7101 8.32844L2.5901 9.20711C2.43018 9.24181 2.26302 9.21217 2.12479 9.12459C1.98656 9.03701 1.88836 8.89853 1.85143 8.73911L1.49343 7.30577C1.45134 7.13308 1.47524 6.95089 1.56046 6.7949C1.64567 6.63891 1.78605 6.52035 1.9541 6.46244L10.9568 3.50244"
+                                    stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M9.04004 7.83133L11.928 7.21533" stroke="white" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M10.6667 13.9999L8.59668 9.85986" stroke="white" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M10.99 3.95991C10.9043 3.6169 10.9583 3.2539 11.1402 2.95073C11.3221 2.64756 11.617 2.42905 11.96 2.34325L12.6866 2.16191C12.858 2.11915 13.0394 2.14618 13.1909 2.23705C13.3424 2.32793 13.4517 2.47522 13.4946 2.64658L14.5046 6.68658C14.5476 6.85809 14.5207 7.03963 14.4298 7.19129C14.3389 7.34294 14.1915 7.45228 14.02 7.49525L13.2933 7.67658C12.9503 7.76228 12.5873 7.70824 12.2841 7.52633C11.9809 7.34443 11.7624 7.04957 11.6766 6.70658L10.99 3.95991Z"
+                                    stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M4.10522 5.75537L4.84789 8.72604" stroke="white" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M5.33325 13.9999L7.40325 9.85986" stroke="white" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M8.00008 10.0002C8.73646 10.0002 9.33341 9.40321 9.33341 8.66683C9.33341 7.93045 8.73646 7.3335 8.00008 7.3335C7.2637 7.3335 6.66675 7.93045 6.66675 8.66683C6.66675 9.40321 7.2637 10.0002 8.00008 10.0002Z"
+                                    stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span> Vision
+                    </a>
+                    <a href="#" class="tg-service-item">
+                        <span class="tg-service-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.6667 12L14.6667 8L10.6667 4" stroke="white" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M5.33325 4L1.33325 8L5.33325 12" stroke="white" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span> Frontend
+                    </a>
+                    <a href="#" class="tg-service-item">
+                        <span class="tg-service-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7.33325 11.3332L8.66659 12.6665C8.79791 12.7978 8.95381 12.902 9.12539 12.9731C9.29697 13.0441 9.48087 13.0807 9.66659 13.0807C9.8523 13.0807 10.0362 13.0441 10.2078 12.9731C10.3794 12.902 10.5353 12.7978 10.6666 12.6665C10.7979 12.5352 10.9021 12.3793 10.9731 12.2077C11.0442 12.0361 11.0808 11.8522 11.0808 11.6665C11.0808 11.4808 11.0442 11.2969 10.9731 11.1253C10.9021 10.9537 10.7979 10.7978 10.6666 10.6665"
+                                    stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M9.33324 9.33318L10.9999 10.9998C11.2651 11.2651 11.6248 11.4141 11.9999 11.4141C12.375 11.4141 12.7347 11.2651 12.9999 10.9998C13.2651 10.7346 13.4141 10.3749 13.4141 9.99985C13.4141 9.62477 13.2651 9.26506 12.9999 8.99985L10.4132 6.41318C10.0382 6.03865 9.52991 5.82827 8.99991 5.82827C8.4699 5.82827 7.96157 6.03865 7.58657 6.41318L6.99991 6.99985C6.73469 7.26506 6.37498 7.41406 5.99991 7.41406C5.62483 7.41406 5.26512 7.26506 4.99991 6.99985C4.73469 6.73463 4.58569 6.37492 4.58569 5.99985C4.58569 5.62477 4.73469 5.26506 4.99991 4.99985L6.87324 3.12651C7.4814 2.51994 8.2745 2.13355 9.127 2.0285C9.9795 1.92344 10.8427 2.10573 11.5799 2.54651L11.8932 2.73318C12.1771 2.90451 12.5146 2.96393 12.8399 2.89985L13.9999 2.66651"
+                                    stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M13.9999 2L14.6666 9.33333H13.3333" stroke="white" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M1.99992 2L1.33325 9.33333L5.66659 13.6667C5.9318 13.9319 6.29151 14.0809 6.66659 14.0809C7.04166 14.0809 7.40137 13.9319 7.66659 13.6667C7.9318 13.4015 8.0808 13.0417 8.0808 12.6667C8.0808 12.2916 7.9318 11.9319 7.66659 11.6667"
+                                    stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M2 2.6665H7.33333" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </span> Allies
+                    </a>
+                    <a href="#" class="tg-service-item">
+                        <span class="tg-service-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_4920_860)">
+                                    <path
+                                        d="M8 5.3335C11.3137 5.3335 14 4.43807 14 3.3335C14 2.22893 11.3137 1.3335 8 1.3335C4.68629 1.3335 2 2.22893 2 3.3335C2 4.43807 4.68629 5.3335 8 5.3335Z"
+                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M2.00004 3.3335V12.6668C1.99633 12.9874 2.22391 13.3037 2.6636 13.5888C3.10329 13.874 3.7422 14.1197 4.52647 14.3053C5.31074 14.4909 6.21739 14.611 7.16999 14.6553C8.12258 14.6997 9.09321 14.667 10 14.5602"
+                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M14 3.3335V5.3335" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M14 8L12 11.3333H14.6667L12.6667 14.6667" stroke="white" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                        d="M2 8C2.00096 8.31169 2.22046 8.61898 2.64097 8.89737C3.06148 9.17576 3.67137 9.41754 4.42198 9.60341C5.17258 9.78928 6.04312 9.9141 6.96414 9.96791C7.88516 10.0217 8.83116 10.003 9.72667 9.91333"
+                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_4920_860">
+                                        <rect width="16" height="16" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </span> Backend
+                    </a>
+                    <a href="#" class="tg-service-item">
+                        <span class="tg-service-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3.00008 11.0002C2.00008 11.8402 1.66675 14.3335 1.66675 14.3335C1.66675 14.3335 4.16008 14.0002 5.00008 13.0002C5.47341 12.4402 5.46675 11.5802 4.94008 11.0602C4.68095 10.8129 4.33961 10.67 3.98157 10.6589C3.62352 10.6478 3.274 10.7694 3.00008 11.0002Z"
+                                    stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M8 9.99984L6 7.99984C6.35476 7.07946 6.80147 6.19722 7.33333 5.36651C8.11012 4.1245 9.19175 3.10187 10.4753 2.3959C11.7589 1.68993 13.2018 1.32409 14.6667 1.33317C14.6667 3.14651 14.1467 6.33317 10.6667 8.66651C9.82459 9.19899 8.93123 9.64567 8 9.99984Z"
+                                    stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M6.00008 7.99985H2.66675C2.66675 7.99985 3.03341 5.97985 4.00008 5.33318C5.08008 4.61318 7.33341 5.33318 7.33341 5.33318"
+                                    stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M8 9.99984V13.3332C8 13.3332 10.02 12.9665 10.6667 11.9998C11.3867 10.9198 10.6667 8.6665 10.6667 8.6665"
+                                    stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span> Launch & Growth
+                    </a>
+                    <a href="#" class="tg-service-item">
+                        <span class="tg-service-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.6666 14V12.6667C10.6666 11.9594 10.3856 11.2811 9.88554 10.781C9.38544 10.281 8.70716 10 7.99992 10H3.99992C3.29267 10 2.6144 10.281 2.1143 10.781C1.6142 11.2811 1.33325 11.9594 1.33325 12.6667V14"
+                                    stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M10.6667 2.08545C11.2386 2.2337 11.745 2.56763 12.1065 3.03482C12.4681 3.50202 12.6642 4.07604 12.6642 4.66678C12.6642 5.25752 12.4681 5.83154 12.1065 6.29874C11.745 6.76594 11.2386 7.09987 10.6667 7.24812"
+                                    stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M14.6667 13.9998V12.6664C14.6663 12.0756 14.4697 11.5016 14.1077 11.0346C13.7457 10.5677 13.2388 10.2341 12.6667 10.0864"
+                                    stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M5.99992 7.33333C7.47268 7.33333 8.66658 6.13943 8.66658 4.66667C8.66658 3.19391 7.47268 2 5.99992 2C4.52716 2 3.33325 3.19391 3.33325 4.66667C3.33325 6.13943 4.52716 7.33333 5.99992 7.33333Z"
+                                    stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span> Team & Culture
+                    </a>
+                    <a href="#" class="tg-service-item">
+                        <span class="tg-service-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M2.66659 13.3333H13.3333C13.6869 13.3333 14.026 13.1929 14.2761 12.9428C14.5261 12.6928 14.6666 12.3536 14.6666 12V5.33333C14.6666 4.97971 14.5261 4.64057 14.2761 4.39052C14.026 4.14048 13.6869 4 13.3333 4H8.04658C7.82698 3.99886 7.61105 3.9435 7.41798 3.83883C7.22492 3.73415 7.0607 3.58341 6.93992 3.4L6.39325 2.6C6.27247 2.41659 6.10825 2.26585 5.91519 2.16117C5.72212 2.0565 5.50619 2.00114 5.28658 2H2.66659C2.31296 2 1.97382 2.14048 1.72378 2.39052C1.47373 2.64057 1.33325 2.97971 1.33325 3.33333V12C1.33325 12.7333 1.93325 13.3333 2.66659 13.3333Z"
+                                    stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M5.33325 6.6665V9.33317" stroke="white" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M8 6.6665V7.99984" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M10.6667 6.6665V10.6665" stroke="white" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span> Product Management
+                    </a>
+                    <a href="#" class="tg-service-item">
+                        <span class="tg-service-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 4.6665V13.9998" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M10.6667 8H12.0001" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M10.6667 5.3335H12.0001" stroke="white" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M1.99992 12C1.82311 12 1.65354 11.9298 1.52851 11.8047C1.40349 11.6797 1.33325 11.5101 1.33325 11.3333V2.66667C1.33325 2.48986 1.40349 2.32029 1.52851 2.19526C1.65354 2.07024 1.82311 2 1.99992 2H5.33325C6.0405 2 6.71877 2.28095 7.21887 2.78105C7.71897 3.28115 7.99992 3.95942 7.99992 4.66667C7.99992 3.95942 8.28087 3.28115 8.78097 2.78105C9.28106 2.28095 9.95934 2 10.6666 2H13.9999C14.1767 2 14.3463 2.07024 14.4713 2.19526C14.5963 2.32029 14.6666 2.48986 14.6666 2.66667V11.3333C14.6666 11.5101 14.5963 11.6797 14.4713 11.8047C14.3463 11.9298 14.1767 12 13.9999 12H9.99992C9.46949 12 8.96078 12.2107 8.5857 12.5858C8.21063 12.9609 7.99992 13.4696 7.99992 14C7.99992 13.4696 7.7892 12.9609 7.41413 12.5858C7.03906 12.2107 6.53035 12 5.99992 12H1.99992Z"
+                                    stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M4 8H5.33333" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M4 5.3335H5.33333" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </span> Story & Identity
+                    </a>
+                    <a href="#" class="tg-service-item">
+                        <span class="tg-service-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_4920_1091)">
+                                    <path d="M9.74793 11.9313L2.62793 9.98926" stroke="white" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                        d="M12.2506 1.74799C12.382 1.61658 12.538 1.51234 12.7097 1.44122C12.8814 1.3701 13.0654 1.3335 13.2513 1.3335C13.4371 1.3335 13.6211 1.3701 13.7928 1.44122C13.9645 1.51234 14.1205 1.61658 14.2519 1.74799C14.3834 1.8794 14.4876 2.0354 14.5587 2.2071C14.6298 2.37879 14.6664 2.56281 14.6664 2.74865C14.6664 2.93449 14.6298 3.11851 14.5587 3.29021C14.4876 3.4619 14.3834 3.61791 14.2519 3.74932L11.5733 6.42865C11.5108 6.49116 11.4757 6.57593 11.4757 6.66432C11.4757 6.75271 11.5108 6.83748 11.5733 6.89999L12.2026 7.52932C12.5039 7.83062 12.6731 8.23925 12.6731 8.66532C12.6731 9.09139 12.5039 9.50002 12.2026 9.80132L11.5733 10.4307C11.5108 10.4931 11.426 10.5282 11.3376 10.5282C11.2492 10.5282 11.1645 10.4931 11.1019 10.4307L5.56928 4.89865C5.50679 4.83614 5.47168 4.75137 5.47168 4.66299C5.47168 4.5746 5.50679 4.48983 5.56928 4.42732L6.19861 3.79799C6.49991 3.49673 6.90854 3.32749 7.33461 3.32749C7.76068 3.32749 8.16931 3.49673 8.47061 3.79799L9.09994 4.42732C9.16245 4.48981 9.24722 4.52491 9.33561 4.52491C9.424 4.52491 9.50877 4.48981 9.57128 4.42732L12.2506 1.74799Z"
+                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M5.99995 5.3335C4.79728 7.14016 3.35328 7.64016 1.61128 7.9655C1.55349 7.97605 1.49945 8.00148 1.45448 8.03928C1.40952 8.07708 1.37518 8.12595 1.35486 8.18106C1.33453 8.23618 1.32893 8.29564 1.33859 8.35358C1.34825 8.41153 1.37284 8.46595 1.40995 8.5115L6.28995 14.4335C6.38907 14.5388 6.51973 14.609 6.66222 14.6335C6.80472 14.658 6.95133 14.6356 7.07995 14.5695C8.48995 13.6035 10.6666 11.1948 10.6666 10.0002"
+                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_4920_1091">
+                                        <rect width="16" height="16" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </span> Product Design
+                    </a>
+                </div>
             </div>
         </div>
     </section>
+
+
+    <section class="startups-section">
+        <h2 class="startups-heading">We Help Startups Take Off</h2>
+        <p class="startups-subtitle">
+            Building the next wave of startups, one launch at a time.
+        </p>
+        <div class="container">
+
+            <div class="logos-grid">
+                <!-- Replace src with your actual logo paths -->
+                <div class="logo-item">
+                    <img style="width: 120px; height: 100px; " src="assets/images/startup/iris-acedemy.png"
+                        alt="Iris Academy">
+                </div>
+                <div class="logo-item">
+                    <img style=" height: 100px; " src="assets/images/startup/etsy.png" alt="Etsy">
+                </div>
+                <div class="logo-item">
+                    <img style=" height: 100px; " src="assets/images/startup/himalayan.png" alt="Himalayan">
+                </div>
+                <div class="logo-item">
+                    <img src="assets/images/startup/genz.png" alt="NepalGenZ">
+                </div>
+                <div class="logo-item">
+                    <img src="assets/images/startup/ramrolink.png" alt="RamroLink">
+                </div>
+                <!-- Add more logos as needed -->
+            </div>
+        </div>
+    </section>
+
+
+
+
 
     <section class="footer-img">
         <div class="container footer-bg-container">
