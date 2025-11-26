@@ -1162,6 +1162,7 @@ footer p {
   width: 100%;
   width: fit-content;
   margin: 0 auto;
+  margin-top: 60px;
 }
 
 /* Bottom Banner */

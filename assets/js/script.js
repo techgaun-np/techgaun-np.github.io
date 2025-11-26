@@ -44,7 +44,19 @@ function toggleNav(element) {
 })();
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Contact form submission section
+  // 📌 Read query params
+  const params = new URLSearchParams(window.location.search);
+  const key = params.get("key");
+
+  // 📌 Find the dropdown
+  const reasonSelect = document.querySelector('select[name="reason"]');
+
+  // 📌 Auto-select "startup" if key=startup
+  if (key === "startup" && reasonSelect) {
+    reasonSelect.value = "startup";
+  }
+
+  // --------------- Your existing email code ---------------
   var contactForm = document.getElementById("contact-form");
   var successMessage = document.getElementById("success-message");
 
@@ -58,19 +70,15 @@ document.addEventListener("DOMContentLoaded", function () {
     emailjs.sendForm("service_z7ecq9h", "template_wiuzc5o", this).then(
       function () {
         contactForm.reset();
-        // contactForm.style.display = 'none';
         successMessage.style.display = "block";
 
         setTimeout(function () {
           successMessage.style.display = "none";
-          // contactForm.style.display = 'block';
           submitButton.disabled = false;
           submitButton.textContent = "Submit";
         }, 5000);
       },
-      function (error) {
-        // console.log('FAILED...', error);
-        // alert('Failed to send the message. Please try again later.');
+      function () {
         submitButton.disabled = false;
         submitButton.textContent = "Submit";
       }
