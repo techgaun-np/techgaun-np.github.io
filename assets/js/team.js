@@ -12,16 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="grid">
           ${window.teamData
             .map((member, index) => {
-              let gridClass = "";
-              if (index < 10) {
-                gridClass = "grid-2";
-              } else if (index < 5) {
-                gridClass = "grid-1";
-              } else if (index < 8) {
-                gridClass = "grid-2";
-              } else {
-                gridClass = "grid-4";
-              }
+              let gridClass = "grid-2";
               return `
                 <div class="card ${gridClass}" data-member-id="${index}">
                   <div class="card-inner">
