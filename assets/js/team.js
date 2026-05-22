@@ -83,6 +83,14 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
 
     teamContainer.innerHTML = teamHTML;
+    document.querySelectorAll(".team-img").forEach((img) => {
+      img.onerror = function () {
+        this.style.background = "#163152";
+        this.style.border = "3px solid #fe8402";
+        this.onerror = null;
+        this.src = "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
+      };
+    });
 
     const cards = document.querySelectorAll(".card");
 
