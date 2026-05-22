@@ -27,8 +27,8 @@ document.addEventListener("DOMContentLoaded", function () {
                   <div class="card-inner">
                     <div class="default-content card-face">
                       <img src="${member.image}" alt="${
-                member.name
-              }" class="team-img">
+                        member.name
+                      }" class="team-img">
                       <div class="team-content">
                         <h3 class="team-name">${member.name}</h3>
                         <p class="team-role">${member.role}</p>
@@ -65,34 +65,28 @@ document.addEventListener("DOMContentLoaded", function () {
               `;
             })
             .join("")}
-            <div class="card grid-2">
-            <a href="/careers">
-                  <div class="card-inner">
-                    <div class="default-content card-face">
-                                                              <img src="./assets/images/team/backimg.png" alt="Your Picture" class="your-img">
-
-                      
-                      <div class="team-content">
-                      
-                      </div>
-                    </div>
-                    <div class="alternate-content your-alternate-content card-face">
-                      <img src="./assets/images/team/joinus.png" alt="Your Picture" class="your-img flipped-img">
-                          <dotlottie-player
-                            src="https://lottie.host/bc20c809-5385-43b6-94e4-46b1f098db36/He8mjoYkmm.lottie"
-                            background="transparent"
-                            speed="1"
-                            style="width: 110px; height: 110px; position: absolute; top: -20px; left: 31%;"
-                            loop
-                            autoplay
-                          ></dotlottie-player>
-
-                    </div>
-                          <h3 class="your-title join">Join Us</h3>
-
+            <div class="card grid-2 no-flip">
+              <a href="/careers">
+                <div class="card-inner">
+                  <div class="default-content card-face">
+                    <img src="./assets/images/team/backimg.png" alt="Your Picture" class="your-img">
+                    <div class="team-content"></div>
                   </div>
-                  </a>
+                  <div class="alternate-content your-alternate-content card-face">
+                    <img src="./assets/images/team/joinus.png" alt="Your Picture" class="your-img flipped-img">
+                    <dotlottie-player
+                      src="https://lottie.host/bc20c809-5385-43b6-94e4-46b1f098db36/He8mjoYkmm.lottie"
+                      background="transparent"
+                      speed="1"
+                      style="width: 110px; height: 110px; position: absolute; top: -20px; left: 31%;"
+                      loop
+                      autoplay
+                    ></dotlottie-player>
+                  </div>
                 </div>
+                <h3 class="your-title join">Join Us</h3>
+              </a>
+            </div>
         </div>
       </div>
     `;
@@ -120,6 +114,8 @@ document.addEventListener("DOMContentLoaded", function () {
     cards.forEach((card) => {
       const button1 = card.querySelector(".button1");
       const button2 = card.querySelector(".button2");
+
+      if (!button1 || !button2) return;
 
       button1.addEventListener("click", () => {
         if (!card.classList.contains("flipped")) {
