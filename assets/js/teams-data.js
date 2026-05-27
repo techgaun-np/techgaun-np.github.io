@@ -78,35 +78,14 @@ window.teamData = [
     linkedin: "https://www.linkedin.com/in/uruna-shakya-5504a5212/",
   },
   {
-    name: "Kritan Shrestha",
-    role: "Associate Fullstack Engineer",
-    description:
-      "I’m an early riser and biking enthusiast who loves coding, machines, and new technology. Coding keeps me energized, much like a good ride. One unforgettable experience? Trying vada pav—it was amazing!",
-
-    image: "./assets/images/team/kritan.png",
-    ramrolink: "https://ramro.link/kritan",
-    github: "https://github.com/kritan560",
-    linkedin: "https://www.linkedin.com/in/kritan-shrestha-52a61a144",
-  },
-  {
-    name: "Ajay Ranabhat",
-    role: "Full Stack Engineer",
-    description:
-      "I'm a tech enthusiast who loves coding, exploring new tech, traveling, and learning new things.",
-    image: "./assets/images/team/ajay.png",
-    ramrolink: "https://ramro.link/ajay",
-    github: "https://github.com/ajay-rb",
-    linkedin: "https://www.linkedin.com/in/ajayranabhat/",
-  },
-  {
-    name: "Arzu Awal",
+    name: "Aarju Awal",
     role: "QA Engineer",
     description:
       "QA engineer finding bugs and building automation so apps behave better than I do.",
     image: "./assets/images/team/arzu-awal.jpg",
     ramrolink: "",
-    github: "",
-    linkedin: "",
+    github: "https://github.com/aarjuawal",
+    linkedin: "https://www.linkedin.com/in/aarzu-awal-723509271",
   },
   {
     name: "Yash Maharjan",
@@ -115,8 +94,8 @@ window.teamData = [
       "Writing UI like a melody, then listening to it break in production like a tragic remix.",
     image: "./assets/images/team/yash-maharjan.jpg",
     ramrolink: "",
-    github: "",
-    linkedin: "",
+    github: "https://github.com/Yash-ftW",
+    linkedin: "https://www.linkedin.com/in/yashmaharjan/",
   },
   {
     name: "Sam Shrestha",
@@ -124,8 +103,8 @@ window.teamData = [
     description: "Just a dev whose career runs on agents.",
     image: "./assets/images/team/sam-shrestha.png",
     ramrolink: "",
-    github: "",
-    linkedin: "",
+    github: "https://github.com/SamStha07",
+    linkedin: "https://www.linkedin.com/in/shyam-k-shrestha",
   },
   {
     name: "Subash Baidya",
@@ -133,8 +112,8 @@ window.teamData = [
     description: "",
     image: "./assets/images/team/subash-baidya.jpeg",
     ramrolink: "",
-    github: "",
-    linkedin: "",
+    github: " https://www.github.com/subashhB",
+    linkedin: "https://www.linkedin.com/in/subash-baidya-1229b626a",
   },
   {
     name: "Arun Mahara",
@@ -161,8 +140,8 @@ window.teamData = [
     description: "Somewhere between git blame and it works on my machine.",
     image: "./assets/images/team/sugat-sujakhu.jpeg",
     ramrolink: "",
-    github: "",
-    linkedin: "",
+    github: "https://github.com/notsugat",
+    linkedin: "https://linkedin.com/in/notsugat",
   },
   {
     name: "Momik Shrestha",
@@ -180,6 +159,26 @@ window.teamData = [
     description:
       "Coffee-fueled QA Engineer and music lover, paid to click random things until something breaks.",
     image: "./assets/images/team/anjana-bhattarai.jpg",
+    ramrolink: "",
+    github: "https://github.com/anjana881",
+    linkedin:
+      "https://www.linkedin.com/in/anjana-bhattrai-1a5990198?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
+  },
+  {
+    name: "Abiral Khaptari",
+    role: "Frontend Developer",
+    description:
+      "Bringing creativity, dedication, and results to every project.",
+    image: "./assets/images/team/abiral-khaptari.jpg",
+    ramrolink: "",
+    github: "https://github.com/abiral-k",
+    linkedin: "",
+  },
+  {
+    name: "Rachana Bhudathoki",
+    role: "Admin",
+    description: "",
+    image: "./assets/images/team/rachana-budathoki.jpg",
     ramrolink: "",
     github: "",
     linkedin: "",
