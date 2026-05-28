@@ -73,8 +73,9 @@ window.teamData = [
     role: "UX Engineer",
     description:
       "Obsessed with details, driven by empathy and always chasing that seamless user journey.",
-    ramrolink: "https://ramro.link/Uruna",
     image: "./assets/images/team/uruna.png",
+    ramrolink: "https://ramro.link/Uruna",
+    github: "https://github.com/Uruna",
     linkedin: "https://www.linkedin.com/in/uruna-shakya-5504a5212/",
   },
   {
@@ -166,7 +167,7 @@ window.teamData = [
   },
   {
     name: "Abiral Khaptari",
-    role: "Frontend Developer",
+    role: "Frontend Engineer",
     description:
       "Bringing creativity, dedication, and results to every project.",
     image: "./assets/images/team/abiral-khaptari.jpg",
@@ -182,5 +183,15 @@ window.teamData = [
     ramrolink: "",
     github: "",
     linkedin: "",
+  },
+  {
+    name: "Rabina Karmacharya",
+    role: "Marketing Manager",
+    description:
+      "Creating meaningful opportunities through communication, collaboration, and creativity.",
+    image: "./assets/images/team/rabina-karmacharya.png",
+    ramrolink: "",
+    github: "",
+    linkedin: "https://www.linkedin.com/in/rabina-karmacharya-b22804395",
   },
 ];
