@@ -70,7 +70,7 @@ function openApplyModal(jobTitle, department) {
   jobTitleInput.value = jobTitle;
   departmentInput.value = department;
 
-  modal.style.display = "block";
+  modal.style.display = "flex";
   document.body.style.overflow = "hidden"; // Prevent scrolling when modal is open
 }
 
@@ -223,6 +223,7 @@ document.addEventListener("DOMContentLoaded", function () {
       try {
         // Create template parameters
         const templateParams = {
+          to_email: ["innovate@techgaun.com", "info@techgaun.com"],
           from_name: applicationForm.from_name.value,
           from_email: email,
           from_phone: phone,
