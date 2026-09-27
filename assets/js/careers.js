@@ -74,7 +74,7 @@ function openApplyModal(jobTitle, department) {
   document.body.style.overflow = "hidden"; // Prevent scrolling when modal is open
 }
 
-function closeModal() {
+function closeApplyModal() {
   const modal = document.getElementById("apply-modal");
   modal.style.display = "none";
   document.body.style.overflow = "auto"; // Restore scrolling
@@ -123,14 +123,14 @@ document.addEventListener("DOMContentLoaded", function () {
   // Modal close button
   const closeBtn = document.querySelector(".close-modal");
   if (closeBtn) {
-    closeBtn.addEventListener("click", closeModal);
+    closeBtn.addEventListener("click", closeApplyModal);
   }
 
   // Close modal when clicking outside
   window.addEventListener("click", function (event) {
     const modal = document.getElementById("apply-modal");
     if (event.target === modal) {
-      closeModal();
+      closeApplyModal();
     }
   });
 
@@ -223,7 +223,7 @@ document.addEventListener("DOMContentLoaded", function () {
       try {
         // Create template parameters
         const templateParams = {
-          to_email: ["innovate@techgaun.com", "info@techgaun.com"],
+          to_email: "innovate@techgaun.com,info@techgaun.com",
           from_name: applicationForm.from_name.value,
           from_email: email,
           from_phone: phone,
@@ -231,7 +231,6 @@ document.addEventListener("DOMContentLoaded", function () {
           job_title: applicationForm.job_title.value,
           department: applicationForm.department.value,
           resume_link: resumeUrl,
-          reason: applicationForm.reason.value,
         };
 
         // Send email with application details
@@ -248,7 +247,7 @@ document.addEventListener("DOMContentLoaded", function () {
           submitButton.style.display = "block";
           submitButton.disabled = false;
           submitButton.textContent = "Submit Application";
-          closeModal();
+          closeApplyModal();
         }, 5000);
       } catch (error) {
         console.error("Failed:", error);
